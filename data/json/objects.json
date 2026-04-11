@@ -638,28 +638,6 @@
     "image_local": "assets/img/1170810.jpg"
   },
   {
-    "object_id": 1168643,
-    "object_number": "VK-2485",
-    "object_name": "Trichter",
-    "thesaurus_id": "AUT.AAW.AAC.AAB.AAH",
-    "thesaurus_term": "Andere Hilfsgeräte",
-    "thesaurus_path": [
-      "Volkskundliche Sammlung NÖ",
-      "Volkskunde – Hauswirtschaft",
-      "AUT.AAW.AAC.AAB",
-      "Andere Hilfsgeräte"
-    ],
-    "top_id": "AUT.AAW.AAC",
-    "medium": "Holz, gedrechselt",
-    "dimensions": "H x B x Dm: 19 x 10 cm",
-    "dated": "1780-1880",
-    "begin_iso": "10000001780",
-    "end_iso": "10000001880",
-    "url_object": "https://online.landessammlungen-noe.at/objects/1168643",
-    "url_image_remote": "https://online.landessammlungen-noe.at/internal/media/dispatcher/336606",
-    "image_local": "assets/img/1168643.jpg"
-  },
-  {
     "object_id": 1171587,
     "object_number": "VK-13331",
     "object_name": "Backform",
