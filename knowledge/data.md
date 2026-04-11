@@ -1,12 +1,12 @@
 # Daten-Bestandsaufnahme
 
-Stand: 2026-04-11. Wird in M1 nach Selektion und in M3 nach Akkuranz-Auswertung aktualisiert.
+Stand: 2026-04-11, nach Vollauf und Frontend-Abschluss.
 
 ## Quelle
 
 **Datei:** [`data/Trainingsobjekte_LandNOE_VK.xlsx`](../data/Trainingsobjekte_LandNOE_VK.xlsx) (ein Tabellenblatt).
 
-**Herkunft:** Volkskundliche Sammlung der Landessammlungen Niederösterreich. Auszug aus dem Sammlungsmanagementsystem, vom Workshop-Auftraggeber bereitgestellt. **Urheberrechtlich geschützt** — keine Weiterverbreitung außerhalb des Workshop-Kontexts.
+**Herkunft:** Volkskundliche Sammlung der Landessammlungen Niederösterreich. Auszug aus dem Sammlungsmanagementsystem, vom Workshop-Auftraggeber bereitgestellt. Lizenz der Objekte: **CC BY-NC 4.0**, siehe Sektion *Lizenz der Daten* unten.
 
 ## Struktur
 
@@ -30,7 +30,7 @@ Header (Zeile 1) und 10.722 Datenzeilen. 15 Spalten:
 | `URL_Objekt` | URL | `https://online.landessammlungen-noe.at/objects/1177724` | 0 |
 | `URL_Foto` | URL | `https://online.landessammlungen-noe.at/internal/media/dispatcher/374605` | **0** (jedes Objekt hat ein Bild) |
 
-**Konsequenz für die UI:** `Medium`, `Dimensions`, `Dated` dürfen nie als Pflichtfelder angenommen werden — der Editor muss leere Werte sauber darstellen.
+**Konsequenz für die UI:** `Medium`, `Dimensions`, `Dated` dürfen nie als Pflichtfelder angenommen werden — die Original-Variant-Card zeigt leere Felder leer an, ohne Fallback-Text.
 
 ## Thesaurus-Statistik
 
@@ -67,7 +67,7 @@ Header (Zeile 1) und 10.722 Datenzeilen. 15 Spalten:
 ## Bekannte Lücken
 
 1. **Top-Bereich-Namen fehlen.** Im Excel hat nur `AUT.AAW.AAH` (Handwerk/Industrie/Handel) einen menschenlesbaren Term — die anderen 19 Top-Bereiche tragen nur ihren CN-Code. Quelle für die fehlenden Namen: das Feld „Bereich" auf jeder Onlinesammlungs-Detailseite, z.B. „Volkskunde – Kleidung". `scripts/01_build_thesaurus.py` holt sie einmalig pro Top-Bereich von einer Beispielobjektseite und cached sie unter `scripts/cache/top_names.json`.
-2. **Beschreibungstexte fehlen vollständig.** Die Excel hat keine Spalte mit Katalogtext. Quelle: Detailseite jedes Objekts unter `https://online.landessammlungen-noe.at/objects/{ObjectID}`. Diese Texte sind im präzisen, lakonischen Sammlungsstil und werden in M1 von `scripts/03_scrape_originals.py` einmalig geholt — sowohl als Ground-Truth für den Vergleich mit der KI als auch als Few-Shot-Material für die Prompts.
+2. **Beschreibungstexte fehlen vollständig.** Die Excel hat keine Spalte mit Katalogtext. Quelle: Detailseite jedes Objekts unter `https://online.landessammlungen-noe.at/objects/{ObjectID}`. Diese Texte sind im präzisen, lakonischen Sammlungsstil und werden von `scripts/03_scrape_originals.py` einmalig geholt — sowohl als Ground-Truth für den Vergleich mit der KI als auch als Few-Shot-Material für die Prompts.
 3. **Zwischenebenen ohne Namen.** Die Excel führt nur Top (Tiefe 2) und Leaf (Tiefe 3/4). Die Mittel-Knoten zwischen `AUT.AAW.AAH` und `AUT.AAW.AAH.AAN.AAD` haben keine eigenen Term-Einträge. Konsequenz: Der Thesaurus-Tree im UI zeigt Mittelknoten mit ihrem CN-Code, nicht klickbar für Filter.
 
 ## Externe Quellen
@@ -82,18 +82,18 @@ Header (Zeile 1) und 10.722 Datenzeilen. 15 Spalten:
 
 Auf jedem Objekt-JSON ist ein `license`-Feld. Stichproben zeigen **CC BY-NC 4.0** (`https://creativecommons.org/licenses/by-nc/4.0/`). Das heißt: Nutzung mit Namensnennung und nicht-kommerziell ist erlaubt — der Workshop und das Repo erfüllen das. Im README ist eine entsprechende Attribution Pflicht.
 
-## Wird in M1 ergänzt
+## Selektion und Vollauf (final)
 
-- Konkrete Selektions-Statistik der ~250 kuratierten Objekte (aus `scripts/selection_report.txt`)
-- Liste der finalen 20 Top-Bereich-Namen (aus `scripts/cache/top_names.json`)
-- Scraping-Erfolgsrate der Originalbeschreibungen (aus `scripts/scrape_report.txt`)
-- Tatsächliche Repo-Größe der Bilder nach Resize
-- Liste der 5 Few-Shot-Beispiele
+- **245 Objekte** in `data/json/objects.json`, stratifiziert über alle 20 Top-Bereiche. Ursprünglich 246 — Objekt `1168643` wurde nach drei fehlgeschlagenen Bild-Download-Versuchen aus der Selektion entfernt (siehe `scripts/download_report.txt` und Journal-Eintrag *Objekt 1168643 aus dem Scope entfernt*).
+- **245 lokale Bilder** unter `assets/img/*.jpg`, resized auf max. 1024 px lange Kante, gesamt **17 MB**. Repo-Gesamtgröße 38 MB — weit unter NFR-4.
+- **Scraping der Originaltexte:** `data/json/originals.json` enthält 245 Einträge (Label/Value plus `description`, `classification`, `license`). Details zum Lauf in `scripts/scrape_report.txt`.
+- **Top-Bereich-Namen:** 20 menschenlesbare Bezeichner, aus der Onlinesammlung geholt und unter `scripts/cache/top_names.json` gecacht.
+- **Few-Shot-Beispiele:** 5 echte Katalogtexte in `scripts/prompts/few_shot_examples.json`, ausgewählt von `03_scrape_originals.py` aus den gescrapten Beschreibungen.
+- **Vollauf Blind** (`data/json/ai_blind.json`, 245 Records, Prompt v2.0, `gemini-3.1-flash-lite-preview`): Top-Bereich 123/245 = **50 %**, Leaf-Term 62/245 = **25 %**.
+- **Vollauf Enriched** (`data/json/ai_enriched.json`, 245 Records, Prompt v2.0, gleiches Modell): Top-Bereich 150/245 = **61 %**, Leaf-Term 85/245 = **35 %**.
+- **Judge** (`data/json/ai_judge.json`, 8 handverlesene Objekte, `gemini-3.1-pro-preview`): 8/8 Judge-Top-Wahlen stimmen mit dem Original überein, 3/8 Objekte als `is_collection_quirk = true` markiert (Trog `1169812`, Spritze `1174037`, Totschläger `1183673`), Quality-Mittel Blind 4.5 / Enriched 4.5.
 
-## Wird in M2/M3 ergänzt
-
-- Tatsächliche Gemini-Kosten und Token-Verbrauch
-- Akkuranz: Anteil korrekter Top-Bereich-Wahl, Anteil korrekter Leaf-Term-Wahl, Top-5-Verwechslungen
+Detaillierte Iterations-Chronik, inkl. Prompt v1 → v2 und Sample-Runs, in [`sample_iteration.md`](sample_iteration.md).
 
 ---
 
@@ -121,62 +121,52 @@ Auf jedem Objekt-JSON ist ein `license`-Feld. Stichproben zeigen **CC BY-NC 4.0*
 ┌────────────────────────────────────────────────┐
 │ Static Site (Vanilla, GitHub Pages)            │
 │  index.html ◀─ data/json/thesaurus.json        │
-│  app.js     ◀─ data/json/objects.json          │
+│  app.js     ◀─ data/json/thesaurus_flat.json   │
+│             ◀─ data/json/objects.json          │
 │             ◀─ data/json/originals.json        │
 │             ◀─ data/json/ai_blind.json         │
 │             ◀─ data/json/ai_enriched.json      │
 │             ◀─ data/json/ai_judge.json         │
-│             ◀─ data/json/edits.json            │
-└────────┬───────────────────────────────────────┘
-         │ Experte editiert
-         ▼
-┌──────────────────────────────┐
-│ localStorage (browser)       │
-└────────┬─────────────────────┘
-         │ Export-Button
-         ▼
-┌──────────────────────────────┐
-│ edits.json (Download)        │
-└────────┬─────────────────────┘
-         │ git commit + push
-         ▼
-       Git-Verlauf = Korrektur-Historie
+│             ◀─ assets/img/*.jpg                │
+└────────────────────────────────────────────────┘
 ```
+
+Der Frontend-Fluss endet hier: Die Site ist ein reiner Read-Only-Vergleichs-Viewer, es gibt keinen Edit-Pfad, kein localStorage, kein Export, keine `edits.json`. Korrekturen an der Originalzuordnung passieren außerhalb des Tools im Sammlungsmanagementsystem. Siehe ADR-14 und Journal-Eintrag *Frontend-Architektur*.
 
 ## Komponenten-Inventar
 
-| Pfad | Status | Zweck |
-|------|--------|-------|
-| `data/Trainingsobjekte_LandNOE_VK.xlsx` | M0 | Quelle, nicht verändern |
-| `knowledge/README.md`, `requirements.md`, `data.md`, `journal.md`, `sample_iteration.md`, `workflows.md` | M1 | Knowledge-Basis |
-| `scripts/_paths.py` | M1 | Zentrale Pfad-Konstanten |
-| `scripts/_common.py` | M1 | Geteilte Helper (HTTP, JSON I/O, Logging, .env-Loader) |
-| `scripts/01_build_thesaurus.py` | M1 | Thesaurus-Baum + Top-Bereich-Scrape |
-| `scripts/02_select_objects.py` | M1 | ~250 Auswahl, stratifiziert |
-| `scripts/03_scrape_originals.py` | M1 | Beschreibungstexte + Few-Shot-Auswahl |
-| `scripts/04_download_images.py` | M1 | Bilder lokal, resized |
-| `scripts/05_preview_selection.py` | M1 | preview.html für visuelles Review |
-| `scripts/06_run_gemini.py` | M2 | Gemini-Calls, beide Modi via `--mode` |
-| `scripts/_gemini_client.py` | M2 | Geteilte Gemini-Logik (Stage 1+2, Disambiguation) |
-| `scripts/07_judge_sample.py` | M2 | LLM-as-a-Judge gegen blind+enriched |
-| `scripts/prompts/system_blind.txt` | M2 | System-Prompt blind |
-| `scripts/prompts/system_enriched.txt` | M2 | System-Prompt enriched |
-| `scripts/prompts/system_judge.txt` | M2 | System-Prompt judge |
-| `scripts/prompts/few_shot_examples.json` | M1 (von 03 erzeugt) | 5 echte Katalogbeispiele |
-| `data/json/thesaurus.json` + `thesaurus_flat.json` | M1 | Browser + Prompt |
-| `data/json/objects.json` | M1 | Master-Metadaten |
-| `data/json/originals.json` | M1 | Beschreibungstexte aus Onlinesammlung |
-| `data/json/ai_blind.json`, `ai_enriched.json` | M2 | KI-Outputs |
-| `data/json/ai_judge.json` | M2 | Judge-Bewertungen |
-| `data/json/edits.json` | M3 (vom Tool exportiert) | Experten-Korrekturen |
-| `assets/img/*.jpg` | M1 | ~250 Bilder, ≤1024 px |
-| `index.html`, `style.css`, `app.js` | M3 | Browser-Tool |
-| `design.md` | M3 | UI-Spezifikation |
-| `ReadMe.md` | M3 | DE+EN, Urheberrecht |
+| Pfad | Zweck |
+|------|-------|
+| `data/Trainingsobjekte_LandNOE_VK.xlsx` | Quelle, nicht verändern |
+| `knowledge/README.md`, `requirements.md`, `data.md`, `journal.md`, `sample_iteration.md`, `workflows.md` | Knowledge-Basis |
+| `scripts/_paths.py` | Zentrale Pfad-Konstanten |
+| `scripts/_common.py` | Geteilte Helper (HTTP, JSON I/O, Logging, `.env`-Loader, `gemini_generate_json`) |
+| `scripts/01_build_thesaurus.py` | Thesaurus-Baum + Top-Bereich-Scrape |
+| `scripts/02_select_objects.py` | 245 Objekte stratifiziert auswählen |
+| `scripts/03_scrape_originals.py` | Beschreibungstexte + Few-Shot-Auswahl |
+| `scripts/04_download_images.py` | Bilder lokal, resized |
+| `scripts/05_preview_selection.py` | preview.html für visuelles Review |
+| `scripts/06_run_gemini.py` | Gemini-Calls, beide Modi via `--mode` |
+| `scripts/_gemini_client.py` | Zweistufige Gemini-Logik (Stage 1 + Stage 2 mit Disambiguation) |
+| `scripts/07_judge_sample.py` | LLM-as-a-Judge gegen blind+enriched (handverlesene Stichprobe) |
+| `scripts/prompts/system_blind.txt` | System-Prompt blind (v2.0) |
+| `scripts/prompts/system_enriched.txt` | System-Prompt enriched (v2.0) |
+| `scripts/prompts/system_judge.txt` | System-Prompt judge (v1.0) |
+| `scripts/prompts/few_shot_examples.json` | 5 echte Katalogbeispiele |
+| `data/json/thesaurus.json` + `thesaurus_flat.json` | Thesaurus für Browser + Prompts |
+| `data/json/objects.json` | Master-Metadaten der 245 Objekte |
+| `data/json/originals.json` | Beschreibungstexte aus Onlinesammlung |
+| `data/json/ai_blind.json`, `ai_enriched.json` | KI-Outputs, je 245 Records |
+| `data/json/ai_judge.json` | 8 Judge-Bewertungen |
+| `data/json/judge_selection.json` | Die 8 handverlesenen Objekt-IDs für den Judge-Run |
+| `assets/img/*.jpg` | 245 Bilder, max. 1024 px lange Kante, gesamt 17 MB |
+| `index.html`, `style.css`, `app.js` | Vanilla-Browser-Tool, Vergleichs-Viewer |
+| `design.md` | UI-Spezifikation im Ist-Stand |
+| `README.md` | Repo-Root-README mit EN-Abstract, CC BY-NC 4.0 und MIT-Hinweis |
 
 ## Verifikation
 
-**Pipeline (M1+M2):**
+**Pipeline:**
 
 ```bash
 cd scripts
@@ -192,25 +182,25 @@ python 06_run_gemini.py --mode enriched
 python 07_judge_sample.py
 ```
 
-Erwartung: alle ~250 Objekte haben Bild + zwei KI-Outputs + Judge-Bewertung. Selection-Report zeigt sinnvolle Streuung.
+Erwartung: alle 245 Objekte haben Bild + zwei KI-Outputs. Die Judge-Stichprobe umfasst 8 handverlesene Objekte aus `data/json/judge_selection.json`. Selection-Report zeigt sinnvolle Streuung.
 
-**Browser-Tool (M3):**
+**Browser-Tool:**
 
 - `python -m http.server 8000` im Repo-Root
+- Galerie-Header zeigt „245 Objekte · 20 Bereiche · 225 Kategorien"
 - Filter-Stichprobe: Top-Bereich „Religion und Glaube" anklicken → nur Religions-Objekte sichtbar
 - Freitext „Beutel" → Treffer
-- Status-Filter „Konflikt" → nur KI-Original-Differenzen
-- Klick auf Objekt → Drawer mit Foto + drei Varianten + Judge
-- Editor: Beschreibung ändern → Speichern → Status wechselt zu 🟢
-- „Bearbeitungen exportieren" → JSON-Datei herunterladbar
-- Datei nach `data/json/edits.json` legen, Seite neu laden → Änderung bleibt
+- Status-Filter „Konflikt" alleine → nur rote Kacheln; „keine KI" alleine → leere Galerie (alle 245 haben KI-Daten)
+- Klick auf Objekt → Detail-Seite (`#/object/:id`) mit Foto, Original, KI blind, KI erweitert, Judge. Prev/Next-Buttons navigieren durch die gefilterten Nachbarn, ESC geht zurück.
+- Detail-Seite eines Quirk-Objekts (z.B. `#/object/1169812`) → gelber Sammlungs-Quirk-Banner auf der Original-Karte sichtbar
+- Akkuranz-Dashboard: drei Panels sichtbar (Akkuranz, Verwechslungen, Judge 3/8 Quirks)
 
-**GitHub Pages (M3):**
+**GitHub Pages:**
 
 - Repo auf `main` pushen, Pages aktivieren
 - Live-URL aufrufen, gleiche Stichproben wie oben
-- Repo-Größe < 100 MB sicherstellen (Stand M1: 17 MB Bilder)
+- Repo-Größe weit unter NFR-4 (Stand nach Vollauf: 38 MB gesamt, davon 17 MB Bilder)
 
 **Workshop-Tag-Test (19.04.2026):**
 
-- Site offline aufrufen (Internet aus). Muss vollständig funktionieren.
+- Site offline aufrufen (Internet aus). Muss vollständig funktionieren — keine externen Requests im DevTools Network-Tab.

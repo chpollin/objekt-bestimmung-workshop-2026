@@ -1,6 +1,6 @@
 # Drei Workflows
 
-Das Projekt zeigt drei aufeinander aufbauende KI-Workflows. Jeder beantwortet eine eigene Frage und liefert eigene Workshop-Erkenntnisse. Im Detail-Drawer der Browser-UI werden alle drei nebeneinander dargestellt — der menschliche Experte sieht, wie sie sich unterscheiden, und entscheidet, welcher gewinnt.
+Das Projekt zeigt drei aufeinander aufbauende KI-Workflows. Jeder beantwortet eine eigene Frage und liefert eigene Workshop-Erkenntnisse. Auf der Detail-Seite der Browser-UI (`#/object/:id`) werden alle drei nebeneinander dargestellt, sodass Original und KI-Varianten direkt vergleichbar sind.
 
 ## Übersicht
 
@@ -10,7 +10,7 @@ Das Projekt zeigt drei aufeinander aufbauende KI-Workflows. Jeder beantwortet ei
 | **B. Enriched** | Foto + Original-Metadaten | klassifiziert + reichert an | Wie verändert sich das Ergebnis, wenn die KI bestehende Sammlungsdaten als Kontext hat? |
 | **C. Judge** | Foto + Original + Antworten von A und B | bewertet, kritisiert, schlägt Korrekturen vor | Kann eine stärkere KI eine schwächere KI sinnvoll bewerten — und finden, was Menschen übersehen? |
 
-C ist **keine** dritte Klassifikation, sondern eine **Meta-Schicht** über A und B. C läuft mit einem stärkeren Modell (`gemini-3-pro-preview`) gegen die Outputs des schwächeren Modells (`gemini-3.1-flash-lite-preview`).
+C ist **keine** dritte Klassifikation, sondern eine **Meta-Schicht** über A und B. C läuft mit einem stärkeren Modell (`gemini-3.1-pro-preview`) gegen die Outputs des schwächeren Modells (`gemini-3.1-flash-lite-preview`). Judge läuft bewusst nur auf einer handverlesenen 8er-Stichprobe (`data/json/judge_selection.json`) — siehe ADR-12 und FR-11 in `requirements.md`.
 
 ## Workflow A: Blind
 
@@ -61,9 +61,9 @@ C ist **keine** dritte Klassifikation, sondern eine **Meta-Schicht** über A und
 - `is_collection_quirk`: bool — ist das Original eine sammlungsspezifische Konvention, die aus dem Bild allein nicht ableitbar wäre? (sehr wichtig für faire Bewertung)
 - Begründungstext
 
-**Pipeline-Schritt.** `python scripts/07_judge_sample.py` (in Iterationsphase) bzw. `07_judge.py` im Vollauf
+**Pipeline-Schritt.** `python scripts/07_judge_sample.py --selection data/json/judge_selection.json`
 
-**Modell.** `gemini-3-pro-preview` (deutlich stärker als das Flash-Lite-Modell der Workflows A und B). Andere Generation = andere Perspektive.
+**Modell.** `gemini-3.1-pro-preview` (deutlich stärker als das Flash-Lite-Modell der Workflows A und B). Andere Generation = andere Perspektive.
 
 **Was es im Workshop zeigt.**
 1. **KI kann KI bewerten.** Eine zweite KI-Meinung gegen die erste — und sie ist nicht nur ein Spiegel, sondern findet echte Schwächen.
@@ -74,17 +74,18 @@ C ist **keine** dritte Klassifikation, sondern eine **Meta-Schicht** über A und
 
 **Wofür es nicht taugt.** Ground Truth zu setzen, wo es keine gibt. Der Judge ist eine Meinung, nicht die Wahrheit. Auch er kann irren — und genau diese Diskussion ist Teil der Workshop-Story.
 
-## Workflow im UI (M3)
+## Workflow im UI
 
-Der Detail-Drawer zeigt vier Karten nebeneinander oder in Tabs:
+Die Detail-Seite (`#/object/:id`) zeigt vier Karten read-only untereinander in der rechten Spalte, links daneben das große Foto:
 
-1. **Original** (read-only, grau, Ground-Truth-Marke) — was die Sammlung sagt
-2. **KI Blind** (read-only, lila Badge) — Workflow A
-3. **KI Enriched** (read-only, blau Badge) — Workflow B
-4. **Judge** (read-only, dunkles Badge mit Modellname) — Workflow C, mit Verdict + Hints
-5. **Experte** (editierbar) — die fünfte Spalte, in der der Mensch das letzte Wort hat
+1. **Original** (Ground-Truth, grau) — was die Sammlung sagt. Trägt bei Objekten mit Judge-Quirk zusätzlich einen gelben Banner *„Sammlungs-Quirk — Zuordnung folgt sammlungsinterner Konvention"*.
+2. **KI Blind** (lila Badge) — Workflow A.
+3. **KI Enriched** (blau Badge) — Workflow B.
+4. **Judge** (dunkles Badge mit Modellname) — Workflow C, mit Verdict, Quality-Noten und Prompt-Hinweisen. Nur bei den 8 handverlesenen Objekten befüllt; bei den anderen zeigt die Karte *„Kein Judge-Urteil für dieses Objekt"*.
 
-Im Akkuranz-Dashboard (FR-8) wird zusätzlich die Judge-Verteilung geführt: wie oft hat der Judge welchem Workflow zugestimmt, wie hoch sind die Beschreibungs-Qualitätsnoten, wie viele Objekte sind als Sammlungs-Quirk markiert.
+Es gibt keine Experten-Edit-Spalte — die Site ist ein reiner Vergleichs-Viewer (siehe ADR-14). Änderungen an der Klassifikation passieren außerhalb des Tools, im Sammlungsmanagementsystem.
+
+Im Akkuranz-Dashboard (FR-8) wird zusätzlich die Judge-Verteilung geführt: Quirk-Anteil als Hero-Metric, Quality-Mittelwerte für Blind und Enriched, Verdict-Verteilung. Die „häufigste Verwechslungen"-Liste ist klickbar — ein Klick pinnt einen Filter auf das betreffende `fromTop → toTop`-Paar, sodass man direkt in die Betroffenen-Objekte springt.
 
 ## Wo leben die Prompts
 
@@ -108,4 +109,4 @@ Die Disambiguation der Leaf-Listen (siehe ADR-11 in `requirements.md`) ist **kei
 - AUT.AAW.AAH.AAC.AAB: Hilfsgerät  [Sub-Cluster mit: Werkstatteinrichtung, Bohrwerkzeuge, …]
 ```
 
-Das ist datengetrieben aus dem Thesaurus selbst, nicht handgepflegt — und wirkt deshalb auf alle 246 Objekte und beide Modi gleichzeitig.
+Das ist datengetrieben aus dem Thesaurus selbst, nicht handgepflegt — und wirkt deshalb auf alle 245 Objekte und beide Modi gleichzeitig.
