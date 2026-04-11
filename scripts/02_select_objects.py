@@ -24,6 +24,7 @@ from _paths import (
     SELECTION_REPORT,
     SOURCE_XLSX,
     THESAURUS_FLAT_JSON,
+    THESAURUS_JSON,
     ensure_dirs,
 )
 
@@ -50,6 +51,7 @@ def completeness_score(row: dict) -> int:
 def select(
     table,
     flat_thesaurus: list[dict],
+    path_by_cn: dict[str, list[str]],
     target: int,
     per_leaf_cap: int,
     min_per_top: int,
@@ -126,6 +128,14 @@ def select(
         leaf = leaf_to_term.get(cn)
         oid = row["ObjectID"]
         url_image = row.get("URL_Foto")
+        # leaf.path is the preferred source. For mid-level CN codes that don't
+        # appear in flat.json (7-ish cases where the Excel assigns an object
+        # to a mid cluster rather than a true leaf), fall back to the full
+        # tree resolver so every object has a non-null path.
+        if leaf:
+            path = leaf["path"]
+        else:
+            path = path_by_cn.get(cn)
         objects_out.append(
             {
                 "object_id": oid,
@@ -133,7 +143,7 @@ def select(
                 "object_name": row.get("ObjectName"),
                 "thesaurus_id": cn,
                 "thesaurus_term": row.get("Term"),
-                "thesaurus_path": leaf["path"] if leaf else None,
+                "thesaurus_path": path,
                 "top_id": leaf_to_top.get(cn, top_id_of(cn)),
                 "medium": row.get("Medium"),
                 "dimensions": row.get("Dimensions"),
@@ -167,6 +177,27 @@ def select(
     return objects_out, report
 
 
+def _build_path_resolver(tree: dict) -> dict[str, list[str]]:
+    """Walk the thesaurus tree and return {cn_id: path} for *every* node
+    (top area, mid-cluster, leaf). This lets us resolve the path for objects
+    whose CN is a mid-level code — flat.json only contains leaves, so those
+    7-ish mid-level objects would otherwise have null paths.
+    """
+    if tree is None:
+        return {}
+    out: dict[str, list[str]] = {}
+
+    def visit(node: dict, parents: list[str]) -> None:
+        path = parents + [node["term"]]
+        out[node["id"]] = path
+        for child in node.get("children", []):
+            visit(child, path)
+
+    for top in tree.get("children", []):
+        visit(top, [tree.get("root", "Volkskundliche Sammlung NÖ")])
+    return out
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--target", type=int, default=DEFAULT_TARGET)
@@ -182,9 +213,13 @@ def main() -> None:
     if flat is None:
         raise SystemExit("thesaurus_flat.json missing — run 01_build_thesaurus.py first")
 
+    tree = read_json(THESAURUS_JSON)
+    path_by_cn = _build_path_resolver(tree)
+
     objects, report = select(
         table,
         flat,
+        path_by_cn,
         target=args.target,
         per_leaf_cap=args.per_leaf_cap,
         min_per_top=args.min_per_top,

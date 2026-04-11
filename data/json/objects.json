@@ -731,7 +731,11 @@
     "object_name": "Häferl",
     "thesaurus_id": "AUT.AAW.AAC.AAC",
     "thesaurus_term": "Essen und Trinken",
-    "thesaurus_path": null,
+    "thesaurus_path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Hauswirtschaft",
+      "Essen und Trinken"
+    ],
     "top_id": "AUT.AAW.AAC",
     "medium": "Metall, emailliert, bedruckt",
     "dimensions": "H x B x Dm: 8,5 x 11 x 9 cm",
@@ -1099,7 +1103,11 @@
     "object_name": "Spitzhacke",
     "thesaurus_id": "AUT.AAW.AAD.AAB",
     "thesaurus_term": "Bodenbearbeitung",
-    "thesaurus_path": null,
+    "thesaurus_path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Landwirtschaft",
+      "Bodenbearbeitung"
+    ],
     "top_id": "AUT.AAW.AAD",
     "medium": "Metall, Holz, geschmiedet",
     "dimensions": "H x B x T: 64,5 x 6 x 56 cm",
@@ -1160,7 +1168,11 @@
     "object_name": "Reiter",
     "thesaurus_id": "AUT.AAW.AAD.AAD",
     "thesaurus_term": "Ernteaufbereitung",
-    "thesaurus_path": null,
+    "thesaurus_path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Landwirtschaft",
+      "Ernteaufbereitung"
+    ],
     "top_id": "AUT.AAW.AAD",
     "medium": "Holz, Metall, geklammert",
     "dimensions": "H x B x Dm: 13 x 28,5 cm",
@@ -1484,7 +1496,11 @@
     "object_name": "Beil",
     "thesaurus_id": "AUT.AAW.AAE.AAG",
     "thesaurus_term": "Holzverarbeitung",
-    "thesaurus_path": null,
+    "thesaurus_path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Forstwirtschaft",
+      "Holzverarbeitung"
+    ],
     "top_id": "AUT.AAW.AAE",
     "medium": "Metall, geschmiedet",
     "dimensions": "H x B x T: 18 x 4 x 8,5 cm",
@@ -1654,7 +1670,10 @@
     "object_name": "Holzform Herrenhut",
     "thesaurus_id": "AUT.AAW.AAH",
     "thesaurus_term": "Handwerk/Industrie/Handel",
-    "thesaurus_path": null,
+    "thesaurus_path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Handwerk/Industrie/Handel"
+    ],
     "top_id": "AUT.AAW.AAH",
     "medium": null,
     "dimensions": null,
@@ -2308,7 +2327,11 @@
     "object_name": "Brezelständer",
     "thesaurus_id": "AUT.AAW.AAH.ABA",
     "thesaurus_term": "Ladeneinrichtung",
-    "thesaurus_path": null,
+    "thesaurus_path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Handwerk/Industrie/Handel",
+      "Ladeneinrichtung"
+    ],
     "top_id": "AUT.AAW.AAH",
     "medium": "Holz, gedrechselt, verschraubt, lackiert",
     "dimensions": "H x B x Dm: 31,5 x 17 x 12,5 cm",
@@ -4993,7 +5016,11 @@
     "object_name": "Zeichnung",
     "thesaurus_id": "AUT.AAW.AAS.AAB",
     "thesaurus_term": "Zeichnung/Grafik",
-    "thesaurus_path": null,
+    "thesaurus_path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Bildwerke",
+      "Zeichnung/Grafik"
+    ],
     "top_id": "AUT.AAW.AAS",
     "medium": "Bleistiftzeichnung, koloriert, Papier_x000D_",
     "dimensions": "H x B: 26,5 × 36 cm",

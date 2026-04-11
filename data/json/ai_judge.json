@@ -1,0 +1,149 @@
+[
+  {
+    "object_id": 1168634,
+    "judge_model": "gemini-3.1-pro-preview",
+    "judge_prompt_version": "v1.0",
+    "judged_at": "2026-04-11T17:03:47+00:00",
+    "tokens_input": 2142,
+    "tokens_output": 237,
+    "latency_ms": 11905,
+    "verdict": "both_correct",
+    "judge_top_id": "AUT.AAW.AAP",
+    "is_collection_quirk": false,
+    "description_quality_blind": 5,
+    "description_quality_enriched": 5,
+    "prompt_improvement_hints": [
+      "Striktere Bindung an das vorgegebene Vokabular erzwingen, da die KI dazu neigt, spezifischere Leaf-Terms (wie 'Heiligenstatuen') zu erfinden, wenn ihr die vorhandenen (wie 'Devotionalien') zu ungenau erscheinen."
+    ],
+    "reasoning": "Beide Modelle ordnen die Figur völlig korrekt dem Top-Bereich 'Religion und Glaube' zu. Die Beschreibungen sind in beiden Fällen präzise, detailliert und erfassen den Erhaltungszustand (fehlende Arme, Farbabplatzungen) sehr gut. Die Abweichung beim Leaf-Term ist inhaltlich plausibel, auch wenn sie vom Original abweicht."
+  },
+  {
+    "object_id": 1169812,
+    "judge_model": "gemini-3.1-pro-preview",
+    "judge_prompt_version": "v1.0",
+    "judged_at": "2026-04-11T17:02:57+00:00",
+    "tokens_input": 2090,
+    "tokens_output": 270,
+    "latency_ms": 16156,
+    "verdict": "tie_plausible",
+    "judge_top_id": "AUT.AAW.AAD",
+    "is_collection_quirk": true,
+    "description_quality_blind": 4,
+    "description_quality_enriched": 5,
+    "prompt_improvement_hints": [
+      "Enriched-Prompt muss stärker erzwingen, dass die Original-Klassifikation (Top-Bereich) übernommen wird, anstatt bei der visuellen Ersteinordnung zu bleiben.",
+      "Kontext-Trigger für 'Trog': Kann sowohl Hauswirtschaft als auch Landwirtschaft (Fütterung) sein, Metadaten müssen hier den Ausschlag geben."
+    ],
+    "reasoning": "Ein Trog dieser Größe kann visuell plausibel sowohl in der Hauswirtschaft als auch in der Landwirtschaft (Fütterung) verortet werden. Die blinde KI entscheidet sich nachvollziehbar für Hauswirtschaft. Die Enriched-KI ignoriert jedoch die Original-Metadaten zur Klassifikation völlig und bleibt bei Hauswirtschaft, was ein Fehler in der Prompt-Befolgung ist. Die Beschreibungen beider KIs sind exzellent und detaillierter als das Original."
+  },
+  {
+    "object_id": 1171669,
+    "judge_model": "gemini-3.1-pro-preview",
+    "judge_prompt_version": "v1.0",
+    "judged_at": "2026-04-11T17:18:46+00:00",
+    "tokens_input": 2162,
+    "tokens_output": 280,
+    "latency_ms": 12155,
+    "verdict": "enriched_better",
+    "judge_top_id": "AUT.AAW.AAA",
+    "is_collection_quirk": false,
+    "description_quality_blind": 4,
+    "description_quality_enriched": 5,
+    "prompt_improvement_hints": [
+      "Blind-Prompt: Bei massiven, polierten Steinobjekten stärker architektonische Zierelemente (Fassaden, Tore) als Alternative zu Inneneinrichtung (Öfen) in Betracht ziehen.",
+      "Enriched-Prompt: Wenn das Original den Leaf-Term 'Fassaden' vorgibt, sollte die KI diesen nicht ohne zwingenden visuellen Grund auf 'Tür- und Torbestandteile' abändern, auch wenn beides plausibel ist."
+    ],
+    "reasoning": "Die Blind-KI interpretiert das Objekt visuell nachvollziehbar, aber inhaltlich falsch als Kachelofenteil. Die Enriched-KI nutzt die Metadaten korrekt, um das Objekt in die Architektur einzuordnen, und liefert eine hervorragende, präzise Bildbeschreibung. Die leichte Abweichung beim Leaf-Term (Torbestandteil statt Fassade) ist bei einem isolierten Aufsatz absolut plausibel."
+  },
+  {
+    "object_id": 1173235,
+    "judge_model": "gemini-3.1-pro-preview",
+    "judge_prompt_version": "v1.0",
+    "judged_at": "2026-04-11T17:03:18+00:00",
+    "tokens_input": 2113,
+    "tokens_output": 226,
+    "latency_ms": 7296,
+    "verdict": "both_correct",
+    "judge_top_id": "AUT.AAW.AAK",
+    "is_collection_quirk": false,
+    "description_quality_blind": 5,
+    "description_quality_enriched": 5,
+    "prompt_improvement_hints": [
+      "Das Enriched-Modell sollte darauf hingewiesen werden, dass in den Metadaten beschriebene innere Merkmale (wie hier die Lederfransen) auf Außenaufnahmen naturgemäß nicht sichtbar sind und dies kein Widerspruch ist."
+    ],
+    "reasoning": "Beide Modelle haben das Objekt anhand des Einwurfschlitzes korrekt als Spardose erkannt und dem richtigen Bereich zugeordnet. Die Blind-Beschreibung ist sehr präzise. Das Enriched-Modell liefert ebenfalls eine gute Beschreibung, zweifelt aber fälschlicherweise das Material Leder an, da es übersieht, dass die Originalbeschreibung die Lederfransen im Inneren verortet."
+  },
+  {
+    "object_id": 1173675,
+    "judge_model": "gemini-3.1-pro-preview",
+    "judge_prompt_version": "v1.0",
+    "judged_at": "2026-04-11T17:04:00+00:00",
+    "tokens_input": 2065,
+    "tokens_output": 255,
+    "latency_ms": 12593,
+    "verdict": "tie_plausible",
+    "judge_top_id": "AUT.AAW.AAQ",
+    "is_collection_quirk": false,
+    "description_quality_blind": 5,
+    "description_quality_enriched": 5,
+    "prompt_improvement_hints": [
+      "Die KI sollte angewiesen werden, explizit auf Widersprüche zwischen Bild (Metallschnalle) und Metadaten (lederbezogene Schnalle) einzugehen.",
+      "Die Unterscheidung zwischen 'Zubehör' und 'Accessoires' im Vokabular scheint unscharf zu sein und sollte im Prompt geklärt werden."
+    ],
+    "reasoning": "Beide KIs erkennen das Objekt korrekt als Gürtel und ordnen es dem Bereich Kleidung zu. Die Beschreibungen sind detailliert und treffend, wobei die Blind-KI die Motive bereits sehr gut erkennt. Die Enriched-KI spezifiziert die Schnalle als 'zweizinkige Metallschnalle', was visuell korrekt erscheint, aber die Originalbeschreibung ('lederbezogen') unkommentiert übergeht."
+  },
+  {
+    "object_id": 1174037,
+    "judge_model": "gemini-3.1-pro-preview",
+    "judge_prompt_version": "v1.0",
+    "judged_at": "2026-04-11T17:03:29+00:00",
+    "tokens_input": 2157,
+    "tokens_output": 262,
+    "latency_ms": 11046,
+    "verdict": "blind_better",
+    "judge_top_id": "AUT.AAW.AAM",
+    "is_collection_quirk": true,
+    "description_quality_blind": 3,
+    "description_quality_enriched": 2,
+    "prompt_improvement_hints": [
+      "Enriched-Prompt muss betonen, dass die Original-Kategorisierung (hier Spielzeug) Vorrang vor wörtlichen Assoziationen (Spritze -> Medizin) hat.",
+      "Warnung vor Homonymen oder mehrdeutigen Begriffen einbauen (Spritze als Spielzeug vs. medizinisches Instrument)."
+    ],
+    "reasoning": "Blind beschreibt das Objekt rein optisch korrekt als Holzstab und ordnet es mangels Kontext vorsichtig als unbestimmtes Werkzeug ein. Enriched erhält die Metadaten (Spielzeug, Hollerschieße), lässt sich aber vom Begriff 'Spritze' in die Irre führen und ordnet es fälschlicherweise der Medizin zu. Daher ist die blinde Antwort in ihrer Zurückhaltung besser als die grob fehlgeleitete Enriched-Antwort."
+  },
+  {
+    "object_id": 1179144,
+    "judge_model": "gemini-3.1-pro-preview",
+    "judge_prompt_version": "v1.0",
+    "judged_at": "2026-04-11T17:03:35+00:00",
+    "tokens_input": 2186,
+    "tokens_output": 145,
+    "latency_ms": 5953,
+    "verdict": "both_correct",
+    "judge_top_id": "AUT.AAW.AAN",
+    "is_collection_quirk": false,
+    "description_quality_blind": 5,
+    "description_quality_enriched": 5,
+    "prompt_improvement_hints": [],
+    "reasoning": "Beide Modelle erkennen das Objekt korrekt als Saiteninstrument im Bereich Freizeit/Unterhaltung. Die Beschreibungen sind präzise und zutreffend. Das Enriched-Modell erkennt zudem clever den Tippfehler in den Metadaten ('Dragt' statt 'Draht')."
+  },
+  {
+    "object_id": 1183673,
+    "judge_model": "gemini-3.1-pro-preview",
+    "judge_prompt_version": "v1.0",
+    "judged_at": "2026-04-11T17:03:11+00:00",
+    "tokens_input": 2091,
+    "tokens_output": 327,
+    "latency_ms": 13688,
+    "verdict": "tie_plausible",
+    "judge_top_id": "AUT.AAW.AAG",
+    "is_collection_quirk": true,
+    "description_quality_blind": 5,
+    "description_quality_enriched": 4,
+    "prompt_improvement_hints": [
+      "Bei mehrdeutigen Begriffen wie 'Totschläger' in den Metadaten sollte die KI prüfen, ob es sich um ein Werkzeug aus einem spezifischen Lebensbereich (z.B. Fischerei als Fischtöter) statt um eine Waffe handelt.",
+      "Die KI sollte bei einfachen, industriell wirkenden Objekten (wie einem Rohr mit Gewinde) vorsichtig sein, diese unhinterfragt als Waffe zu klassifizieren, nur weil das Inventarbuch einen umgangssprachlichen Begriff verwendet."
+    ],
+    "reasoning": "Visuell handelt es sich lediglich um ein Eisenrohr mit Gewinde, weshalb die blinde KI es völlig plausibel als technisches Bauteil einordnet. Die angereicherte KI übernimmt den Begriff 'Totschläger', interpretiert diesen aber naheliegend als Waffe, da ihr der spezifische Kontext 'Fischerei' (Fischtöter) fehlt. Die Zuordnung zur Fischerei ist eine reine Sammlungskonvention aus dem Erwerbungskontext, weshalb beide KI-Antworten auf ihre Weise logisch und nachvollziehbar sind."
+  }
+]
