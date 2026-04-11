@@ -12,7 +12,7 @@ Das Projekt zeigt drei aufeinander aufbauende KI-Workflows. Jeder beantwortet ei
 
 C ist **keine** dritte Klassifikation, sondern eine **Meta-Schicht** über A und B. C läuft mit einem stärkeren Modell (`gemini-3.1-pro-preview`) gegen die Outputs des schwächeren Modells (`gemini-3.1-flash-lite-preview`). Judge läuft bewusst nur auf einer handverlesenen 8er-Stichprobe (`data/json/judge_selection.json`) — siehe ADR-12 und FR-11 in `requirements.md`.
 
-## Workflow A: Blind
+## Workflow A: Vision-LLM, nur Foto
 
 **Eingabe.** Bild als JPEG, max. 1024 px lange Kante. Keine weiteren Informationen.
 
@@ -33,7 +33,7 @@ C ist **keine** dritte Klassifikation, sondern eine **Meta-Schicht** über A und
 
 **Wofür es nicht taugt.** Sammlungsspezifische Konventionen, Provenienz, Datierung jenseits stilistischer Marker, kontextuelle Klassifikationen.
 
-## Workflow B: Enriched
+## Workflow B: Vision-LLM, Foto + Metadaten
 
 **Eingabe.** Bild **plus** vorhandene Original-Metadaten: `object_name`, `medium`, `dimensions`, `dated`. Diese kommen aus dem Sammlungsmanagementsystem (Excel-Quelle).
 
@@ -49,7 +49,7 @@ C ist **keine** dritte Klassifikation, sondern eine **Meta-Schicht** über A und
 
 **Wofür es nicht taugt.** Wenn die Originaldaten fehlerhaft oder verführerisch sind, zieht der Kontext die KI in die Irre.
 
-## Workflow C: Judge
+## Workflow C: LLM-Judge (Meta-Ebene)
 
 **Eingabe.** Bild + Original-Metadaten + Original-Beschreibung + die JSON-Antworten von Workflow A und B.
 

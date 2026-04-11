@@ -7,9 +7,9 @@ Wissensbasis von *Objekt-Bestimmung Workshop 2026*. Workshop am 20.04.2026 in Sa
 Eine zweiteilige Architektur:
 
 1. **Offline-Pipeline** (Python, in `scripts/`) berechnet alle KI-Antworten einmalig vor und legt JSONs unter `data/json/` ab.
-2. **Static Site** (Vanilla HTML/CSS/JS, in Repo-Root) liest die JSONs und stellt sie als Browse/Filter-/Vergleichs-Viewer bereit. Original, KI blind, KI erweitert und Judge-Urteil stehen pro Objekt nebeneinander. Kein Editor, kein Export — reine Lese-/Vergleichs-Funktion. Läuft offline und auf GitHub Pages, kein Backend.
+2. **Static Site** (Vanilla HTML/CSS/JS, in Repo-Root) liest die JSONs und stellt sie als Browse-/Filter-/Vergleichs-Viewer bereit. Pro Objekt stehen nebeneinander: Original (Sammlungsdaten), Vision-LLM mit nur dem Foto, Vision-LLM mit Foto plus Metadaten und ein LLM-Judge-Urteil. Kein Editor, kein Export — reine Lese-/Vergleichs-Funktion. Läuft offline und auf GitHub Pages, kein Backend.
 
-Die KI läuft in **drei Workflows**: Blind (nur Foto) → Enriched (Foto + Metadaten) → Judge (stärkere KI bewertet die schwächere, nur für handverlesene 8er-Stichprobe). Details in [`workflows.md`](workflows.md).
+Das Modell läuft in **drei Workflows**: *Nur Foto* (Vision-LLM mit Bild) → *Foto + Metadaten* (Vision-LLM mit Bild plus Objektname, Material, Maße, Datierung) → *LLM-Judge* (ein stärkeres Modell bewertet die beiden anderen, nur für eine handverlesene 8er-Stichprobe). Details in [`workflows.md`](workflows.md).
 
 ## Status
 

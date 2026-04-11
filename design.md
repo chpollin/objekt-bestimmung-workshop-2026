@@ -60,7 +60,7 @@ Beim Routing toggled `app.js` das `hidden`-Attribut der beiden View-Container. E
 ├───────────────┬──────────────────────────────────────────────────────┤
 │ FILTER        │ 245 Objekte · 20 Bereiche · 225 Kategorien           │
 │               ├──────────────────────────────────────────────────────┤
-│ Suche         │ ▶ Akkuranz-Dashboard (collapsible)                   │
+│ Suche         │ ▼ Modell-Auswertung (default open, collapsible)      │
 │ [_________]   │                                                      │
 │               │ ┌───┐ ┌───┐ ┌───┐ ┌───┐ ┌───┐ ┌───┐                  │
 │ KI vs Orig    │ │🟢 │ │🔴 │ │🟢 │ │⚪ │ │🟢 │ │🟢 │                  │
@@ -85,23 +85,26 @@ Der Status-Filter hat drei Zustände (FR-5): *Übereinstimmung* (🟢 grün — 
 Drei Panels nebeneinander in einem CSS-Grid. Jedes Panel liest aus `state.filteredObjects`, Zahlen bleiben im Kontext des aktuellen Filters.
 
 ```
-┌─────────────────────────────┬─────────────────────────────┬─────────────────────────────┐
-│ KI-Akkuranz                 │ Häufigste Verwechslungen    │ Judge (8 bewertet)          │
-│ 50 %  Bereich blind  123/245│ Handwerk → Hauswirt. · 14×  │ 3 / 8                       │
-│ 25 %  Leaf-Term blind 62/245│ Religion → Bildwerke · 9×   │ Original = Sammlungs-Quirk  │
-│ 61 %  Bereich enrich 150/245│ Werkzeug → …                │ (Erklärtext)                │
-│ 35 %  Leaf-Term enr. 85/245 │ …                           │ 4.5  Quality blind (Ø 1–5)  │
-│                             │   [klickbar → Filter]       │ 4.5  Quality enriched       │
-│                             │                             │ • both_correct · 3×         │
-│                             │                             │ • tie_plausible · 3×        │
-│                             │                             │ • enriched_better · 1×      │
-│                             │                             │ • blind_better · 1×         │
-└─────────────────────────────┴─────────────────────────────┴─────────────────────────────┘
+┌──────────────────────────────────┬────────────────────────────────┬────────────────────────────────────┐
+│ Treffergenauigkeit               │ Häufigste Verwechslungen       │ LLM-Judge (8 bewertet)             │
+│ 50 %  Bereich · Nur Foto 123/245 │ Landwirt. → Handwerk · 7×      │ 3 / 8  Original = Sammlungs-Quirk  │
+│ 25 %  Leaf   · Nur Foto  62/245  │ Architektur → Wohnen · 6×      │ (Erklärtext in --text-mute)        │
+│ 61 %  Bereich · F+M     150/245  │ Bildwerke → Religion · 4×      │ 4.5  Beschreibungs-Qualität · F    │
+│ 35 %  Leaf   · F+M       85/245  │ …                              │ 4.5  Beschreibungs-Qualität · F+M  │
+│                                  │   [klickbar → Filter]          │ • Beide plausibel · 3×             │
+│                                  │                                │ • Beide korrekt · 3×               │
+│                                  │                                │ • Mit Metadaten besser · 1×        │
+│                                  │                                │ • Nur mit Foto besser · 1×         │
+└──────────────────────────────────┴────────────────────────────────┴────────────────────────────────────┘
 ```
 
-Die Konfusions-Zeilen sind klickbar: ein Klick pinnt einen Filter `confusion = {fromTop, toTop}`, die Galerie zeigt daraufhin nur die Objekte, bei denen das Original im einen und KI-blind im anderen Bereich klassifiziert. Ein „× zurücksetzen"-Link im Panel räumt den Filter auf. Das ist die Drill-Down-Interaktion für den Vortrag: „welche Werkzeuge landen bei der KI in Handwerk, obwohl die Sammlung sie woanders einordnet?"
+*F = Nur Foto, F+M = Foto + Metadaten.*
 
-Im Judge-Panel ist der Quirk-Wert (`3 / 8`) als Hero-Metric in `--warn` (Orange) gesetzt, mit explizitem Erklärtext: *„In diesen Fällen ist nicht die KI falsch, sondern die Sammlungs-Zuordnung folgt einer internen Konvention."* Das ist die didaktische Kernbotschaft.
+Die Konfusions-Zeilen sind klickbar: ein Klick pinnt einen Filter `confusion = {fromTop, toTop}`, die Galerie zeigt daraufhin nur die Objekte, bei denen das Original im einen und das *Nur-Foto*-Modell im anderen Bereich klassifiziert. Ein „× zurücksetzen"-Link im Panel räumt den Filter auf. Das ist die Drill-Down-Interaktion für den Vortrag: „welche Werkzeuge landen beim Modell in Handwerk, obwohl die Sammlung sie woanders einordnet?"
+
+Das „Volkskunde – "-Präfix wird in der Konfusions-Liste strip-gerendert (siehe `topLabel()` in `app.js`), weil beide Seiten des Pfeils denselben Präfix tragen und er als Redundanz stört.
+
+Im Judge-Panel ist der Quirk-Wert (`3 / 8`) als Hero-Metric in `--warn` (Orange) gesetzt, mit explizitem Erklärtext: *„In diesen Fällen ist nicht das Modell falsch, sondern die Sammlungs-Zuordnung folgt einer internen Konvention."* Das ist die didaktische Kernbotschaft. Die Verdict-Labels (`both_correct`, `tie_plausible` etc.) sind rohe JSON-Schlüssel und werden über das `VERDICT_LABEL`-Mapping auf deutsche Anzeige-Strings gebracht.
 
 ## Layout — Detail-Seite (`#/object/:id`)
 
@@ -122,20 +125,27 @@ Kein Drawer, keine Overlay-Slide-Animation — eine echte Unterseite, die die Ga
 │       sticky auf scroll      │ Inventar-Nr.: VK-20440                │
 │                              │ [Onlinesammlung öffnen ↗]             │
 │                              │                                       │
-│                              │ ◉ KI BLIND  [model: gemini-3.1-flash] │
+│                              │ ◉ VISION-LLM · NUR FOTO               │
+│                              │   gemini-3.1-flash-lite-preview       │
+│                              │   /„Das Modell sieht nur das Foto …"/ │
 │                              │ Bereich: Accessoires ✓                │
 │                              │ Term: Gürtel ✗                        │
 │                              │ Beschreibung: …                       │
 │                              │ Material / Technik / Datierung        │
 │                              │ Confidence: …                         │
+│                              │ Bereichs-Begründung: …                │
 │                              │                                       │
-│                              │ ◉ KI ERWEITERT                        │
+│                              │ ◉ VISION-LLM · FOTO + METADATEN       │
+│                              │   /„Das Modell sieht das Foto plus …"/│
 │                              │ (gleiche Felder)                      │
 │                              │                                       │
-│                              │ ◉ JUDGE     [gemini-3.1-pro]          │
-│                              │ Verdict: tie_plausible                │
-│                              │ judge_top_id: … ✓                     │
-│                              │ Quality blind / enriched              │
+│                              │ ◉ LLM-JUDGE                           │
+│                              │   gemini-3.1-pro-preview              │
+│                              │   /„Ein stärkeres Modell bewertet …"/ │
+│                              │ Urteil: Beide plausibel               │
+│                              │ Judge wählt: … ✓                      │
+│                              │ Beschreibungs-Qualität: Nur Foto 5 ·  │
+│                              │   Foto + Metadaten 5                  │
 │                              │ Begründung: …                         │
 │                              │ Hinweise an den Prompt: …             │
 └──────────────────────────────┴───────────────────────────────────────┘
@@ -143,9 +153,9 @@ Kein Drawer, keine Overlay-Slide-Animation — eine echte Unterseite, die die Ga
 
 **Header:** Back-Link zur Galerie (erhält Filter-State), Titel mit Objektname + Untertitel (Inventarnummer + Bereich-Name), Prev/Next-Buttons navigieren durch die **gefilterten** Nachbarn — nicht durch die gesamten 245. Disable am Ende/Anfang.
 
-**Body:** Zweispaltiges CSS-Grid. Links das große Foto, rechts vier `.variant-card` stapeln sich: Original (Sammlungsdaten), KI blind, KI erweitert, Judge. Der Judge-Slot bleibt bei Objekten ohne Judge-Urteil leer und zeigt eine `variant-card__empty`-Zeile.
+**Body:** Zweispaltiges CSS-Grid. Links das große Foto, rechts vier `.variant-card` stapeln sich: Original (Sammlungsdaten), Vision-LLM mit nur dem Foto, Vision-LLM mit Foto + Metadaten, LLM-Judge. Jede Karte hat unter dem Badge eine `.variant-card__subtitle`-Zeile (kursiv, muted), die in einem Satz erklärt, was *dieses* Modell gesehen hat — das ist die didaktische Kernbotschaft pro Karte. Der Judge-Slot bleibt bei Objekten ohne Judge-Urteil leer und zeigt eine `variant-card__empty`-Zeile.
 
-**Judge-Quirk-Banner:** Bei Objekten mit `ai_judge.is_collection_quirk === true` erscheint auf der Original-Karte ein gelber Banner direkt unter dem Badge: *„Judge: Sammlungs-Quirk — Zuordnung folgt sammlungsinterner Konvention"*. Das ist nicht Cosmetic, sondern der Moment, in dem die Akkuranz-Prozente vom Dashboard eine Erklärung bekommen.
+**Judge-Quirk-Banner:** Bei Objekten mit `ai_judge.is_collection_quirk === true` erscheint auf der Original-Karte ein gelber Banner direkt unter dem Badge: *„Judge: Sammlungs-Quirk — Zuordnung folgt sammlungsinterner Konvention"*. Das ist nicht Cosmetic, sondern der Moment, in dem die Treffergenauigkeits-Prozente vom Dashboard eine Erklärung bekommen.
 
 **Mobile-Fallback:** Unter 900 px wird das Grid einspaltig (Foto oben, Varianten darunter), das Foto ist `position: static` und `max-height: 50vh`. Mobile ist kein Primärziel (NFR fehlt), aber die Seite bricht nicht.
 
@@ -170,6 +180,7 @@ Kein Drawer, keine Overlay-Slide-Animation — eine echte Unterseite, die die Ga
 - `.variant-card` — eine Variante
 - `.variant-card--original` / `--ai-blind` / `--ai-enriched` / `--ai-judge` — Farbvariante pro Quelle
 - `.variant-card__header`, `.variant-card__badge`, `.variant-card__model` — Karten-Header
+- `.variant-card__subtitle` — kursive Erklärzeile direkt unter dem Header: *„Das Modell sieht nur das Foto, keine Metadaten."* etc.
 - `.variant-card__field`, `.variant-card__field-label`, `.variant-card__field-value` — Datenzeile
 - `.variant-card__meta`, `.variant-card__hints`, `.variant-card__empty` — Footer und Spezialzeilen
 - `.variant-card__quirk` — gelber Judge-Quirk-Banner auf der Original-Karte

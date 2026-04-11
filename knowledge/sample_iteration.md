@@ -153,6 +153,8 @@ Lohnt sich eine Iteration 3, die Enriched explizit auf „Metadaten-Klassifikati
 
 ## Vollauf auf 245 Objekten (Prompt v2.0)
 
+> **Nomenklatur-Hinweis für den Rest dieser Datei:** *Blind* = Vision-LLM sieht nur das Foto. *Enriched* = Vision-LLM sieht das Foto plus die bestehenden Sammlungs-Metadaten (Objektname, Material, Maße, Datierung). Die Kurzformen werden aus Lesbarkeitsgründen beibehalten — sie sind in den Iterations-Einträgen oben so etabliert, und die UI-Labels benutzen die ausgeschriebenen Varianten.
+
 **Datum:** 2026-04-11
 **Modell:** `gemini-3.1-flash-lite-preview`
 **Prompts:** `system_blind.txt` v2.0, `system_enriched.txt` v2.0 (unverändert gegenüber Iteration 2)
@@ -176,6 +178,6 @@ Lohnt sich eine Iteration 3, die Enriched explizit auf „Metadaten-Klassifikati
 
 ### Status
 
-- Vollauf **abgeschlossen**, finale KI-Outputs liegen in `data/json/ai_blind.json` und `data/json/ai_enriched.json`.
+- Vollauf **abgeschlossen**, finale Modell-Outputs liegen in `data/json/ai_blind.json` und `data/json/ai_enriched.json`.
 - Judge-Daten unverändert: 8 handverlesene Objekte aus der Sample-Phase (siehe Judge-Run-Sektion oben).
 - Iteration 3 **nicht umgesetzt** (siehe Entscheidung oben).

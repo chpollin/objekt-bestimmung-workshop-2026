@@ -18,15 +18,15 @@ Ein zweiteiliges System aus einer Python-Offline-Pipeline und einem browserbasie
 
 Drei parallele Workflows (Details in [`knowledge/workflows.md`](knowledge/workflows.md)):
 
-1. **Blind** — das Modell sieht nur das Foto.
-2. **Enriched** — das Modell sieht Foto und bestehende Metadaten (Objektname, Material, Maße, Datierung).
-3. **Judge** — ein stärkeres Modell (Gemini 3.1 Pro) bewertet eine handverlesene 8er-Stichprobe der Ergebnisse und markiert Quirks.
+1. **Nur Foto** (Workflow A) — das Vision-LLM sieht nur das Foto.
+2. **Foto + Metadaten** (Workflow B) — das Vision-LLM sieht das Foto plus die bestehenden Sammlungs-Metadaten (Objektname, Material, Maße, Datierung).
+3. **LLM-Judge** (Workflow C) — ein stärkeres Modell (Gemini 3.1 Pro) bewertet eine handverlesene 8er-Stichprobe der Ergebnisse und markiert sammlungsinterne Konventionen („Quirks").
 
 Die Architektur ist bewusst pre-computed statt Live-API: Der Bildserver der Landessammlungen NÖ sendet keine CORS-Header, und ein fehlschlagender Live-Call am Workshop-Tag wäre katastrophal. Details zur Begründung stehen in [`knowledge/requirements.md`](knowledge/requirements.md) unter ADR-1.
 
 ## Frontend öffnen
 
-**GitHub Pages:** *(URL wird hier eingetragen, sobald Pages aktiviert ist)*
+**GitHub Pages:** <https://chpollin.github.io/objekt-bestimmung-workshop-2026/>
 
 **Lokal:**
 

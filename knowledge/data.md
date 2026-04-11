@@ -89,9 +89,9 @@ Auf jedem Objekt-JSON ist ein `license`-Feld. Stichproben zeigen **CC BY-NC 4.0*
 - **Scraping der Originaltexte:** `data/json/originals.json` enthält 245 Einträge (Label/Value plus `description`, `classification`, `license`). Details zum Lauf in `scripts/scrape_report.txt`.
 - **Top-Bereich-Namen:** 20 menschenlesbare Bezeichner, aus der Onlinesammlung geholt und unter `scripts/cache/top_names.json` gecacht.
 - **Few-Shot-Beispiele:** 5 echte Katalogtexte in `scripts/prompts/few_shot_examples.json`, ausgewählt von `03_scrape_originals.py` aus den gescrapten Beschreibungen.
-- **Vollauf Blind** (`data/json/ai_blind.json`, 245 Records, Prompt v2.0, `gemini-3.1-flash-lite-preview`): Top-Bereich 123/245 = **50 %**, Leaf-Term 62/245 = **25 %**.
-- **Vollauf Enriched** (`data/json/ai_enriched.json`, 245 Records, Prompt v2.0, gleiches Modell): Top-Bereich 150/245 = **61 %**, Leaf-Term 85/245 = **35 %**.
-- **Judge** (`data/json/ai_judge.json`, 8 handverlesene Objekte, `gemini-3.1-pro-preview`): 8/8 Judge-Top-Wahlen stimmen mit dem Original überein, 3/8 Objekte als `is_collection_quirk = true` markiert (Trog `1169812`, Spritze `1174037`, Totschläger `1183673`), Quality-Mittel Blind 4.5 / Enriched 4.5.
+- **Vollauf *nur Foto*** — Workflow A (`data/json/ai_blind.json`, 245 Records, Prompt v2.0, `gemini-3.1-flash-lite-preview`): Top-Bereich 123/245 = **50 %**, Leaf-Term 62/245 = **25 %**.
+- **Vollauf *Foto + Metadaten*** — Workflow B (`data/json/ai_enriched.json`, 245 Records, Prompt v2.0, gleiches Modell): Top-Bereich 150/245 = **61 %**, Leaf-Term 85/245 = **35 %**.
+- **LLM-Judge** — Workflow C (`data/json/ai_judge.json`, 8 handverlesene Objekte, `gemini-3.1-pro-preview`): 8/8 Judge-Top-Wahlen stimmen mit dem Original überein, 3/8 Objekte als `is_collection_quirk = true` markiert (Trog `1169812`, Spritze `1174037`, Totschläger `1183673`), Beschreibungs-Qualität im Mittel 4.5 (nur Foto) bzw. 4.5 (Foto + Metadaten).
 
 Detaillierte Iterations-Chronik, inkl. Prompt v1 → v2 und Sample-Runs, in [`sample_iteration.md`](sample_iteration.md).
 
