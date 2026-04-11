@@ -151,7 +151,7 @@ function statusFor(objectId) {
 const STATUS_LABEL = {
   match: "🟢 Übereinstimmung",
   conflict: "🔴 Konflikt",
-  noai: "⚪ keine KI",
+  noai: "⚪ kein Modell-Urteil",
 };
 
 // ============================================================
@@ -615,15 +615,15 @@ function renderDetailBody(obj, original, blind, enriched, judge) {
   const variants = document.createElement("div");
   variants.className = "detail-page__variants";
   variants.appendChild(renderVariantOriginal(obj, original));
-  variants.appendChild(renderVariantAi(obj, blind, "ai-blind", "KI BLIND"));
-  variants.appendChild(renderVariantAi(obj, enriched, "ai-enriched", "KI ERWEITERT"));
+  variants.appendChild(renderVariantAi(obj, blind, "ai-blind", "VISION-LLM", "Das Modell sieht nur das Foto, keine Metadaten."));
+  variants.appendChild(renderVariantAi(obj, enriched, "ai-enriched", "VISION-LLM", "Das Modell sieht das Foto plus Objektname, Material, Maße und Datierung aus der Sammlung."));
   variants.appendChild(renderVariantJudge(obj, judge));
   body.appendChild(variants);
 
   return body;
 }
 
-function variantCard(badgeText, klass, modelText) {
+function variantCard(badgeText, klass, modelText, subtitleText = "") {
   const card = document.createElement("section");
   card.className = `variant-card variant-card--${klass}`;
   const header = document.createElement("div");
@@ -639,6 +639,16 @@ function variantCard(badgeText, klass, modelText) {
     header.appendChild(model);
   }
   card.appendChild(header);
+
+  // Optional subtitle line explaining what the model saw — the
+  // didactic difference between blind/enriched/judge is not obvious
+  // from the badge alone, so each card spells it out.
+  if (subtitleText) {
+    const sub = document.createElement("div");
+    sub.className = "variant-card__subtitle";
+    sub.textContent = subtitleText;
+    card.appendChild(sub);
+  }
   return card;
 }
 
@@ -658,12 +668,17 @@ function variantField(card, label, value) {
 }
 
 function renderVariantOriginal(obj, original) {
-  const card = variantCard("ORIGINAL", "original", "Sammlungsdaten");
+  const card = variantCard(
+    "ORIGINAL",
+    "original",
+    "Sammlungsdaten",
+    "Ground Truth aus dem Sammlungsmanagementsystem der Landessammlungen NÖ."
+  );
 
   // If the judge flagged this object's sammlungs-zuordnung as a quirk,
   // surface that on the Original card — it is the didactic point of the
-  // workshop: „falsche" KI-Antworten sind oft korrekte, und das Original
-  // selbst ist die Kuriosität.
+  // workshop: vermeintlich "falsche" Modell-Antworten sind oft korrekt,
+  // und das Original selbst ist die Kuriosität.
   const judge = state.aiJudgeById.get(obj.object_id);
   if (judge && judge.is_collection_quirk) {
     const note = document.createElement("div");
@@ -694,16 +709,17 @@ function renderVariantOriginal(obj, original) {
   return card;
 }
 
-function renderVariantAi(obj, record, klass, badgeText) {
+function renderVariantAi(obj, record, klass, badgeText, subtitleText) {
   const card = variantCard(
     badgeText,
     klass,
-    record ? record.model || "" : ""
+    record ? record.model || "" : "",
+    subtitleText
   );
   if (!record) {
     const empty = document.createElement("div");
     empty.className = "variant-card__empty";
-    empty.textContent = "Noch keine KI-Antwort.";
+    empty.textContent = "Noch keine Modell-Antwort.";
     card.appendChild(empty);
     return card;
   }
@@ -745,9 +761,10 @@ function renderVariantAi(obj, record, klass, badgeText) {
 
 function renderVariantJudge(obj, judge) {
   const card = variantCard(
-    "JUDGE",
+    "LLM-JUDGE",
     "ai-judge",
-    judge ? judge.judge_model || "" : ""
+    judge ? judge.judge_model || "" : "",
+    "Ein stärkeres Modell (Gemini 3.1 Pro) bewertet die beiden Vision-LLM-Antworten."
   );
   if (!judge) {
     const empty = document.createElement("div");
@@ -924,22 +941,22 @@ function renderDashboardAccuracyPanel(m) {
   const panel = document.createElement("div");
   panel.className = "dashboard__panel";
   panel.innerHTML = `
-    <h3>KI-Akkuranz (im aktuellen Filter)</h3>
+    <h3>Treffergenauigkeit (im aktuellen Filter)</h3>
     <div class="dashboard__metric">
       <b>${pct(m.blindTop, m.blindCount)}</b>
-      <span>Bereich blind (${m.blindTop}/${m.blindCount})</span>
+      <span>Bereich · Nur Foto (${m.blindTop}/${m.blindCount})</span>
     </div>
     <div class="dashboard__metric">
       <b>${pct(m.blindLeaf, m.blindCount)}</b>
-      <span>Leaf-Term blind (${m.blindLeaf}/${m.blindCount})</span>
+      <span>Leaf-Term · Nur Foto (${m.blindLeaf}/${m.blindCount})</span>
     </div>
     <div class="dashboard__metric">
       <b>${pct(m.enrichedTop, m.enrichedCount)}</b>
-      <span>Bereich erweitert (${m.enrichedTop}/${m.enrichedCount})</span>
+      <span>Bereich · Foto + Metadaten (${m.enrichedTop}/${m.enrichedCount})</span>
     </div>
     <div class="dashboard__metric">
       <b>${pct(m.enrichedLeaf, m.enrichedCount)}</b>
-      <span>Leaf-Term erweitert (${m.enrichedLeaf}/${m.enrichedCount})</span>
+      <span>Leaf-Term · Foto + Metadaten (${m.enrichedLeaf}/${m.enrichedCount})</span>
     </div>
   `;
   return panel;
@@ -1037,16 +1054,16 @@ function renderDashboardJudgePanel(m) {
       <span>Original = Sammlungs-Quirk</span>
     </div>
     <p class="dashboard__note">
-      In diesen Fällen ist nicht die KI falsch, sondern die
+      In diesen Fällen ist nicht das Modell falsch, sondern die
       Sammlungs-Zuordnung folgt einer internen Konvention.
     </p>
     <div class="dashboard__metric">
       <b>${m.qbMean.toFixed(1)}</b>
-      <span>Quality blind (Ø 1–5)</span>
+      <span>Beschreibungs-Qualität · Nur Foto (Ø 1–5)</span>
     </div>
     <div class="dashboard__metric">
       <b>${m.qeMean.toFixed(1)}</b>
-      <span>Quality erweitert (Ø 1–5)</span>
+      <span>Beschreibungs-Qualität · Foto + Metadaten (Ø 1–5)</span>
     </div>
     <ul class="dashboard__list">${verdictLines}</ul>
   `;

@@ -13,7 +13,7 @@
       <p class="app-header__subtitle">Workshop-Demo · Landessammlungen Niederösterreich · Volkskundliche Sammlung</p>
     </div>
     <nav class="app-header__actions">
-      <a href="knowledge/README.md">Über das Projekt</a>
+      <a href="README.md">Über das Projekt</a>
     </nav>
   </header>
 
@@ -33,7 +33,7 @@
         </div>
 
         <div class="filter-block">
-          <div class="filter-block__label">KI vs. Original</div>
+          <div class="filter-block__label">Modell vs. Original</div>
           <label class="filter-checkbox">
             <input type="checkbox" id="filter-status-match" checked>
             <span class="status-dot status-dot--ok"></span> Übereinstimmung
@@ -44,7 +44,7 @@
           </label>
           <label class="filter-checkbox">
             <input type="checkbox" id="filter-status-noai" checked>
-            <span class="status-dot status-dot--mute"></span> keine KI
+            <span class="status-dot status-dot--mute"></span> kein Modell-Urteil
           </label>
         </div>
 
@@ -64,8 +64,8 @@
         <div class="gallery-section__header">
           <h2 id="gallery-stats">Lade …</h2>
         </div>
-        <details class="dashboard" id="dashboard">
-          <summary class="dashboard__summary">Akkuranz-Dashboard</summary>
+        <details class="dashboard" id="dashboard" open>
+          <summary class="dashboard__summary">Modell-Auswertung · Treffergenauigkeit, Verwechslungen, Judge-Urteil</summary>
           <div class="dashboard__body" id="dashboard-body">
             <!-- befüllt von renderDashboard() -->
           </div>
