@@ -49,6 +49,7 @@ const state = {
     leafId: null,
     query: "",
     status: { match: true, conflict: true, noai: true },
+    confusion: null, // { fromTop, toTop } — set by clicking a dashboard row
   },
   selectedId: null,
 };
@@ -127,18 +128,6 @@ function buildIndex(target, list, key) {
  * Full list of top-area codes present in the current object set, unique,
  * preserving insertion order for stable rendering.
  */
-function uniqueTopIds() {
-  const seen = new Set();
-  const out = [];
-  for (const obj of state.objects) {
-    if (!seen.has(obj.top_id)) {
-      seen.add(obj.top_id);
-      out.push(obj.top_id);
-    }
-  }
-  return out;
-}
-
 // ============================================================
 // 5. STATUS
 // ============================================================
@@ -170,18 +159,38 @@ const STATUS_LABEL = {
 // ============================================================
 
 /**
+ * True if `obj` matches the lowercased free-text query `q`. An empty `q`
+ * matches everything. Search scope = object name, term, medium, dimensions,
+ * dated, plus the scraped original description.
+ */
+function matchesQuery(obj, q) {
+  if (!q) return true;
+  const orig = state.originalsById.get(obj.object_id);
+  const haystack = [
+    obj.object_name,
+    obj.thesaurus_term,
+    obj.medium,
+    obj.dimensions,
+    obj.dated,
+    orig && orig.description,
+  ]
+    .filter(Boolean)
+    .join(" ")
+    .toLowerCase();
+  return haystack.includes(q);
+}
+
+/**
  * Apply the current filter state to state.objects and write the result into
  * state.filteredObjects. This is the single source of truth for "what shows
  * in the gallery". The sidebar and gallery both read from filteredObjects.
  */
 function applyFilters() {
-  const { topId, leafId, query, status } = state.filters;
+  const { topId, leafId, query, status, confusion } = state.filters;
   const q = query.trim().toLowerCase();
 
   state.filteredObjects = state.objects.filter((obj) => {
-    // Status filter
-    const s = statusFor(obj.object_id);
-    if (!status[s]) return false;
+    if (!status[statusFor(obj.object_id)]) return false;
 
     // Thesaurus filter — leaf wins if set, otherwise top
     if (leafId) {
@@ -190,22 +199,15 @@ function applyFilters() {
       if (obj.top_id !== topId) return false;
     }
 
-    // Freitext search over name, term, medium, original description
-    if (q) {
-      const orig = state.originalsById.get(obj.object_id);
-      const haystack = [
-        obj.object_name,
-        obj.thesaurus_term,
-        obj.medium,
-        obj.dimensions,
-        obj.dated,
-        orig && orig.description,
-      ]
-        .filter(Boolean)
-        .join(" ")
-        .toLowerCase();
-      if (!haystack.includes(q)) return false;
+    // Confusion filter — pins objects whose original top is X and whose
+    // blind AI top is Y. Used by the dashboard „Verwechslungen"-list.
+    if (confusion) {
+      if (obj.top_id !== confusion.fromTop) return false;
+      const b = state.aiBlindById.get(obj.object_id);
+      if (!b || b.top_id !== confusion.toTop) return false;
     }
+
+    if (!matchesQuery(obj, q)) return false;
 
     return true;
   });
@@ -216,6 +218,7 @@ function resetFilters() {
   state.filters.leafId = null;
   state.filters.query = "";
   state.filters.status = { match: true, conflict: true, noai: true };
+  state.filters.confusion = null;
 
   const queryInput = document.getElementById("filter-query");
   if (queryInput) queryInput.value = "";
@@ -336,6 +339,17 @@ function renderGalleryCard(obj) {
  * Each node shows its object count (after applying non-thesaurus filters, so
  * the tree reflects the current search/status scope).
  */
+/**
+ * Strip the redundant "Volkskunde – " prefix from a top-area term. The
+ * prefix appears on every top name (this is a Volkskunde-only collection
+ * and the sidebar panel is already titled „THESAURUS") — repeating it 20×
+ * wastes horizontal space and forces line wraps.
+ */
+function stripTopPrefix(term) {
+  if (!term) return "";
+  return term.replace(/^Volkskunde\s*[–-]\s*/, "");
+}
+
 function renderThesaurusTree() {
   const host = document.getElementById("thesaurus-tree");
   if (!host || !state.thesaurus) return;
@@ -363,7 +377,7 @@ function renderThesaurusTree() {
     const active = state.filters.topId === top.id && !state.filters.leafId;
     summary.innerHTML = `
       <span class="thesaurus-tree__top-label${active ? " thesaurus-tree__leaf--active" : ""}">
-        ${escapeHtml(top.term)}
+        ${escapeHtml(stripTopPrefix(top.term))}
         <span class="thesaurus-tree__count">${topCount}</span>
       </span>
     `;
@@ -437,24 +451,8 @@ function countsIgnoringThesaurusFilter() {
   const byLeaf = new Map();
 
   for (const obj of state.objects) {
-    const s = statusFor(obj.object_id);
-    if (!status[s]) continue;
-
-    if (q) {
-      const orig = state.originalsById.get(obj.object_id);
-      const haystack = [
-        obj.object_name,
-        obj.thesaurus_term,
-        obj.medium,
-        obj.dimensions,
-        obj.dated,
-        orig && orig.description,
-      ]
-        .filter(Boolean)
-        .join(" ")
-        .toLowerCase();
-      if (!haystack.includes(q)) continue;
-    }
+    if (!status[statusFor(obj.object_id)]) continue;
+    if (!matchesQuery(obj, q)) continue;
 
     byTop.set(obj.top_id, (byTop.get(obj.top_id) || 0) + 1);
     byLeaf.set(obj.thesaurus_id, (byLeaf.get(obj.thesaurus_id) || 0) + 1);
@@ -544,8 +542,14 @@ function renderDetailView() {
 
   const page = document.createElement("div");
   page.className = "detail-page";
+  page.appendChild(renderDetailHeader(obj, prevId, nextId));
+  page.appendChild(renderDetailBody(obj, original, blind, enriched, judge));
+  root.appendChild(page);
 
-  // Header
+  window.scrollTo({ top: 0, left: 0, behavior: "instant" });
+}
+
+function renderDetailHeader(obj, prevId, nextId) {
   const header = document.createElement("div");
   header.className = "detail-page__header";
 
@@ -566,36 +570,34 @@ function renderDetailView() {
   title.textContent = obj.object_name || "(ohne Namen)";
   const meta = document.createElement("div");
   meta.className = "detail-page__meta";
-  meta.textContent = `${obj.object_number || ""} · ${(obj.thesaurus_path && obj.thesaurus_path[1]) || obj.top_id}`;
+  const topTerm = (obj.thesaurus_path && obj.thesaurus_path[1]) || obj.top_id;
+  meta.textContent = `${obj.object_number || ""} · ${topTerm}`;
   titleWrap.appendChild(title);
   titleWrap.appendChild(meta);
   header.appendChild(titleWrap);
 
   const nav = document.createElement("div");
   nav.className = "detail-page__nav";
-  const prevBtn = document.createElement("button");
-  prevBtn.type = "button";
-  prevBtn.textContent = "←";
-  prevBtn.title = "Vorheriges Objekt";
-  prevBtn.disabled = prevId == null;
-  prevBtn.addEventListener("click", () => {
-    if (prevId != null) location.hash = `#/object/${prevId}`;
-  });
-  const nextBtn = document.createElement("button");
-  nextBtn.type = "button";
-  nextBtn.textContent = "→";
-  nextBtn.title = "Nächstes Objekt";
-  nextBtn.disabled = nextId == null;
-  nextBtn.addEventListener("click", () => {
-    if (nextId != null) location.hash = `#/object/${nextId}`;
-  });
-  nav.appendChild(prevBtn);
-  nav.appendChild(nextBtn);
+  nav.appendChild(makeDetailNavButton("←", prevId, "Vorheriges Objekt"));
+  nav.appendChild(makeDetailNavButton("→", nextId, "Nächstes Objekt"));
   header.appendChild(nav);
 
-  page.appendChild(header);
+  return header;
+}
 
-  // Body
+function makeDetailNavButton(label, targetId, title) {
+  const btn = document.createElement("button");
+  btn.type = "button";
+  btn.textContent = label;
+  btn.title = title;
+  btn.disabled = targetId == null;
+  btn.addEventListener("click", () => {
+    if (targetId != null) location.hash = `#/object/${targetId}`;
+  });
+  return btn;
+}
+
+function renderDetailBody(obj, original, blind, enriched, judge) {
   const body = document.createElement("div");
   body.className = "detail-page__body";
 
@@ -612,18 +614,13 @@ function renderDetailView() {
 
   const variants = document.createElement("div");
   variants.className = "detail-page__variants";
-
   variants.appendChild(renderVariantOriginal(obj, original));
   variants.appendChild(renderVariantAi(obj, blind, "ai-blind", "KI BLIND"));
   variants.appendChild(renderVariantAi(obj, enriched, "ai-enriched", "KI ERWEITERT"));
   variants.appendChild(renderVariantJudge(obj, judge));
-
   body.appendChild(variants);
-  page.appendChild(body);
-  root.appendChild(page);
 
-  // Reset scroll to top on navigation
-  window.scrollTo({ top: 0, left: 0, behavior: "instant" });
+  return body;
 }
 
 function variantCard(badgeText, klass, modelText) {
@@ -662,6 +659,19 @@ function variantField(card, label, value) {
 
 function renderVariantOriginal(obj, original) {
   const card = variantCard("ORIGINAL", "original", "Sammlungsdaten");
+
+  // If the judge flagged this object's sammlungs-zuordnung as a quirk,
+  // surface that on the Original card — it is the didactic point of the
+  // workshop: „falsche" KI-Antworten sind oft korrekte, und das Original
+  // selbst ist die Kuriosität.
+  const judge = state.aiJudgeById.get(obj.object_id);
+  if (judge && judge.is_collection_quirk) {
+    const note = document.createElement("div");
+    note.className = "variant-card__quirk";
+    note.textContent = "Judge: Sammlungs-Quirk — Zuordnung folgt sammlungsinterner Konvention";
+    card.appendChild(note);
+  }
+
   variantField(card, "Term", obj.thesaurus_term || "");
   variantField(card, "Bereich", (obj.thesaurus_path && obj.thesaurus_path[1]) || obj.top_id || "");
   variantField(card, "Beschreibung", (original && original.description) || "");
@@ -818,7 +828,7 @@ function computeDashboard() {
   let blindTop = 0, blindLeaf = 0;
   let enrichedTop = 0, enrichedLeaf = 0;
 
-  const confusions = new Map(); // "origTop -> aiTop" (blind) -> count
+  const confusions = new Map(); // key `fromTop|toTop` -> {fromTop, toTop, count}
 
   let judgeCount = 0;
   let quirks = 0;
@@ -835,8 +845,10 @@ function computeDashboard() {
       blindCount++;
       if (b.top_id === obj.top_id) blindTop++;
       else {
-        const key = `${obj.top_id} → ${b.top_id}`;
-        confusions.set(key, (confusions.get(key) || 0) + 1);
+        const key = `${obj.top_id}|${b.top_id}`;
+        const prev = confusions.get(key);
+        if (prev) prev.count++;
+        else confusions.set(key, { fromTop: obj.top_id, toTop: b.top_id, count: 1 });
       }
       if (b.thesaurus_id === obj.thesaurus_id) blindLeaf++;
     }
@@ -854,8 +866,8 @@ function computeDashboard() {
     }
   }
 
-  const topConfusions = [...confusions.entries()]
-    .sort((a, b) => b[1] - a[1])
+  const topConfusions = [...confusions.values()]
+    .sort((a, b) => b.count - a.count)
     .slice(0, 5);
 
   return {
@@ -880,6 +892,16 @@ function pct(n, d) {
   return `${Math.round((100 * n) / d)} %`;
 }
 
+function topLabel(topId) {
+  if (!topId) return "";
+  const tree = state.thesaurus;
+  if (tree && tree.children) {
+    const node = tree.children.find((c) => c.id === topId);
+    if (node) return node.term;
+  }
+  return topId;
+}
+
 function renderDashboard() {
   const host = document.getElementById("dashboard");
   const body = document.getElementById("dashboard-body");
@@ -893,11 +915,15 @@ function renderDashboard() {
   host.hidden = false;
 
   body.innerHTML = "";
+  body.appendChild(renderDashboardAccuracyPanel(m));
+  body.appendChild(renderDashboardConfusionsPanel(m));
+  body.appendChild(renderDashboardJudgePanel(m));
+}
 
-  // Panel 1: KI-Akkuranz
-  const p1 = document.createElement("div");
-  p1.className = "dashboard__panel";
-  p1.innerHTML = `
+function renderDashboardAccuracyPanel(m) {
+  const panel = document.createElement("div");
+  panel.className = "dashboard__panel";
+  panel.innerHTML = `
     <h3>KI-Akkuranz (im aktuellen Filter)</h3>
     <div class="dashboard__metric">
       <b>${pct(m.blindTop, m.blindCount)}</b>
@@ -916,55 +942,115 @@ function renderDashboard() {
       <span>Leaf-Term erweitert (${m.enrichedLeaf}/${m.enrichedCount})</span>
     </div>
   `;
-  body.appendChild(p1);
+  return panel;
+}
 
-  // Panel 2: Top 5 confusions (blind)
-  const p2 = document.createElement("div");
-  p2.className = "dashboard__panel";
-  const confusionLines = m.topConfusions
-    .map(([k, v]) => `<li>${escapeHtml(k)} · ${v}×</li>`)
-    .join("");
-  p2.innerHTML = `
-    <h3>Häufigste Verwechslungen (blind)</h3>
-    ${
-      confusionLines
-        ? `<ul class="dashboard__list">${confusionLines}</ul>`
-        : '<p class="dashboard__empty">Keine Verwechslungen im aktuellen Filter.</p>'
+function renderDashboardConfusionsPanel(m) {
+  const panel = document.createElement("div");
+  panel.className = "dashboard__panel";
+
+  const h = document.createElement("h3");
+  h.textContent = "Häufigste Verwechslungen (blind)";
+  panel.appendChild(h);
+
+  if (state.filters.confusion) {
+    panel.appendChild(renderActiveConfusionBanner(state.filters.confusion));
+  }
+
+  if (m.topConfusions.length === 0) {
+    const empty = document.createElement("p");
+    empty.className = "dashboard__empty";
+    empty.textContent = "Keine Verwechslungen im aktuellen Filter.";
+    panel.appendChild(empty);
+    return panel;
+  }
+
+  const ul = document.createElement("ul");
+  ul.className = "dashboard__list";
+  for (const c of m.topConfusions) {
+    ul.appendChild(renderConfusionListItem(c));
+  }
+  panel.appendChild(ul);
+  return panel;
+}
+
+function renderActiveConfusionBanner({ fromTop, toTop }) {
+  const active = document.createElement("p");
+  active.className = "dashboard__note";
+  active.textContent = `Gefiltert: ${topLabel(fromTop)} → ${topLabel(toTop)}. `;
+
+  const clear = document.createElement("a");
+  clear.href = "#";
+  clear.textContent = "× zurücksetzen";
+  clear.addEventListener("click", (e) => {
+    e.preventDefault();
+    state.filters.confusion = null;
+    onFiltersChanged();
+  });
+  active.appendChild(clear);
+  return active;
+}
+
+function renderConfusionListItem(c) {
+  const li = document.createElement("li");
+  li.className = "is-clickable";
+  li.textContent = `${topLabel(c.fromTop)} → ${topLabel(c.toTop)} · ${c.count}×`;
+  li.title = "Klicken, um diese Objekte zu filtern";
+  li.addEventListener("click", () => {
+    // Toggle — a click on the already-active pair clears the filter.
+    const cur = state.filters.confusion;
+    if (cur && cur.fromTop === c.fromTop && cur.toTop === c.toTop) {
+      state.filters.confusion = null;
+    } else {
+      state.filters.confusion = { fromTop: c.fromTop, toTop: c.toTop };
+      // A confusion filter implies we want conflicts visible.
+      state.filters.status.conflict = true;
+      const cb = document.getElementById("filter-status-conflict");
+      if (cb) cb.checked = true;
     }
-  `;
-  body.appendChild(p2);
+    onFiltersChanged();
+  });
+  return li;
+}
 
-  // Panel 3: Judge
-  const p3 = document.createElement("div");
-  p3.className = "dashboard__panel";
+function renderDashboardJudgePanel(m) {
+  const panel = document.createElement("div");
+  panel.className = "dashboard__panel";
+
   if (m.judgeCount === 0) {
-    p3.innerHTML = `
+    panel.innerHTML = `
       <h3>Judge</h3>
       <p class="dashboard__empty">Kein Judge-Urteil im aktuellen Filter.</p>
     `;
-  } else {
-    const verdictLines = [...m.verdicts.entries()]
-      .sort((a, b) => b[1] - a[1])
-      .map(([k, v]) => `<li>${escapeHtml(k)} · ${v}×</li>`)
-      .join("");
-    p3.innerHTML = `
-      <h3>Judge (${m.judgeCount} bewertet)</h3>
-      <div class="dashboard__metric">
-        <b>${pct(m.quirks, m.judgeCount)}</b>
-        <span>Sammlungs-Quirks</span>
-      </div>
-      <div class="dashboard__metric">
-        <b>${m.qbMean.toFixed(1)}</b>
-        <span>Quality blind (Ø 1–5)</span>
-      </div>
-      <div class="dashboard__metric">
-        <b>${m.qeMean.toFixed(1)}</b>
-        <span>Quality erweitert (Ø 1–5)</span>
-      </div>
-      <ul class="dashboard__list">${verdictLines}</ul>
-    `;
+    return panel;
   }
-  body.appendChild(p3);
+
+  const verdictLines = [...m.verdicts.entries()]
+    .sort((a, b) => b[1] - a[1])
+    .map(([k, v]) => `<li>${escapeHtml(k)} · ${v}×</li>`)
+    .join("");
+
+  panel.innerHTML = `
+    <h3>Judge (${m.judgeCount} bewertet)</h3>
+    <div class="dashboard__metric dashboard__metric--hero">
+      <b>${m.quirks} / ${m.judgeCount}</b>
+      <span>Original = Sammlungs-Quirk</span>
+    </div>
+    <p class="dashboard__note">
+      In diesen Fällen ist nicht die KI falsch, sondern die
+      Sammlungs-Zuordnung folgt einer internen Konvention.
+    </p>
+    <div class="dashboard__metric">
+      <b>${m.qbMean.toFixed(1)}</b>
+      <span>Quality blind (Ø 1–5)</span>
+    </div>
+    <div class="dashboard__metric">
+      <b>${m.qeMean.toFixed(1)}</b>
+      <span>Quality erweitert (Ø 1–5)</span>
+    </div>
+    <ul class="dashboard__list">${verdictLines}</ul>
+  `;
+  return panel;
 }
 
 // ============================================================

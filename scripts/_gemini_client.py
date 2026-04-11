@@ -28,7 +28,7 @@ from pathlib import Path
 
 import google.generativeai as genai
 
-from _common import gemini_generate_json, log, read_json
+from _common import GeminiCallResult, gemini_generate_json, read_json
 from _paths import (
     FEW_SHOT_JSON,
     SYSTEM_BLIND_TXT,
@@ -39,14 +39,6 @@ from _paths import (
 
 DEFAULT_MODEL = "gemini-3.1-flash-lite-preview"
 PROMPT_VERSION = "v2.0"
-
-
-@dataclass
-class StageResult:
-    payload: dict
-    tokens_input: int
-    tokens_output: int
-    latency_ms: int
 
 
 @dataclass
@@ -180,7 +172,7 @@ class GeminiClient:
 
     def _stage1_top_area(
         self, image_bytes: bytes, mode: str, object_meta: dict | None
-    ) -> StageResult:
+    ) -> GeminiCallResult:
         top_lines = [f"- {opt['id']}: {opt['term']}" for opt in self._top_options]
         prompt_parts = [
             self._system_for(mode),
@@ -214,7 +206,7 @@ class GeminiClient:
         mode: str,
         top_id: str,
         object_meta: dict | None,
-    ) -> StageResult:
+    ) -> GeminiCallResult:
         leaves = self._leaves_by_top[top_id]
         leaf_lines: list[str] = []
         for l in leaves:
@@ -270,24 +262,18 @@ class GeminiClient:
     # Low-level call
     # -----------------------------------------------------------------------
 
-    def _call(self, prompt_parts: list[str], image_bytes: bytes, schema: dict) -> StageResult:
+    def _call(self, prompt_parts: list[str], image_bytes: bytes, schema: dict) -> GeminiCallResult:
         model = genai.GenerativeModel(self.model_name)
         contents = [
             {"mime_type": "image/jpeg", "data": image_bytes},
             "\n".join(prompt_parts),
         ]
-        result = gemini_generate_json(
+        return gemini_generate_json(
             model,
             contents,
             schema,
             max_retries=self.max_retries,
             label="gemini",
-        )
-        return StageResult(
-            payload=result.payload,
-            tokens_input=result.tokens_input,
-            tokens_output=result.tokens_output,
-            latency_ms=result.latency_ms,
         )
 
     # -----------------------------------------------------------------------
