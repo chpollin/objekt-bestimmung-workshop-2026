@@ -1,0 +1,40 @@
+Scraped 246 of 250 objects
+Errors: 4
+  1184173
+  1187629
+  1187630
+  1181769
+
+Per classification:
+    40  Volkskunde – Handwerk/Industrie/Handel
+    25  Volkskunde – Hauswirtschaft
+    23  Volkskunde – Kleidung
+    17  Volkskunde – Landwirtschaft
+    16  Volkskunde – Wohnen
+    14  Volkskunde – Freizeit/Unterhaltung/Genuss
+    13  Volkskunde – Öffentlichkeit und Gemeinwesen
+    13  Volkskunde – Bildwerke
+    12  Volkskunde – Messen und Wiegen
+    11  Volkskunde – Schriftgut
+    10  Volkskunde – Brauch und Fest
+    10  Volkskunde – Religion und Glaube
+     9  Volkskunde – Architektur
+     8  Volkskunde – Spielzeug/Spiel/Sport
+     7  Volkskunde – Gesundheit
+     5  Volkskunde – Forstwirtschaft
+     5  Volkskunde – Kommunikation
+     4  Volkskunde – Transport und Verkehr
+     3  Volkskunde – Jagd
+     1  Volkskunde – Fischerei
+
+Coverage:
+  description present: 245/246
+  medium present:      244/246
+  dimensions present:  244/246
+
+Few-shot examples chosen:
+  [Volkskunde – Handwerk/Industrie/Handel] Holz: Holzquader mit eingeschlagenen Nägeln, laut Inventarbuch "Nageltasche".
+  [Volkskunde – Religion und Glaube] Votivtier: Schmiedeeiserne stilisierte Tierdarstellung (wahrscheinlich Pferd).
+  [Volkskunde – Hauswirtschaft] Wespenfalle: Bauchige Wespenfalle aus transparentem Glas mit einem kurzen Hals, einer Öffnung
+  [Volkskunde – Freizeit/Unterhaltung/Genuss] Radio: Kleines UKW-Taschenradio mit einem Batteriefach für Knopfzellen, einem Ein-Aus-L
+  [Volkskunde – Kleidung] Mantel: Dunkelblauer einreihiger Herrenmantel mit schwarz-blauen Knöpfen. In dem Mantel

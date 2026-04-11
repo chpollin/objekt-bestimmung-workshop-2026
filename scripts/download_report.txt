@@ -1,0 +1,8 @@
+Downloaded: 213
+Skipped (already present): 32
+Errors: 1
+Max edge: 1024px  quality: 85
+Total bytes on disk: 16,941,966
+
+Failures:
+  1168643: failed after 3 retries: https://online.landessammlungen-noe.at/internal/media/dispatcher/336606

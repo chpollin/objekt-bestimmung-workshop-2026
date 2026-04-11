@@ -1,0 +1,4405 @@
+[
+  {
+    "id": "AUT.AAW.AAA.AAB.AAB",
+    "term": "Böden",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Architektur",
+      "AUT.AAW.AAA.AAB",
+      "Böden"
+    ],
+    "top_id": "AUT.AAW.AAA"
+  },
+  {
+    "id": "AUT.AAW.AAA.AAB.AAL",
+    "term": "Dächer",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Architektur",
+      "AUT.AAW.AAA.AAB",
+      "Dächer"
+    ],
+    "top_id": "AUT.AAW.AAA"
+  },
+  {
+    "id": "AUT.AAW.AAA.AAB.AAD",
+    "term": "Tür- und Torbestandteile",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Architektur",
+      "AUT.AAW.AAA.AAB",
+      "Tür- und Torbestandteile"
+    ],
+    "top_id": "AUT.AAW.AAA"
+  },
+  {
+    "id": "AUT.AAW.AAA.AAC.AAC",
+    "term": "Dächer",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Architektur",
+      "AUT.AAW.AAA.AAC",
+      "Dächer"
+    ],
+    "top_id": "AUT.AAW.AAA"
+  },
+  {
+    "id": "AUT.AAW.AAA.AAC.AAA",
+    "term": "Fassaden",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Architektur",
+      "AUT.AAW.AAA.AAC",
+      "Fassaden"
+    ],
+    "top_id": "AUT.AAW.AAA"
+  },
+  {
+    "id": "AUT.AAW.AAA.AAC.AAB",
+    "term": "Wände/Decken",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Architektur",
+      "AUT.AAW.AAA.AAC",
+      "Wände/Decken"
+    ],
+    "top_id": "AUT.AAW.AAA"
+  },
+  {
+    "id": "AUT.AAW.AAA.AAD.AAB",
+    "term": "Strom",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Architektur",
+      "AUT.AAW.AAA.AAD",
+      "Strom"
+    ],
+    "top_id": "AUT.AAW.AAA"
+  },
+  {
+    "id": "AUT.AAW.AAA.AAE.AAE",
+    "term": "Einfriedungen",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Architektur",
+      "AUT.AAW.AAA.AAE",
+      "Einfriedungen"
+    ],
+    "top_id": "AUT.AAW.AAA"
+  },
+  {
+    "id": "AUT.AAW.AAS.AAA.AAI",
+    "term": "Alltagsdarstellungen",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Bildwerke",
+      "AUT.AAW.AAS.AAA",
+      "Alltagsdarstellungen"
+    ],
+    "top_id": "AUT.AAW.AAS"
+  },
+  {
+    "id": "AUT.AAW.AAS.AAA.AAL",
+    "term": "Genrebilder",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Bildwerke",
+      "AUT.AAW.AAS.AAA",
+      "Genrebilder"
+    ],
+    "top_id": "AUT.AAW.AAS"
+  },
+  {
+    "id": "AUT.AAW.AAS.AAA.AAJ",
+    "term": "Religiöse Darstellungen",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Bildwerke",
+      "AUT.AAW.AAS.AAA",
+      "Religiöse Darstellungen"
+    ],
+    "top_id": "AUT.AAW.AAS"
+  },
+  {
+    "id": "AUT.AAW.AAS.AAD.AAC",
+    "term": "Ansichtskarten",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Bildwerke",
+      "AUT.AAW.AAS.AAD",
+      "Ansichtskarten"
+    ],
+    "top_id": "AUT.AAW.AAS"
+  },
+  {
+    "id": "AUT.AAW.AAS.AAE.AAC",
+    "term": "Politik/Soziales/Zeitgeschehen",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Bildwerke",
+      "AUT.AAW.AAS.AAE",
+      "Politik/Soziales/Zeitgeschehen"
+    ],
+    "top_id": "AUT.AAW.AAS"
+  },
+  {
+    "id": "AUT.AAW.AAS.AAE.AAB",
+    "term": "Produkt- und Wirtschaftswerbung",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Bildwerke",
+      "AUT.AAW.AAS.AAE",
+      "Produkt- und Wirtschaftswerbung"
+    ],
+    "top_id": "AUT.AAW.AAS"
+  },
+  {
+    "id": "AUT.AAW.AAS.AAH.AAD",
+    "term": "Landschaften und Gebäude",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Bildwerke",
+      "AUT.AAW.AAS.AAH",
+      "Landschaften und Gebäude"
+    ],
+    "top_id": "AUT.AAW.AAS"
+  },
+  {
+    "id": "AUT.AAW.AAS.AAH.AAC",
+    "term": "Portraits",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Bildwerke",
+      "AUT.AAW.AAS.AAH",
+      "Portraits"
+    ],
+    "top_id": "AUT.AAW.AAS"
+  },
+  {
+    "id": "AUT.AAW.AAS.AAI.AAF",
+    "term": "Genrebilder",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Bildwerke",
+      "AUT.AAW.AAS.AAI",
+      "Genrebilder"
+    ],
+    "top_id": "AUT.AAW.AAS"
+  },
+  {
+    "id": "AUT.AAW.AAS.AAI.AAC",
+    "term": "Landschaften, identifiziert",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Bildwerke",
+      "AUT.AAW.AAS.AAI",
+      "Landschaften, identifiziert"
+    ],
+    "top_id": "AUT.AAW.AAS"
+  },
+  {
+    "id": "AUT.AAW.AAS.AAI.AAD",
+    "term": "Landschaften, unbekannt",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Bildwerke",
+      "AUT.AAW.AAS.AAI",
+      "Landschaften, unbekannt"
+    ],
+    "top_id": "AUT.AAW.AAS"
+  },
+  {
+    "id": "AUT.AAW.AAS.AAI.AAE",
+    "term": "Mode",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Bildwerke",
+      "AUT.AAW.AAS.AAI",
+      "Mode"
+    ],
+    "top_id": "AUT.AAW.AAS"
+  },
+  {
+    "id": "AUT.AAW.AAS.AAI.AAA",
+    "term": "Religiöse Darstellungen",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Bildwerke",
+      "AUT.AAW.AAS.AAI",
+      "Religiöse Darstellungen"
+    ],
+    "top_id": "AUT.AAW.AAS"
+  },
+  {
+    "id": "AUT.AAW.AAS.AAN",
+    "term": "Andenkenbilder",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Bildwerke",
+      "Andenkenbilder"
+    ],
+    "top_id": "AUT.AAW.AAS"
+  },
+  {
+    "id": "AUT.AAW.AAS.AAK",
+    "term": "Bilderrahmen",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Bildwerke",
+      "Bilderrahmen"
+    ],
+    "top_id": "AUT.AAW.AAS"
+  },
+  {
+    "id": "AUT.AAW.AAS.AAL",
+    "term": "Kastenbilder",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Bildwerke",
+      "Kastenbilder"
+    ],
+    "top_id": "AUT.AAW.AAS"
+  },
+  {
+    "id": "AUT.AAW.AAS.AAO",
+    "term": "Spiegelbild",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Bildwerke",
+      "Spiegelbild"
+    ],
+    "top_id": "AUT.AAW.AAS"
+  },
+  {
+    "id": "AUT.AAW.AAS.AAM",
+    "term": "Stickerei",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Bildwerke",
+      "Stickerei"
+    ],
+    "top_id": "AUT.AAW.AAS"
+  },
+  {
+    "id": "AUT.AAW.AAS.AAB.AAB",
+    "term": "Portraits, unbekannt",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Bildwerke",
+      "Zeichnung/Grafik",
+      "Portraits, unbekannt"
+    ],
+    "top_id": "AUT.AAW.AAS"
+  },
+  {
+    "id": "AUT.AAW.AAO.AAB.AAJ",
+    "term": "Allerheiligen und Allerseelen",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Brauch und Fest",
+      "AUT.AAW.AAO.AAB",
+      "Allerheiligen und Allerseelen"
+    ],
+    "top_id": "AUT.AAW.AAO"
+  },
+  {
+    "id": "AUT.AAW.AAO.AAB.AAB",
+    "term": "Fastnacht (Fasching)",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Brauch und Fest",
+      "AUT.AAW.AAO.AAB",
+      "Fastnacht (Fasching)"
+    ],
+    "top_id": "AUT.AAW.AAO"
+  },
+  {
+    "id": "AUT.AAW.AAO.AAB.AAF",
+    "term": "Neujahr",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Brauch und Fest",
+      "AUT.AAW.AAO.AAB",
+      "Neujahr"
+    ],
+    "top_id": "AUT.AAW.AAO"
+  },
+  {
+    "id": "AUT.AAW.AAO.AAB.AAG",
+    "term": "Nikolo/Krampus",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Brauch und Fest",
+      "AUT.AAW.AAO.AAB",
+      "Nikolo/Krampus"
+    ],
+    "top_id": "AUT.AAW.AAO"
+  },
+  {
+    "id": "AUT.AAW.AAO.AAB.AAC",
+    "term": "Ostern",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Brauch und Fest",
+      "AUT.AAW.AAO.AAB",
+      "Ostern"
+    ],
+    "top_id": "AUT.AAW.AAO"
+  },
+  {
+    "id": "AUT.AAW.AAO.AAB.AAE",
+    "term": "Regionale Bräuche und Feste",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Brauch und Fest",
+      "AUT.AAW.AAO.AAB",
+      "Regionale Bräuche und Feste"
+    ],
+    "top_id": "AUT.AAW.AAO"
+  },
+  {
+    "id": "AUT.AAW.AAO.AAB.AAA",
+    "term": "Weihnachten",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Brauch und Fest",
+      "AUT.AAW.AAO.AAB",
+      "Weihnachten"
+    ],
+    "top_id": "AUT.AAW.AAO"
+  },
+  {
+    "id": "AUT.AAW.AAO.AAC.AAE",
+    "term": "Andere Jubiläen",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Brauch und Fest",
+      "AUT.AAW.AAO.AAC",
+      "Andere Jubiläen"
+    ],
+    "top_id": "AUT.AAW.AAO"
+  },
+  {
+    "id": "AUT.AAW.AAO.AAC.AAA",
+    "term": "Geburt und Taufe",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Brauch und Fest",
+      "AUT.AAW.AAO.AAC",
+      "Geburt und Taufe"
+    ],
+    "top_id": "AUT.AAW.AAO"
+  },
+  {
+    "id": "AUT.AAW.AAO.AAC.AAD",
+    "term": "Hochzeit und Ehejubiläen",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Brauch und Fest",
+      "AUT.AAW.AAO.AAC",
+      "Hochzeit und Ehejubiläen"
+    ],
+    "top_id": "AUT.AAW.AAO"
+  },
+  {
+    "id": "AUT.AAW.AAO.AAC.AAC",
+    "term": "Kommunion/Konfirmation/Firmung",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Brauch und Fest",
+      "AUT.AAW.AAO.AAC",
+      "Kommunion/Konfirmation/Firmung"
+    ],
+    "top_id": "AUT.AAW.AAO"
+  },
+  {
+    "id": "AUT.AAW.AAO.AAC.AAF",
+    "term": "Tod und Begräbnis",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Brauch und Fest",
+      "AUT.AAW.AAO.AAC",
+      "Tod und Begräbnis"
+    ],
+    "top_id": "AUT.AAW.AAO"
+  },
+  {
+    "id": "AUT.AAW.AAG.AAA.AAB",
+    "term": "Zubehör",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Fischerei",
+      "AUT.AAW.AAG.AAA",
+      "Zubehör"
+    ],
+    "top_id": "AUT.AAW.AAG"
+  },
+  {
+    "id": "AUT.AAW.AAE.AAB.AAB",
+    "term": "Fäll- und Spaltwerkzeuge",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Forstwirtschaft",
+      "AUT.AAW.AAE.AAB",
+      "Fäll- und Spaltwerkzeuge"
+    ],
+    "top_id": "AUT.AAW.AAE"
+  },
+  {
+    "id": "AUT.AAW.AAE.AAE.AAA",
+    "term": "Pecher",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Forstwirtschaft",
+      "AUT.AAW.AAE.AAE",
+      "Pecher"
+    ],
+    "top_id": "AUT.AAW.AAE"
+  },
+  {
+    "id": "AUT.AAW.AAE.AAG.AAB",
+    "term": "Bearbeitungswerkzeuge",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Forstwirtschaft",
+      "Holzverarbeitung",
+      "Bearbeitungswerkzeuge"
+    ],
+    "top_id": "AUT.AAW.AAE"
+  },
+  {
+    "id": "AUT.AAW.AAE.AAG.AAA",
+    "term": "Sägen",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Forstwirtschaft",
+      "Holzverarbeitung",
+      "Sägen"
+    ],
+    "top_id": "AUT.AAW.AAE"
+  },
+  {
+    "id": "AUT.AAW.AAN.AAA.AAC",
+    "term": "Reisegepäck",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Freizeit/Unterhaltung/Genuss",
+      "AUT.AAW.AAN.AAA",
+      "Reisegepäck"
+    ],
+    "top_id": "AUT.AAW.AAN"
+  },
+  {
+    "id": "AUT.AAW.AAN.AAA.AAB",
+    "term": "Souvenirs",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Freizeit/Unterhaltung/Genuss",
+      "AUT.AAW.AAN.AAA",
+      "Souvenirs"
+    ],
+    "top_id": "AUT.AAW.AAN"
+  },
+  {
+    "id": "AUT.AAW.AAN.AAB.AAB",
+    "term": "Bastelerzeugnisse",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Freizeit/Unterhaltung/Genuss",
+      "AUT.AAW.AAN.AAB",
+      "Bastelerzeugnisse"
+    ],
+    "top_id": "AUT.AAW.AAN"
+  },
+  {
+    "id": "AUT.AAW.AAN.AAD.AAA",
+    "term": "Blasinstrumente",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Freizeit/Unterhaltung/Genuss",
+      "AUT.AAW.AAN.AAD",
+      "Blasinstrumente"
+    ],
+    "top_id": "AUT.AAW.AAN"
+  },
+  {
+    "id": "AUT.AAW.AAN.AAD.AAF",
+    "term": "Mechanische Musikinstrumente",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Freizeit/Unterhaltung/Genuss",
+      "AUT.AAW.AAN.AAD",
+      "Mechanische Musikinstrumente"
+    ],
+    "top_id": "AUT.AAW.AAN"
+  },
+  {
+    "id": "AUT.AAW.AAN.AAD.AAB",
+    "term": "Saiteninstrumente",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Freizeit/Unterhaltung/Genuss",
+      "AUT.AAW.AAN.AAD",
+      "Saiteninstrumente"
+    ],
+    "top_id": "AUT.AAW.AAN"
+  },
+  {
+    "id": "AUT.AAW.AAN.AAD.AAG",
+    "term": "Wiedergabegeräte",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Freizeit/Unterhaltung/Genuss",
+      "AUT.AAW.AAN.AAD",
+      "Wiedergabegeräte"
+    ],
+    "top_id": "AUT.AAW.AAN"
+  },
+  {
+    "id": "AUT.AAW.AAN.AAG.AAC",
+    "term": "Ausstattung",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Freizeit/Unterhaltung/Genuss",
+      "AUT.AAW.AAN.AAG",
+      "Ausstattung"
+    ],
+    "top_id": "AUT.AAW.AAN"
+  },
+  {
+    "id": "AUT.AAW.AAN.AAG.AAD",
+    "term": "Einrichtung",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Freizeit/Unterhaltung/Genuss",
+      "AUT.AAW.AAN.AAG",
+      "Einrichtung"
+    ],
+    "top_id": "AUT.AAW.AAN"
+  },
+  {
+    "id": "AUT.AAW.AAN.AAG.AAB",
+    "term": "Schilder",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Freizeit/Unterhaltung/Genuss",
+      "AUT.AAW.AAN.AAG",
+      "Schilder"
+    ],
+    "top_id": "AUT.AAW.AAN"
+  },
+  {
+    "id": "AUT.AAW.AAN.AAG.AAA",
+    "term": "Stammtischzeichen",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Freizeit/Unterhaltung/Genuss",
+      "AUT.AAW.AAN.AAG",
+      "Stammtischzeichen"
+    ],
+    "top_id": "AUT.AAW.AAN"
+  },
+  {
+    "id": "AUT.AAW.AAN.AAH.AAB",
+    "term": "Rauchutensilien",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Freizeit/Unterhaltung/Genuss",
+      "AUT.AAW.AAN.AAH",
+      "Rauchutensilien"
+    ],
+    "top_id": "AUT.AAW.AAN"
+  },
+  {
+    "id": "AUT.AAW.AAN.AAH.AAA",
+    "term": "Schnupfutensilien",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Freizeit/Unterhaltung/Genuss",
+      "AUT.AAW.AAN.AAH",
+      "Schnupfutensilien"
+    ],
+    "top_id": "AUT.AAW.AAN"
+  },
+  {
+    "id": "AUT.AAW.AAN.AAJ",
+    "term": "Erinnerungsstücke",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Freizeit/Unterhaltung/Genuss",
+      "Erinnerungsstücke"
+    ],
+    "top_id": "AUT.AAW.AAN"
+  },
+  {
+    "id": "AUT.AAW.AAN.AAE",
+    "term": "Theater/Oper",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Freizeit/Unterhaltung/Genuss",
+      "Theater/Oper"
+    ],
+    "top_id": "AUT.AAW.AAN"
+  },
+  {
+    "id": "AUT.AAW.AAN.AAI",
+    "term": "Unterhaltung",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Freizeit/Unterhaltung/Genuss",
+      "Unterhaltung"
+    ],
+    "top_id": "AUT.AAW.AAN"
+  },
+  {
+    "id": "AUT.AAW.AAT.AAA.AAE",
+    "term": "Behandlungsinstrumente",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Gesundheit",
+      "AUT.AAW.AAT.AAA",
+      "Behandlungsinstrumente"
+    ],
+    "top_id": "AUT.AAW.AAT"
+  },
+  {
+    "id": "AUT.AAW.AAT.AAA.AAM",
+    "term": "Erste Hilfe",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Gesundheit",
+      "AUT.AAW.AAT.AAA",
+      "Erste Hilfe"
+    ],
+    "top_id": "AUT.AAW.AAT"
+  },
+  {
+    "id": "AUT.AAW.AAT.AAA.AAH",
+    "term": "Hebammengerät",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Gesundheit",
+      "AUT.AAW.AAT.AAA",
+      "Hebammengerät"
+    ],
+    "top_id": "AUT.AAW.AAT"
+  },
+  {
+    "id": "AUT.AAW.AAT.AAA.AAJ",
+    "term": "Krankenpflege",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Gesundheit",
+      "AUT.AAW.AAT.AAA",
+      "Krankenpflege"
+    ],
+    "top_id": "AUT.AAW.AAT"
+  },
+  {
+    "id": "AUT.AAW.AAT.AAA.AAL",
+    "term": "Sehhilfen",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Gesundheit",
+      "AUT.AAW.AAT.AAA",
+      "Sehhilfen"
+    ],
+    "top_id": "AUT.AAW.AAT"
+  },
+  {
+    "id": "AUT.AAW.AAT.AAA.AAG",
+    "term": "Tierärztliche Instrumente",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Gesundheit",
+      "AUT.AAW.AAT.AAA",
+      "Tierärztliche Instrumente"
+    ],
+    "top_id": "AUT.AAW.AAT"
+  },
+  {
+    "id": "AUT.AAW.AAT.AAA.AAO",
+    "term": "Volksmedizin/Magie",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Gesundheit",
+      "AUT.AAW.AAT.AAA",
+      "Volksmedizin/Magie"
+    ],
+    "top_id": "AUT.AAW.AAT"
+  },
+  {
+    "id": "AUT.AAW.AAT.AAB.AAD",
+    "term": "Arbeitsgeräte",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Gesundheit",
+      "AUT.AAW.AAT.AAB",
+      "Arbeitsgeräte"
+    ],
+    "top_id": "AUT.AAW.AAT"
+  },
+  {
+    "id": "AUT.AAW.AAT.AAB.AAE",
+    "term": "Arzneimittelbehälter",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Gesundheit",
+      "AUT.AAW.AAT.AAB",
+      "Arzneimittelbehälter"
+    ],
+    "top_id": "AUT.AAW.AAT"
+  },
+  {
+    "id": "AUT.AAW.AAT.AAB.AAB",
+    "term": "Laboreinrichtung",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Gesundheit",
+      "AUT.AAW.AAT.AAB",
+      "Laboreinrichtung"
+    ],
+    "top_id": "AUT.AAW.AAT"
+  },
+  {
+    "id": "AUT.AAW.AAT.AAB.AAC",
+    "term": "Wiegen und Messen",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Gesundheit",
+      "AUT.AAW.AAT.AAB",
+      "Wiegen und Messen"
+    ],
+    "top_id": "AUT.AAW.AAT"
+  },
+  {
+    "id": "AUT.AAW.AAT.AAC.AAB",
+    "term": "Haar- und Bartpflege",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Gesundheit",
+      "AUT.AAW.AAT.AAC",
+      "Haar- und Bartpflege"
+    ],
+    "top_id": "AUT.AAW.AAT"
+  },
+  {
+    "id": "AUT.AAW.AAT.AAC.AAF",
+    "term": "Hilfsgerät",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Gesundheit",
+      "AUT.AAW.AAT.AAC",
+      "Hilfsgerät"
+    ],
+    "top_id": "AUT.AAW.AAT"
+  },
+  {
+    "id": "AUT.AAW.AAT.AAC.AAD",
+    "term": "Monatshygiene",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Gesundheit",
+      "AUT.AAW.AAT.AAC",
+      "Monatshygiene"
+    ],
+    "top_id": "AUT.AAW.AAT"
+  },
+  {
+    "id": "AUT.AAW.AAT.AAC.AAE",
+    "term": "Perücken",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Gesundheit",
+      "AUT.AAW.AAT.AAC",
+      "Perücken"
+    ],
+    "top_id": "AUT.AAW.AAT"
+  },
+  {
+    "id": "AUT.AAW.AAT.AAC.AAA",
+    "term": "Waschutensilien",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Gesundheit",
+      "AUT.AAW.AAT.AAC",
+      "Waschutensilien"
+    ],
+    "top_id": "AUT.AAW.AAT"
+  },
+  {
+    "id": "AUT.AAW.AAH.AAB.AAB",
+    "term": "Hilfsgerät",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Handwerk/Industrie/Handel",
+      "AUT.AAW.AAH.AAB",
+      "Hilfsgerät"
+    ],
+    "top_id": "AUT.AAW.AAH"
+  },
+  {
+    "id": "AUT.AAW.AAH.AAB.AAE",
+    "term": "Hobel",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Handwerk/Industrie/Handel",
+      "AUT.AAW.AAH.AAB",
+      "Hobel"
+    ],
+    "top_id": "AUT.AAW.AAH"
+  },
+  {
+    "id": "AUT.AAW.AAH.AAB.AAC",
+    "term": "Messmittel und Anreißzeuge",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Handwerk/Industrie/Handel",
+      "AUT.AAW.AAH.AAB",
+      "Messmittel und Anreißzeuge"
+    ],
+    "top_id": "AUT.AAW.AAH"
+  },
+  {
+    "id": "AUT.AAW.AAH.AAB.AAH",
+    "term": "Oberflächenbearbeitung",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Handwerk/Industrie/Handel",
+      "AUT.AAW.AAH.AAB",
+      "Oberflächenbearbeitung"
+    ],
+    "top_id": "AUT.AAW.AAH"
+  },
+  {
+    "id": "AUT.AAW.AAH.AAB.AAD",
+    "term": "Sägen",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Handwerk/Industrie/Handel",
+      "AUT.AAW.AAH.AAB",
+      "Sägen"
+    ],
+    "top_id": "AUT.AAW.AAH"
+  },
+  {
+    "id": "AUT.AAW.AAH.AAB.AAA",
+    "term": "Werkstatteinrichtung",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Handwerk/Industrie/Handel",
+      "AUT.AAW.AAH.AAB",
+      "Werkstatteinrichtung"
+    ],
+    "top_id": "AUT.AAW.AAH"
+  },
+  {
+    "id": "AUT.AAW.AAH.AAC.AAI",
+    "term": "Arbeitsmaterialien",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Handwerk/Industrie/Handel",
+      "AUT.AAW.AAH.AAC",
+      "Arbeitsmaterialien"
+    ],
+    "top_id": "AUT.AAW.AAH"
+  },
+  {
+    "id": "AUT.AAW.AAH.AAC.AAE",
+    "term": "Bohrwerkzeuge",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Handwerk/Industrie/Handel",
+      "AUT.AAW.AAH.AAC",
+      "Bohrwerkzeuge"
+    ],
+    "top_id": "AUT.AAW.AAH"
+  },
+  {
+    "id": "AUT.AAW.AAH.AAC.AAB",
+    "term": "Hilfsgerät",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Handwerk/Industrie/Handel",
+      "AUT.AAW.AAH.AAC",
+      "Hilfsgerät"
+    ],
+    "top_id": "AUT.AAW.AAH"
+  },
+  {
+    "id": "AUT.AAW.AAH.AAC.AAA",
+    "term": "Werkstatteinrichtung",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Handwerk/Industrie/Handel",
+      "AUT.AAW.AAH.AAC",
+      "Werkstatteinrichtung"
+    ],
+    "top_id": "AUT.AAW.AAH"
+  },
+  {
+    "id": "AUT.AAW.AAH.AAD.AAJ",
+    "term": "Arbeitsmaterialien",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Handwerk/Industrie/Handel",
+      "AUT.AAW.AAH.AAD",
+      "Arbeitsmaterialien"
+    ],
+    "top_id": "AUT.AAW.AAH"
+  },
+  {
+    "id": "AUT.AAW.AAH.AAD.AAA",
+    "term": "Ausrüstung",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Handwerk/Industrie/Handel",
+      "AUT.AAW.AAH.AAD",
+      "Ausrüstung"
+    ],
+    "top_id": "AUT.AAW.AAH"
+  },
+  {
+    "id": "AUT.AAW.AAH.AAD.AAH",
+    "term": "Bohrwerkzeuge",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Handwerk/Industrie/Handel",
+      "AUT.AAW.AAH.AAD",
+      "Bohrwerkzeuge"
+    ],
+    "top_id": "AUT.AAW.AAH"
+  },
+  {
+    "id": "AUT.AAW.AAH.AAD.AAB",
+    "term": "Hilfsgerät",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Handwerk/Industrie/Handel",
+      "AUT.AAW.AAH.AAD",
+      "Hilfsgerät"
+    ],
+    "top_id": "AUT.AAW.AAH"
+  },
+  {
+    "id": "AUT.AAW.AAH.AAD.AAC",
+    "term": "Messmittel und Anreißzeuge",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Handwerk/Industrie/Handel",
+      "AUT.AAW.AAH.AAD",
+      "Messmittel und Anreißzeuge"
+    ],
+    "top_id": "AUT.AAW.AAH"
+  },
+  {
+    "id": "AUT.AAW.AAH.AAD.AAI",
+    "term": "Oberflächenbearbeitung",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Handwerk/Industrie/Handel",
+      "AUT.AAW.AAH.AAD",
+      "Oberflächenbearbeitung"
+    ],
+    "top_id": "AUT.AAW.AAH"
+  },
+  {
+    "id": "AUT.AAW.AAH.AAD.AAF",
+    "term": "Sägen",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Handwerk/Industrie/Handel",
+      "AUT.AAW.AAH.AAD",
+      "Sägen"
+    ],
+    "top_id": "AUT.AAW.AAH"
+  },
+  {
+    "id": "AUT.AAW.AAH.AAD.AAE",
+    "term": "Äxte und Beile",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Handwerk/Industrie/Handel",
+      "AUT.AAW.AAH.AAD",
+      "Äxte und Beile"
+    ],
+    "top_id": "AUT.AAW.AAH"
+  },
+  {
+    "id": "AUT.AAW.AAH.AAE.AAG",
+    "term": "Arbeitsmaterialien",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Handwerk/Industrie/Handel",
+      "AUT.AAW.AAH.AAE",
+      "Arbeitsmaterialien"
+    ],
+    "top_id": "AUT.AAW.AAH"
+  },
+  {
+    "id": "AUT.AAW.AAH.AAE.AAB",
+    "term": "Hilfsgerät",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Handwerk/Industrie/Handel",
+      "AUT.AAW.AAH.AAE",
+      "Hilfsgerät"
+    ],
+    "top_id": "AUT.AAW.AAH"
+  },
+  {
+    "id": "AUT.AAW.AAH.AAE.AAC",
+    "term": "Mess- und Schneidewerkzeug",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Handwerk/Industrie/Handel",
+      "AUT.AAW.AAH.AAE",
+      "Mess- und Schneidewerkzeug"
+    ],
+    "top_id": "AUT.AAW.AAH"
+  },
+  {
+    "id": "AUT.AAW.AAH.AAE.AAF",
+    "term": "Nacharbeiten",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Handwerk/Industrie/Handel",
+      "AUT.AAW.AAH.AAE",
+      "Nacharbeiten"
+    ],
+    "top_id": "AUT.AAW.AAH"
+  },
+  {
+    "id": "AUT.AAW.AAH.AAE.AAE",
+    "term": "Nähwerkzeug",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Handwerk/Industrie/Handel",
+      "AUT.AAW.AAH.AAE",
+      "Nähwerkzeug"
+    ],
+    "top_id": "AUT.AAW.AAH"
+  },
+  {
+    "id": "AUT.AAW.AAH.AAE.AAD",
+    "term": "Vorarbeiten",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Handwerk/Industrie/Handel",
+      "AUT.AAW.AAH.AAE",
+      "Vorarbeiten"
+    ],
+    "top_id": "AUT.AAW.AAH"
+  },
+  {
+    "id": "AUT.AAW.AAH.AAE.AAA",
+    "term": "Werkstatteinrichtung",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Handwerk/Industrie/Handel",
+      "AUT.AAW.AAH.AAE",
+      "Werkstatteinrichtung"
+    ],
+    "top_id": "AUT.AAW.AAH"
+  },
+  {
+    "id": "AUT.AAW.AAH.AAE.AAI",
+    "term": "Zunftgerät",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Handwerk/Industrie/Handel",
+      "AUT.AAW.AAH.AAE",
+      "Zunftgerät"
+    ],
+    "top_id": "AUT.AAW.AAH"
+  },
+  {
+    "id": "AUT.AAW.AAH.AAF.AAA",
+    "term": "Werkstatteinrichtung",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Handwerk/Industrie/Handel",
+      "AUT.AAW.AAH.AAF",
+      "Werkstatteinrichtung"
+    ],
+    "top_id": "AUT.AAW.AAH"
+  },
+  {
+    "id": "AUT.AAW.AAH.AAG.AAC",
+    "term": "Hilfsgerät",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Handwerk/Industrie/Handel",
+      "AUT.AAW.AAH.AAG",
+      "Hilfsgerät"
+    ],
+    "top_id": "AUT.AAW.AAH"
+  },
+  {
+    "id": "AUT.AAW.AAH.AAG.AAH",
+    "term": "Hufbeschlag",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Handwerk/Industrie/Handel",
+      "AUT.AAW.AAH.AAG",
+      "Hufbeschlag"
+    ],
+    "top_id": "AUT.AAW.AAH"
+  },
+  {
+    "id": "AUT.AAW.AAH.AAG.AAJ",
+    "term": "Werkstücke",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Handwerk/Industrie/Handel",
+      "AUT.AAW.AAH.AAG",
+      "Werkstücke"
+    ],
+    "top_id": "AUT.AAW.AAH"
+  },
+  {
+    "id": "AUT.AAW.AAH.AAG.AAD",
+    "term": "Zangen",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Handwerk/Industrie/Handel",
+      "AUT.AAW.AAH.AAG",
+      "Zangen"
+    ],
+    "top_id": "AUT.AAW.AAH"
+  },
+  {
+    "id": "AUT.AAW.AAH.AAG.AAK",
+    "term": "Zunftgerät",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Handwerk/Industrie/Handel",
+      "AUT.AAW.AAH.AAG",
+      "Zunftgerät"
+    ],
+    "top_id": "AUT.AAW.AAH"
+  },
+  {
+    "id": "AUT.AAW.AAH.AAI.AAI",
+    "term": "Arbeitsmaterialien",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Handwerk/Industrie/Handel",
+      "AUT.AAW.AAH.AAI",
+      "Arbeitsmaterialien"
+    ],
+    "top_id": "AUT.AAW.AAH"
+  },
+  {
+    "id": "AUT.AAW.AAH.AAI.AAG",
+    "term": "Bohrwerkzeuge",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Handwerk/Industrie/Handel",
+      "AUT.AAW.AAH.AAI",
+      "Bohrwerkzeuge"
+    ],
+    "top_id": "AUT.AAW.AAH"
+  },
+  {
+    "id": "AUT.AAW.AAH.AAI.AAB",
+    "term": "Hilfsgerät",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Handwerk/Industrie/Handel",
+      "AUT.AAW.AAH.AAI",
+      "Hilfsgerät"
+    ],
+    "top_id": "AUT.AAW.AAH"
+  },
+  {
+    "id": "AUT.AAW.AAH.AAI.AAE",
+    "term": "Hobel",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Handwerk/Industrie/Handel",
+      "AUT.AAW.AAH.AAI",
+      "Hobel"
+    ],
+    "top_id": "AUT.AAW.AAH"
+  },
+  {
+    "id": "AUT.AAW.AAH.AAI.AAF",
+    "term": "Hämmer",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Handwerk/Industrie/Handel",
+      "AUT.AAW.AAH.AAI",
+      "Hämmer"
+    ],
+    "top_id": "AUT.AAW.AAH"
+  },
+  {
+    "id": "AUT.AAW.AAH.AAI.AAC",
+    "term": "Meßmittel und Anreißzeuge",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Handwerk/Industrie/Handel",
+      "AUT.AAW.AAH.AAI",
+      "Meßmittel und Anreißzeuge"
+    ],
+    "top_id": "AUT.AAW.AAH"
+  },
+  {
+    "id": "AUT.AAW.AAH.AAI.AAH",
+    "term": "Oberflächenbearbeitung",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Handwerk/Industrie/Handel",
+      "AUT.AAW.AAH.AAI",
+      "Oberflächenbearbeitung"
+    ],
+    "top_id": "AUT.AAW.AAH"
+  },
+  {
+    "id": "AUT.AAW.AAH.AAI.AAJ",
+    "term": "Werkstücke",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Handwerk/Industrie/Handel",
+      "AUT.AAW.AAH.AAI",
+      "Werkstücke"
+    ],
+    "top_id": "AUT.AAW.AAH"
+  },
+  {
+    "id": "AUT.AAW.AAH.AAL.AAI",
+    "term": "Oberflächenbearbeitung",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Handwerk/Industrie/Handel",
+      "AUT.AAW.AAH.AAL",
+      "Oberflächenbearbeitung"
+    ],
+    "top_id": "AUT.AAW.AAH"
+  },
+  {
+    "id": "AUT.AAW.AAH.AAL.AAC",
+    "term": "Spann- und Schraubwerkzeug",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Handwerk/Industrie/Handel",
+      "AUT.AAW.AAH.AAL",
+      "Spann- und Schraubwerkzeug"
+    ],
+    "top_id": "AUT.AAW.AAH"
+  },
+  {
+    "id": "AUT.AAW.AAH.AAL.AAK",
+    "term": "Werkstücke",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Handwerk/Industrie/Handel",
+      "AUT.AAW.AAH.AAL",
+      "Werkstücke"
+    ],
+    "top_id": "AUT.AAW.AAH"
+  },
+  {
+    "id": "AUT.AAW.AAH.AAM.AAA",
+    "term": "Fadenherstellung",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Handwerk/Industrie/Handel",
+      "AUT.AAW.AAH.AAM",
+      "Fadenherstellung"
+    ],
+    "top_id": "AUT.AAW.AAH"
+  },
+  {
+    "id": "AUT.AAW.AAH.AAM.AAH",
+    "term": "Hilfsgeräte",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Handwerk/Industrie/Handel",
+      "AUT.AAW.AAH.AAM",
+      "Hilfsgeräte"
+    ],
+    "top_id": "AUT.AAW.AAH"
+  },
+  {
+    "id": "AUT.AAW.AAH.AAM.AAB",
+    "term": "Mustervorlagen",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Handwerk/Industrie/Handel",
+      "AUT.AAW.AAH.AAM",
+      "Mustervorlagen"
+    ],
+    "top_id": "AUT.AAW.AAH"
+  },
+  {
+    "id": "AUT.AAW.AAH.AAM.AAC",
+    "term": "Spul- und Schärgerät",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Handwerk/Industrie/Handel",
+      "AUT.AAW.AAH.AAM",
+      "Spul- und Schärgerät"
+    ],
+    "top_id": "AUT.AAW.AAH"
+  },
+  {
+    "id": "AUT.AAW.AAH.AAM.AAD",
+    "term": "Webgeräte",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Handwerk/Industrie/Handel",
+      "AUT.AAW.AAH.AAM",
+      "Webgeräte"
+    ],
+    "top_id": "AUT.AAW.AAH"
+  },
+  {
+    "id": "AUT.AAW.AAH.AAM.AAE",
+    "term": "Werkstücke",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Handwerk/Industrie/Handel",
+      "AUT.AAW.AAH.AAM",
+      "Werkstücke"
+    ],
+    "top_id": "AUT.AAW.AAH"
+  },
+  {
+    "id": "AUT.AAW.AAH.AAN.AAD",
+    "term": "Geräte für den Druckvorgang",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Handwerk/Industrie/Handel",
+      "AUT.AAW.AAH.AAN",
+      "Geräte für den Druckvorgang"
+    ],
+    "top_id": "AUT.AAW.AAH"
+  },
+  {
+    "id": "AUT.AAW.AAH.AAN.AAB",
+    "term": "Mustervorlagen",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Handwerk/Industrie/Handel",
+      "AUT.AAW.AAH.AAN",
+      "Mustervorlagen"
+    ],
+    "top_id": "AUT.AAW.AAH"
+  },
+  {
+    "id": "AUT.AAW.AAH.AAO.AAI",
+    "term": "Arbeitsmaterialien",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Handwerk/Industrie/Handel",
+      "AUT.AAW.AAH.AAO",
+      "Arbeitsmaterialien"
+    ],
+    "top_id": "AUT.AAW.AAH"
+  },
+  {
+    "id": "AUT.AAW.AAH.AAO.AAB",
+    "term": "Maße und Zuschnitt",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Handwerk/Industrie/Handel",
+      "AUT.AAW.AAH.AAO",
+      "Maße und Zuschnitt"
+    ],
+    "top_id": "AUT.AAW.AAH"
+  },
+  {
+    "id": "AUT.AAW.AAH.AAO.AAH",
+    "term": "Scheren",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Handwerk/Industrie/Handel",
+      "AUT.AAW.AAH.AAO",
+      "Scheren"
+    ],
+    "top_id": "AUT.AAW.AAH"
+  },
+  {
+    "id": "AUT.AAW.AAH.AAO.AAA",
+    "term": "Werkstatteinrichtung",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Handwerk/Industrie/Handel",
+      "AUT.AAW.AAH.AAO",
+      "Werkstatteinrichtung"
+    ],
+    "top_id": "AUT.AAW.AAH"
+  },
+  {
+    "id": "AUT.AAW.AAH.AAO.AAF",
+    "term": "Werkstücke",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Handwerk/Industrie/Handel",
+      "AUT.AAW.AAH.AAO",
+      "Werkstücke"
+    ],
+    "top_id": "AUT.AAW.AAH"
+  },
+  {
+    "id": "AUT.AAW.AAH.AAQ.AAB",
+    "term": "Arbeitsgeräte",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Handwerk/Industrie/Handel",
+      "AUT.AAW.AAH.AAQ",
+      "Arbeitsgeräte"
+    ],
+    "top_id": "AUT.AAW.AAH"
+  },
+  {
+    "id": "AUT.AAW.AAH.AAQ.AAE",
+    "term": "Backwaren",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Handwerk/Industrie/Handel",
+      "AUT.AAW.AAH.AAQ",
+      "Backwaren"
+    ],
+    "top_id": "AUT.AAW.AAH"
+  },
+  {
+    "id": "AUT.AAW.AAH.AAQ.AAC",
+    "term": "Formen",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Handwerk/Industrie/Handel",
+      "AUT.AAW.AAH.AAQ",
+      "Formen"
+    ],
+    "top_id": "AUT.AAW.AAH"
+  },
+  {
+    "id": "AUT.AAW.AAH.AAQ.AAF",
+    "term": "Verpackungsmaterial",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Handwerk/Industrie/Handel",
+      "AUT.AAW.AAH.AAQ",
+      "Verpackungsmaterial"
+    ],
+    "top_id": "AUT.AAW.AAH"
+  },
+  {
+    "id": "AUT.AAW.AAH.AAZ.AAB",
+    "term": "Arbeitsmaterialien",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Handwerk/Industrie/Handel",
+      "AUT.AAW.AAH.AAZ",
+      "Arbeitsmaterialien"
+    ],
+    "top_id": "AUT.AAW.AAH"
+  },
+  {
+    "id": "AUT.AAW.AAH.AAZ.AAA",
+    "term": "Werkstücke",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Handwerk/Industrie/Handel",
+      "AUT.AAW.AAH.AAZ",
+      "Werkstücke"
+    ],
+    "top_id": "AUT.AAW.AAH"
+  },
+  {
+    "id": "AUT.AAW.AAH.AAZ.AAC",
+    "term": "Werkzeuge",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Handwerk/Industrie/Handel",
+      "AUT.AAW.AAH.AAZ",
+      "Werkzeuge"
+    ],
+    "top_id": "AUT.AAW.AAH"
+  },
+  {
+    "id": "AUT.AAW.AAH.ABC.AAA",
+    "term": "Hilfsgerät",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Handwerk/Industrie/Handel",
+      "AUT.AAW.AAH.ABC",
+      "Hilfsgerät"
+    ],
+    "top_id": "AUT.AAW.AAH"
+  },
+  {
+    "id": "AUT.AAW.AAH.ABC.AAB",
+    "term": "Pinsel",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Handwerk/Industrie/Handel",
+      "AUT.AAW.AAH.ABC",
+      "Pinsel"
+    ],
+    "top_id": "AUT.AAW.AAH"
+  },
+  {
+    "id": "AUT.AAW.AAH.ABD.AAC",
+    "term": "Werkstatteinrichtung",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Handwerk/Industrie/Handel",
+      "AUT.AAW.AAH.ABD",
+      "Werkstatteinrichtung"
+    ],
+    "top_id": "AUT.AAW.AAH"
+  },
+  {
+    "id": "AUT.AAW.AAH.ABD.AAA",
+    "term": "Werkstücke",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Handwerk/Industrie/Handel",
+      "AUT.AAW.AAH.ABD",
+      "Werkstücke"
+    ],
+    "top_id": "AUT.AAW.AAH"
+  },
+  {
+    "id": "AUT.AAW.AAH.ABD.AAB",
+    "term": "Werkzeuge",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Handwerk/Industrie/Handel",
+      "AUT.AAW.AAH.ABD",
+      "Werkzeuge"
+    ],
+    "top_id": "AUT.AAW.AAH"
+  },
+  {
+    "id": "AUT.AAW.AAH.ABE.AAB",
+    "term": "Werkstücke",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Handwerk/Industrie/Handel",
+      "AUT.AAW.AAH.ABE",
+      "Werkstücke"
+    ],
+    "top_id": "AUT.AAW.AAH"
+  },
+  {
+    "id": "AUT.AAW.AAH.ABE.AAA",
+    "term": "Werkzeuge",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Handwerk/Industrie/Handel",
+      "AUT.AAW.AAH.ABE",
+      "Werkzeuge"
+    ],
+    "top_id": "AUT.AAW.AAH"
+  },
+  {
+    "id": "AUT.AAW.AAH.ABF.AAA",
+    "term": "Geräte",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Handwerk/Industrie/Handel",
+      "AUT.AAW.AAH.ABF",
+      "Geräte"
+    ],
+    "top_id": "AUT.AAW.AAH"
+  },
+  {
+    "id": "AUT.AAW.AAH.ABF.AAC",
+    "term": "Zunftgeräte",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Handwerk/Industrie/Handel",
+      "AUT.AAW.AAH.ABF",
+      "Zunftgeräte"
+    ],
+    "top_id": "AUT.AAW.AAH"
+  },
+  {
+    "id": "AUT.AAW.AAH.ABG.AAB",
+    "term": "Arbeitsgeräte",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Handwerk/Industrie/Handel",
+      "AUT.AAW.AAH.ABG",
+      "Arbeitsgeräte"
+    ],
+    "top_id": "AUT.AAW.AAH"
+  },
+  {
+    "id": "AUT.AAW.AAH.ABG.AAA",
+    "term": "Model",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Handwerk/Industrie/Handel",
+      "AUT.AAW.AAH.ABG",
+      "Model"
+    ],
+    "top_id": "AUT.AAW.AAH"
+  },
+  {
+    "id": "AUT.AAW.AAH.ABH.AAB",
+    "term": "Rechenmaschinen",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Handwerk/Industrie/Handel",
+      "AUT.AAW.AAH.ABH",
+      "Rechenmaschinen"
+    ],
+    "top_id": "AUT.AAW.AAH"
+  },
+  {
+    "id": "AUT.AAW.AAH.ABH.AAA",
+    "term": "Schreiben",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Handwerk/Industrie/Handel",
+      "AUT.AAW.AAH.ABH",
+      "Schreiben"
+    ],
+    "top_id": "AUT.AAW.AAH"
+  },
+  {
+    "id": "AUT.AAW.AAH.ABI.AAA",
+    "term": "Werkzeuge",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Handwerk/Industrie/Handel",
+      "AUT.AAW.AAH.ABI",
+      "Werkzeuge"
+    ],
+    "top_id": "AUT.AAW.AAH"
+  },
+  {
+    "id": "AUT.AAW.AAH.ABM.AAA",
+    "term": "Zunftgerät",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Handwerk/Industrie/Handel",
+      "AUT.AAW.AAH.ABM",
+      "Zunftgerät"
+    ],
+    "top_id": "AUT.AAW.AAH"
+  },
+  {
+    "id": "AUT.AAW.AAH.ABT.AAB",
+    "term": "Knöpfe",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Handwerk/Industrie/Handel",
+      "AUT.AAW.AAH.ABT",
+      "Knöpfe"
+    ],
+    "top_id": "AUT.AAW.AAH"
+  },
+  {
+    "id": "AUT.AAW.AAH.ABT.AAA",
+    "term": "Stoffe",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Handwerk/Industrie/Handel",
+      "AUT.AAW.AAH.ABT",
+      "Stoffe"
+    ],
+    "top_id": "AUT.AAW.AAH"
+  },
+  {
+    "id": "AUT.AAW.AAH.ABL",
+    "term": "Dachdecker",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Handwerk/Industrie/Handel",
+      "Dachdecker"
+    ],
+    "top_id": "AUT.AAW.AAH"
+  },
+  {
+    "id": "AUT.AAW.AAH.ABP",
+    "term": "Druckerei",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Handwerk/Industrie/Handel",
+      "Druckerei"
+    ],
+    "top_id": "AUT.AAW.AAH"
+  },
+  {
+    "id": "AUT.AAW.AAH.ABQ",
+    "term": "Frisör",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Handwerk/Industrie/Handel",
+      "Frisör"
+    ],
+    "top_id": "AUT.AAW.AAH"
+  },
+  {
+    "id": "AUT.AAW.AAH.ABU",
+    "term": "Geräteteile",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Handwerk/Industrie/Handel",
+      "Geräteteile"
+    ],
+    "top_id": "AUT.AAW.AAH"
+  },
+  {
+    "id": "AUT.AAW.AAH.ABS",
+    "term": "Installateur",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Handwerk/Industrie/Handel",
+      "Installateur"
+    ],
+    "top_id": "AUT.AAW.AAH"
+  },
+  {
+    "id": "AUT.AAW.AAH.ABX",
+    "term": "Kunstblumenherstellung",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Handwerk/Industrie/Handel",
+      "Kunstblumenherstellung"
+    ],
+    "top_id": "AUT.AAW.AAH"
+  },
+  {
+    "id": "AUT.AAW.AAH.ABA.AAD",
+    "term": "Hilfsgerät",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Handwerk/Industrie/Handel",
+      "Ladeneinrichtung",
+      "Hilfsgerät"
+    ],
+    "top_id": "AUT.AAW.AAH"
+  },
+  {
+    "id": "AUT.AAW.AAH.ABA.AAH",
+    "term": "Ladenschilder",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Handwerk/Industrie/Handel",
+      "Ladeneinrichtung",
+      "Ladenschilder"
+    ],
+    "top_id": "AUT.AAW.AAH"
+  },
+  {
+    "id": "AUT.AAW.AAH.ABA.AAC",
+    "term": "Packmaterial",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Handwerk/Industrie/Handel",
+      "Ladeneinrichtung",
+      "Packmaterial"
+    ],
+    "top_id": "AUT.AAW.AAH"
+  },
+  {
+    "id": "AUT.AAW.AAH.ABA.AAF",
+    "term": "Verkaufsartikel",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Handwerk/Industrie/Handel",
+      "Ladeneinrichtung",
+      "Verkaufsartikel"
+    ],
+    "top_id": "AUT.AAW.AAH"
+  },
+  {
+    "id": "AUT.AAW.AAH.ABA.AAB",
+    "term": "Vorratsbehältnisse",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Handwerk/Industrie/Handel",
+      "Ladeneinrichtung",
+      "Vorratsbehältnisse"
+    ],
+    "top_id": "AUT.AAW.AAH"
+  },
+  {
+    "id": "AUT.AAW.AAH.ABA.AAG",
+    "term": "Werbematerial und -anlagen",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Handwerk/Industrie/Handel",
+      "Ladeneinrichtung",
+      "Werbematerial und -anlagen"
+    ],
+    "top_id": "AUT.AAW.AAH"
+  },
+  {
+    "id": "AUT.AAW.AAH.ABJ",
+    "term": "Maschinenteile",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Handwerk/Industrie/Handel",
+      "Maschinenteile"
+    ],
+    "top_id": "AUT.AAW.AAH"
+  },
+  {
+    "id": "AUT.AAW.AAH.AAA",
+    "term": "Noch nicht bestimmte Werkzeuge",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Handwerk/Industrie/Handel",
+      "Noch nicht bestimmte Werkzeuge"
+    ],
+    "top_id": "AUT.AAW.AAH"
+  },
+  {
+    "id": "AUT.AAW.AAH.ABO",
+    "term": "Spitzen und Borten",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Handwerk/Industrie/Handel",
+      "Spitzen und Borten"
+    ],
+    "top_id": "AUT.AAW.AAH"
+  },
+  {
+    "id": "AUT.AAW.AAH.ABK",
+    "term": "Werkzeugteile",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Handwerk/Industrie/Handel",
+      "Werkzeugteile"
+    ],
+    "top_id": "AUT.AAW.AAH"
+  },
+  {
+    "id": "AUT.AAW.AAC.AAB.AAH",
+    "term": "Andere Hilfsgeräte",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Hauswirtschaft",
+      "AUT.AAW.AAC.AAB",
+      "Andere Hilfsgeräte"
+    ],
+    "top_id": "AUT.AAW.AAC"
+  },
+  {
+    "id": "AUT.AAW.AAC.AAB.AAK",
+    "term": "Backgeräte",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Hauswirtschaft",
+      "AUT.AAW.AAC.AAB",
+      "Backgeräte"
+    ],
+    "top_id": "AUT.AAW.AAC"
+  },
+  {
+    "id": "AUT.AAW.AAC.AAB.AAP",
+    "term": "Backgeschirr",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Hauswirtschaft",
+      "AUT.AAW.AAC.AAB",
+      "Backgeschirr"
+    ],
+    "top_id": "AUT.AAW.AAC"
+  },
+  {
+    "id": "AUT.AAW.AAC.AAB.AAO",
+    "term": "Behälter/Aufbewahrung",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Hauswirtschaft",
+      "AUT.AAW.AAC.AAB",
+      "Behälter/Aufbewahrung"
+    ],
+    "top_id": "AUT.AAW.AAC"
+  },
+  {
+    "id": "AUT.AAW.AAC.AAB.AAJ",
+    "term": "Brat- und Röstgeschirr",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Hauswirtschaft",
+      "AUT.AAW.AAC.AAB",
+      "Brat- und Röstgeschirr"
+    ],
+    "top_id": "AUT.AAW.AAC"
+  },
+  {
+    "id": "AUT.AAW.AAC.AAB.AAE",
+    "term": "Hack- und Schneidegeräte",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Hauswirtschaft",
+      "AUT.AAW.AAC.AAB",
+      "Hack- und Schneidegeräte"
+    ],
+    "top_id": "AUT.AAW.AAC"
+  },
+  {
+    "id": "AUT.AAW.AAC.AAB.AAG",
+    "term": "Kochgeräte",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Hauswirtschaft",
+      "AUT.AAW.AAC.AAB",
+      "Kochgeräte"
+    ],
+    "top_id": "AUT.AAW.AAC"
+  },
+  {
+    "id": "AUT.AAW.AAC.AAB.AAI",
+    "term": "Kochgeschirr",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Hauswirtschaft",
+      "AUT.AAW.AAC.AAB",
+      "Kochgeschirr"
+    ],
+    "top_id": "AUT.AAW.AAC"
+  },
+  {
+    "id": "AUT.AAW.AAC.AAB.AAB",
+    "term": "Pressen",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Hauswirtschaft",
+      "AUT.AAW.AAC.AAB",
+      "Pressen"
+    ],
+    "top_id": "AUT.AAW.AAC"
+  },
+  {
+    "id": "AUT.AAW.AAC.AAB.AAD",
+    "term": "Reiben und Hobel",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Hauswirtschaft",
+      "AUT.AAW.AAC.AAB",
+      "Reiben und Hobel"
+    ],
+    "top_id": "AUT.AAW.AAC"
+  },
+  {
+    "id": "AUT.AAW.AAC.AAB.AAF",
+    "term": "Rührgeräte",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Hauswirtschaft",
+      "AUT.AAW.AAC.AAB",
+      "Rührgeräte"
+    ],
+    "top_id": "AUT.AAW.AAC"
+  },
+  {
+    "id": "AUT.AAW.AAC.AAB.AAA",
+    "term": "Siebe und Filter",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Hauswirtschaft",
+      "AUT.AAW.AAC.AAB",
+      "Siebe und Filter"
+    ],
+    "top_id": "AUT.AAW.AAC"
+  },
+  {
+    "id": "AUT.AAW.AAC.AAB.AAC",
+    "term": "Stampf- und Mahlgeräte",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Hauswirtschaft",
+      "AUT.AAW.AAC.AAB",
+      "Stampf- und Mahlgeräte"
+    ],
+    "top_id": "AUT.AAW.AAC"
+  },
+  {
+    "id": "AUT.AAW.AAC.AAD.AAA",
+    "term": "Reinigungsgerät",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Hauswirtschaft",
+      "AUT.AAW.AAC.AAD",
+      "Reinigungsgerät"
+    ],
+    "top_id": "AUT.AAW.AAC"
+  },
+  {
+    "id": "AUT.AAW.AAC.AAD.AAC",
+    "term": "Ungezieferbekämpfung",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Hauswirtschaft",
+      "AUT.AAW.AAC.AAD",
+      "Ungezieferbekämpfung"
+    ],
+    "top_id": "AUT.AAW.AAC"
+  },
+  {
+    "id": "AUT.AAW.AAC.AAE.AAF",
+    "term": "Hilfsgerät und Materialien",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Hauswirtschaft",
+      "AUT.AAW.AAC.AAE",
+      "Hilfsgerät und Materialien"
+    ],
+    "top_id": "AUT.AAW.AAC"
+  },
+  {
+    "id": "AUT.AAW.AAC.AAE.AAD",
+    "term": "Häkeln",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Hauswirtschaft",
+      "AUT.AAW.AAC.AAE",
+      "Häkeln"
+    ],
+    "top_id": "AUT.AAW.AAC"
+  },
+  {
+    "id": "AUT.AAW.AAC.AAE.AAG",
+    "term": "Klöppeln",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Hauswirtschaft",
+      "AUT.AAW.AAC.AAE",
+      "Klöppeln"
+    ],
+    "top_id": "AUT.AAW.AAC"
+  },
+  {
+    "id": "AUT.AAW.AAC.AAE.AAI",
+    "term": "Mustervorlagen",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Hauswirtschaft",
+      "AUT.AAW.AAC.AAE",
+      "Mustervorlagen"
+    ],
+    "top_id": "AUT.AAW.AAC"
+  },
+  {
+    "id": "AUT.AAW.AAC.AAE.AAA",
+    "term": "Nähen",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Hauswirtschaft",
+      "AUT.AAW.AAC.AAE",
+      "Nähen"
+    ],
+    "top_id": "AUT.AAW.AAC"
+  },
+  {
+    "id": "AUT.AAW.AAC.AAE.AAE",
+    "term": "Sticken",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Hauswirtschaft",
+      "AUT.AAW.AAC.AAE",
+      "Sticken"
+    ],
+    "top_id": "AUT.AAW.AAC"
+  },
+  {
+    "id": "AUT.AAW.AAC.AAE.AAC",
+    "term": "Stricken",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Hauswirtschaft",
+      "AUT.AAW.AAC.AAE",
+      "Stricken"
+    ],
+    "top_id": "AUT.AAW.AAC"
+  },
+  {
+    "id": "AUT.AAW.AAC.AAF.AAB",
+    "term": "Küche und Bad",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Hauswirtschaft",
+      "AUT.AAW.AAC.AAF",
+      "Küche und Bad"
+    ],
+    "top_id": "AUT.AAW.AAC"
+  },
+  {
+    "id": "AUT.AAW.AAC.AAF.AAC",
+    "term": "Schlafbereich",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Hauswirtschaft",
+      "AUT.AAW.AAC.AAF",
+      "Schlafbereich"
+    ],
+    "top_id": "AUT.AAW.AAC"
+  },
+  {
+    "id": "AUT.AAW.AAC.AAF.AAA",
+    "term": "Wohn- und Eßbereich",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Hauswirtschaft",
+      "AUT.AAW.AAC.AAF",
+      "Wohn- und Eßbereich"
+    ],
+    "top_id": "AUT.AAW.AAC"
+  },
+  {
+    "id": "AUT.AAW.AAC.AAG.AAC",
+    "term": "Mangeln und Bügeln",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Hauswirtschaft",
+      "AUT.AAW.AAC.AAG",
+      "Mangeln und Bügeln"
+    ],
+    "top_id": "AUT.AAW.AAC"
+  },
+  {
+    "id": "AUT.AAW.AAC.AAG.AAB",
+    "term": "Trocknen",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Hauswirtschaft",
+      "AUT.AAW.AAC.AAG",
+      "Trocknen"
+    ],
+    "top_id": "AUT.AAW.AAC"
+  },
+  {
+    "id": "AUT.AAW.AAC.AAG.AAA",
+    "term": "Waschen",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Hauswirtschaft",
+      "AUT.AAW.AAC.AAG",
+      "Waschen"
+    ],
+    "top_id": "AUT.AAW.AAC"
+  },
+  {
+    "id": "AUT.AAW.AAC.AAH.AAA",
+    "term": "Laternen",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Hauswirtschaft",
+      "AUT.AAW.AAC.AAH",
+      "Laternen"
+    ],
+    "top_id": "AUT.AAW.AAC"
+  },
+  {
+    "id": "AUT.AAW.AAC.AAI.AAA",
+    "term": "Zubehör",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Hauswirtschaft",
+      "AUT.AAW.AAC.AAI",
+      "Zubehör"
+    ],
+    "top_id": "AUT.AAW.AAC"
+  },
+  {
+    "id": "AUT.AAW.AAC.AAL",
+    "term": "Elektroinstallationen",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Hauswirtschaft",
+      "Elektroinstallationen"
+    ],
+    "top_id": "AUT.AAW.AAC"
+  },
+  {
+    "id": "AUT.AAW.AAC.AAC.AAA",
+    "term": "Ess- und Serviergeschirr",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Hauswirtschaft",
+      "Essen und Trinken",
+      "Ess- und Serviergeschirr"
+    ],
+    "top_id": "AUT.AAW.AAC"
+  },
+  {
+    "id": "AUT.AAW.AAC.AAC.AAD",
+    "term": "Essbesteck",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Hauswirtschaft",
+      "Essen und Trinken",
+      "Essbesteck"
+    ],
+    "top_id": "AUT.AAW.AAC"
+  },
+  {
+    "id": "AUT.AAW.AAC.AAC.AAI",
+    "term": "Flaschen",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Hauswirtschaft",
+      "Essen und Trinken",
+      "Flaschen"
+    ],
+    "top_id": "AUT.AAW.AAC"
+  },
+  {
+    "id": "AUT.AAW.AAC.AAC.AAB",
+    "term": "Kaffee- und Teegeschirr",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Hauswirtschaft",
+      "Essen und Trinken",
+      "Kaffee- und Teegeschirr"
+    ],
+    "top_id": "AUT.AAW.AAC"
+  },
+  {
+    "id": "AUT.AAW.AAC.AAC.AAE",
+    "term": "Spezialbesteck",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Hauswirtschaft",
+      "Essen und Trinken",
+      "Spezialbesteck"
+    ],
+    "top_id": "AUT.AAW.AAC"
+  },
+  {
+    "id": "AUT.AAW.AAC.AAC.AAF",
+    "term": "Tafelhilfsgerät",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Hauswirtschaft",
+      "Essen und Trinken",
+      "Tafelhilfsgerät"
+    ],
+    "top_id": "AUT.AAW.AAC"
+  },
+  {
+    "id": "AUT.AAW.AAC.AAC.AAG",
+    "term": "Tafelzubehör",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Hauswirtschaft",
+      "Essen und Trinken",
+      "Tafelzubehör"
+    ],
+    "top_id": "AUT.AAW.AAC"
+  },
+  {
+    "id": "AUT.AAW.AAC.AAC.AAJ",
+    "term": "Taschenmesser",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Hauswirtschaft",
+      "Essen und Trinken",
+      "Taschenmesser"
+    ],
+    "top_id": "AUT.AAW.AAC"
+  },
+  {
+    "id": "AUT.AAW.AAC.AAC.AAC",
+    "term": "Trink- und Schankgeschirr",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Hauswirtschaft",
+      "Essen und Trinken",
+      "Trink- und Schankgeschirr"
+    ],
+    "top_id": "AUT.AAW.AAC"
+  },
+  {
+    "id": "AUT.AAW.AAC.AAM",
+    "term": "Schreibwaren",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Hauswirtschaft",
+      "Schreibwaren"
+    ],
+    "top_id": "AUT.AAW.AAC"
+  },
+  {
+    "id": "AUT.AAW.AAC.AAJ.AAB",
+    "term": "Hämmer",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Hauswirtschaft",
+      "Werkzeuge",
+      "Hämmer"
+    ],
+    "top_id": "AUT.AAW.AAC"
+  },
+  {
+    "id": "AUT.AAW.AAC.AAJ.AAA",
+    "term": "Schneidwerkzeuge",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Hauswirtschaft",
+      "Werkzeuge",
+      "Schneidwerkzeuge"
+    ],
+    "top_id": "AUT.AAW.AAC"
+  },
+  {
+    "id": "AUT.AAW.AAF.AAA.AAC",
+    "term": "Handfeuerwaffen",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Jagd",
+      "AUT.AAW.AAF.AAA",
+      "Handfeuerwaffen"
+    ],
+    "top_id": "AUT.AAW.AAF"
+  },
+  {
+    "id": "AUT.AAW.AAF.AAA.AAD",
+    "term": "Zubehör und Munition",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Jagd",
+      "AUT.AAW.AAF.AAA",
+      "Zubehör und Munition"
+    ],
+    "top_id": "AUT.AAW.AAF"
+  },
+  {
+    "id": "AUT.AAW.AAF.AAB",
+    "term": "Jagdausrüstung",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Jagd",
+      "Jagdausrüstung"
+    ],
+    "top_id": "AUT.AAW.AAF"
+  },
+  {
+    "id": "AUT.AAW.AAQ.AAB.AAF",
+    "term": "Fußbekleidung",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Kleidung",
+      "AUT.AAW.AAQ.AAB",
+      "Fußbekleidung"
+    ],
+    "top_id": "AUT.AAW.AAQ"
+  },
+  {
+    "id": "AUT.AAW.AAQ.AAB.AAH",
+    "term": "Gesondert getragenes Zubehör",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Kleidung",
+      "AUT.AAW.AAQ.AAB",
+      "Gesondert getragenes Zubehör"
+    ],
+    "top_id": "AUT.AAW.AAQ"
+  },
+  {
+    "id": "AUT.AAW.AAQ.AAB.AAJ",
+    "term": "Handschuhe",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Kleidung",
+      "AUT.AAW.AAQ.AAB",
+      "Handschuhe"
+    ],
+    "top_id": "AUT.AAW.AAQ"
+  },
+  {
+    "id": "AUT.AAW.AAQ.AAB.AAE",
+    "term": "Kopfbedeckung",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Kleidung",
+      "AUT.AAW.AAQ.AAB",
+      "Kopfbedeckung"
+    ],
+    "top_id": "AUT.AAW.AAQ"
+  },
+  {
+    "id": "AUT.AAW.AAQ.AAB.AAD",
+    "term": "Nacht- und Ankleidekleidung",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Kleidung",
+      "AUT.AAW.AAQ.AAB",
+      "Nacht- und Ankleidekleidung"
+    ],
+    "top_id": "AUT.AAW.AAQ"
+  },
+  {
+    "id": "AUT.AAW.AAQ.AAB.AAB",
+    "term": "Oberkleidung",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Kleidung",
+      "AUT.AAW.AAQ.AAB",
+      "Oberkleidung"
+    ],
+    "top_id": "AUT.AAW.AAQ"
+  },
+  {
+    "id": "AUT.AAW.AAQ.AAB.AAC",
+    "term": "Unterkleidung",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Kleidung",
+      "AUT.AAW.AAQ.AAB",
+      "Unterkleidung"
+    ],
+    "top_id": "AUT.AAW.AAQ"
+  },
+  {
+    "id": "AUT.AAW.AAQ.AAB.AAG",
+    "term": "Zubehör",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Kleidung",
+      "AUT.AAW.AAQ.AAB",
+      "Zubehör"
+    ],
+    "top_id": "AUT.AAW.AAQ"
+  },
+  {
+    "id": "AUT.AAW.AAQ.AAB.AAA",
+    "term": "Überkleidung",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Kleidung",
+      "AUT.AAW.AAQ.AAB",
+      "Überkleidung"
+    ],
+    "top_id": "AUT.AAW.AAQ"
+  },
+  {
+    "id": "AUT.AAW.AAQ.AAC.AAF",
+    "term": "Fußbekleidung",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Kleidung",
+      "AUT.AAW.AAQ.AAC",
+      "Fußbekleidung"
+    ],
+    "top_id": "AUT.AAW.AAQ"
+  },
+  {
+    "id": "AUT.AAW.AAQ.AAC.AAH",
+    "term": "Gesondert getragenes Zubehör",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Kleidung",
+      "AUT.AAW.AAQ.AAC",
+      "Gesondert getragenes Zubehör"
+    ],
+    "top_id": "AUT.AAW.AAQ"
+  },
+  {
+    "id": "AUT.AAW.AAQ.AAC.AAJ",
+    "term": "Handschuhe",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Kleidung",
+      "AUT.AAW.AAQ.AAC",
+      "Handschuhe"
+    ],
+    "top_id": "AUT.AAW.AAQ"
+  },
+  {
+    "id": "AUT.AAW.AAQ.AAC.AAE",
+    "term": "Kopfbedeckung",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Kleidung",
+      "AUT.AAW.AAQ.AAC",
+      "Kopfbedeckung"
+    ],
+    "top_id": "AUT.AAW.AAQ"
+  },
+  {
+    "id": "AUT.AAW.AAQ.AAC.AAD",
+    "term": "Nacht- und Ankleidekleidung",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Kleidung",
+      "AUT.AAW.AAQ.AAC",
+      "Nacht- und Ankleidekleidung"
+    ],
+    "top_id": "AUT.AAW.AAQ"
+  },
+  {
+    "id": "AUT.AAW.AAQ.AAC.AAB",
+    "term": "Oberkleidung",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Kleidung",
+      "AUT.AAW.AAQ.AAC",
+      "Oberkleidung"
+    ],
+    "top_id": "AUT.AAW.AAQ"
+  },
+  {
+    "id": "AUT.AAW.AAQ.AAC.AAI",
+    "term": "Schmuck für Körper und Kleidung",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Kleidung",
+      "AUT.AAW.AAQ.AAC",
+      "Schmuck für Körper und Kleidung"
+    ],
+    "top_id": "AUT.AAW.AAQ"
+  },
+  {
+    "id": "AUT.AAW.AAQ.AAC.AAC",
+    "term": "Unterkleidung",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Kleidung",
+      "AUT.AAW.AAQ.AAC",
+      "Unterkleidung"
+    ],
+    "top_id": "AUT.AAW.AAQ"
+  },
+  {
+    "id": "AUT.AAW.AAQ.AAC.AAG",
+    "term": "Zubehör",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Kleidung",
+      "AUT.AAW.AAQ.AAC",
+      "Zubehör"
+    ],
+    "top_id": "AUT.AAW.AAQ"
+  },
+  {
+    "id": "AUT.AAW.AAQ.AAC.AAA",
+    "term": "Überkleidung",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Kleidung",
+      "AUT.AAW.AAQ.AAC",
+      "Überkleidung"
+    ],
+    "top_id": "AUT.AAW.AAQ"
+  },
+  {
+    "id": "AUT.AAW.AAQ.AAD.AAF",
+    "term": "Fußkleidung",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Kleidung",
+      "AUT.AAW.AAQ.AAD",
+      "Fußkleidung"
+    ],
+    "top_id": "AUT.AAW.AAQ"
+  },
+  {
+    "id": "AUT.AAW.AAQ.AAD.AAH",
+    "term": "Gesondert getragenes Zubehör",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Kleidung",
+      "AUT.AAW.AAQ.AAD",
+      "Gesondert getragenes Zubehör"
+    ],
+    "top_id": "AUT.AAW.AAQ"
+  },
+  {
+    "id": "AUT.AAW.AAQ.AAD.AAE",
+    "term": "Kopfbedeckung",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Kleidung",
+      "AUT.AAW.AAQ.AAD",
+      "Kopfbedeckung"
+    ],
+    "top_id": "AUT.AAW.AAQ"
+  },
+  {
+    "id": "AUT.AAW.AAQ.AAD.AAD",
+    "term": "Nachtkleidung",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Kleidung",
+      "AUT.AAW.AAQ.AAD",
+      "Nachtkleidung"
+    ],
+    "top_id": "AUT.AAW.AAQ"
+  },
+  {
+    "id": "AUT.AAW.AAQ.AAD.AAB",
+    "term": "Oberkleidung",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Kleidung",
+      "AUT.AAW.AAQ.AAD",
+      "Oberkleidung"
+    ],
+    "top_id": "AUT.AAW.AAQ"
+  },
+  {
+    "id": "AUT.AAW.AAQ.AAD.AAC",
+    "term": "Unterkleidung",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Kleidung",
+      "AUT.AAW.AAQ.AAD",
+      "Unterkleidung"
+    ],
+    "top_id": "AUT.AAW.AAQ"
+  },
+  {
+    "id": "AUT.AAW.AAQ.AAD.AAA",
+    "term": "Überkleidung",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Kleidung",
+      "AUT.AAW.AAQ.AAD",
+      "Überkleidung"
+    ],
+    "top_id": "AUT.AAW.AAQ"
+  },
+  {
+    "id": "AUT.AAW.AAQ.AAE.AAD",
+    "term": "Kopfbedeckung",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Kleidung",
+      "AUT.AAW.AAQ.AAE",
+      "Kopfbedeckung"
+    ],
+    "top_id": "AUT.AAW.AAQ"
+  },
+  {
+    "id": "AUT.AAW.AAQ.AAE.AAH",
+    "term": "Schmuck für Körper und Kleidung",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Kleidung",
+      "AUT.AAW.AAQ.AAE",
+      "Schmuck für Körper und Kleidung"
+    ],
+    "top_id": "AUT.AAW.AAQ"
+  },
+  {
+    "id": "AUT.AAW.AAQ.AAG.AAE",
+    "term": "Bischofsgewänder",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Kleidung",
+      "AUT.AAW.AAQ.AAG",
+      "Bischofsgewänder"
+    ],
+    "top_id": "AUT.AAW.AAQ"
+  },
+  {
+    "id": "AUT.AAW.AAQ.AAH.AAA",
+    "term": "Hochzeit",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Kleidung",
+      "AUT.AAW.AAQ.AAH",
+      "Hochzeit"
+    ],
+    "top_id": "AUT.AAW.AAQ"
+  },
+  {
+    "id": "AUT.AAW.AAQ.AAH.AAB",
+    "term": "Taufe",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Kleidung",
+      "AUT.AAW.AAQ.AAH",
+      "Taufe"
+    ],
+    "top_id": "AUT.AAW.AAQ"
+  },
+  {
+    "id": "AUT.AAW.AAQ.AAI.AAC",
+    "term": "Bergbau",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Kleidung",
+      "AUT.AAW.AAQ.AAI",
+      "Bergbau"
+    ],
+    "top_id": "AUT.AAW.AAQ"
+  },
+  {
+    "id": "AUT.AAW.AAQ.AAI.AAB",
+    "term": "Feuerwehr",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Kleidung",
+      "AUT.AAW.AAQ.AAI",
+      "Feuerwehr"
+    ],
+    "top_id": "AUT.AAW.AAQ"
+  },
+  {
+    "id": "AUT.AAW.AAQ.AAK.AAA",
+    "term": "Ankleiden",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Kleidung",
+      "AUT.AAW.AAQ.AAK",
+      "Ankleiden"
+    ],
+    "top_id": "AUT.AAW.AAQ"
+  },
+  {
+    "id": "AUT.AAW.AAQ.AAK.AAB",
+    "term": "Aufbewahren",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Kleidung",
+      "AUT.AAW.AAQ.AAK",
+      "Aufbewahren"
+    ],
+    "top_id": "AUT.AAW.AAQ"
+  },
+  {
+    "id": "AUT.AAW.AAQ.AAK.AAC",
+    "term": "Pflegen",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Kleidung",
+      "AUT.AAW.AAQ.AAK",
+      "Pflegen"
+    ],
+    "top_id": "AUT.AAW.AAQ"
+  },
+  {
+    "id": "AUT.AAW.AAQ.AAN.AAA",
+    "term": "Damen",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Kleidung",
+      "AUT.AAW.AAQ.AAN",
+      "Damen"
+    ],
+    "top_id": "AUT.AAW.AAQ"
+  },
+  {
+    "id": "AUT.AAW.AAQ.AAN.AAB",
+    "term": "Herren",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Kleidung",
+      "AUT.AAW.AAQ.AAN",
+      "Herren"
+    ],
+    "top_id": "AUT.AAW.AAQ"
+  },
+  {
+    "id": "AUT.AAW.AAQ.AAN.AAC",
+    "term": "Kinder",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Kleidung",
+      "AUT.AAW.AAQ.AAN",
+      "Kinder"
+    ],
+    "top_id": "AUT.AAW.AAQ"
+  },
+  {
+    "id": "AUT.AAW.AAQ.AAM",
+    "term": "Accessoires",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Kleidung",
+      "Accessoires"
+    ],
+    "top_id": "AUT.AAW.AAQ"
+  },
+  {
+    "id": "AUT.AAW.AAQ.AAL",
+    "term": "Regen- und Sonnenschutz",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Kleidung",
+      "Regen- und Sonnenschutz"
+    ],
+    "top_id": "AUT.AAW.AAQ"
+  },
+  {
+    "id": "AUT.AAW.AAL.AAA.AAA",
+    "term": "Fernsprechen",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Kommunikation",
+      "AUT.AAW.AAL.AAA",
+      "Fernsprechen"
+    ],
+    "top_id": "AUT.AAW.AAL"
+  },
+  {
+    "id": "AUT.AAW.AAL.AAA.AAC",
+    "term": "Hörfunk",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Kommunikation",
+      "AUT.AAW.AAL.AAA",
+      "Hörfunk"
+    ],
+    "top_id": "AUT.AAW.AAL"
+  },
+  {
+    "id": "AUT.AAW.AAL.AAB.AAB",
+    "term": "Auditive Medien und Zubehör",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Kommunikation",
+      "AUT.AAW.AAL.AAB",
+      "Auditive Medien und Zubehör"
+    ],
+    "top_id": "AUT.AAW.AAL"
+  },
+  {
+    "id": "AUT.AAW.AAL.AAB.AAA",
+    "term": "Visuelle Medien und Zubehör",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Kommunikation",
+      "AUT.AAW.AAL.AAB",
+      "Visuelle Medien und Zubehör"
+    ],
+    "top_id": "AUT.AAW.AAL"
+  },
+  {
+    "id": "AUT.AAW.AAL.AAD.AAE",
+    "term": "Büromaterialien",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Kommunikation",
+      "AUT.AAW.AAL.AAD",
+      "Büromaterialien"
+    ],
+    "top_id": "AUT.AAW.AAL"
+  },
+  {
+    "id": "AUT.AAW.AAL.AAD.AAB",
+    "term": "Schreiben",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Kommunikation",
+      "AUT.AAW.AAL.AAD",
+      "Schreiben"
+    ],
+    "top_id": "AUT.AAW.AAL"
+  },
+  {
+    "id": "AUT.AAW.AAL.AAE",
+    "term": "Briefverkehr",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Kommunikation",
+      "Briefverkehr"
+    ],
+    "top_id": "AUT.AAW.AAL"
+  },
+  {
+    "id": "AUT.AAW.AAD.AAC.AAC",
+    "term": "Lesegeräte",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Landwirtschaft",
+      "AUT.AAW.AAD.AAC",
+      "Lesegeräte"
+    ],
+    "top_id": "AUT.AAW.AAD"
+  },
+  {
+    "id": "AUT.AAW.AAD.AAC.AAA",
+    "term": "Mähgeräte und Zubehör",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Landwirtschaft",
+      "AUT.AAW.AAD.AAC",
+      "Mähgeräte und Zubehör"
+    ],
+    "top_id": "AUT.AAW.AAD"
+  },
+  {
+    "id": "AUT.AAW.AAD.AAE.AAJ",
+    "term": "Gartenbau",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Landwirtschaft",
+      "AUT.AAW.AAD.AAE",
+      "Gartenbau"
+    ],
+    "top_id": "AUT.AAW.AAD"
+  },
+  {
+    "id": "AUT.AAW.AAD.AAE.AAK",
+    "term": "Obstbau",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Landwirtschaft",
+      "AUT.AAW.AAD.AAE",
+      "Obstbau"
+    ],
+    "top_id": "AUT.AAW.AAD"
+  },
+  {
+    "id": "AUT.AAW.AAD.AAF.AAJ",
+    "term": "Almwirtschaft",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Landwirtschaft",
+      "AUT.AAW.AAD.AAF",
+      "Almwirtschaft"
+    ],
+    "top_id": "AUT.AAW.AAD"
+  },
+  {
+    "id": "AUT.AAW.AAD.AAF.AAB",
+    "term": "Bienen",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Landwirtschaft",
+      "AUT.AAW.AAD.AAF",
+      "Bienen"
+    ],
+    "top_id": "AUT.AAW.AAD"
+  },
+  {
+    "id": "AUT.AAW.AAD.AAF.AAD",
+    "term": "Fütterung",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Landwirtschaft",
+      "AUT.AAW.AAD.AAF",
+      "Fütterung"
+    ],
+    "top_id": "AUT.AAW.AAD"
+  },
+  {
+    "id": "AUT.AAW.AAD.AAF.AAK",
+    "term": "Haustiere",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Landwirtschaft",
+      "AUT.AAW.AAD.AAF",
+      "Haustiere"
+    ],
+    "top_id": "AUT.AAW.AAD"
+  },
+  {
+    "id": "AUT.AAW.AAD.AAF.AAE",
+    "term": "Hirtengerät",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Landwirtschaft",
+      "AUT.AAW.AAD.AAF",
+      "Hirtengerät"
+    ],
+    "top_id": "AUT.AAW.AAD"
+  },
+  {
+    "id": "AUT.AAW.AAD.AAF.AAH",
+    "term": "Pferdegeschirr",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Landwirtschaft",
+      "AUT.AAW.AAD.AAF",
+      "Pferdegeschirr"
+    ],
+    "top_id": "AUT.AAW.AAD"
+  },
+  {
+    "id": "AUT.AAW.AAD.AAF.AAG",
+    "term": "Pflege",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Landwirtschaft",
+      "AUT.AAW.AAD.AAF",
+      "Pflege"
+    ],
+    "top_id": "AUT.AAW.AAD"
+  },
+  {
+    "id": "AUT.AAW.AAD.AAF.AAF",
+    "term": "Stallhaltung",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Landwirtschaft",
+      "AUT.AAW.AAD.AAF",
+      "Stallhaltung"
+    ],
+    "top_id": "AUT.AAW.AAD"
+  },
+  {
+    "id": "AUT.AAW.AAD.AAF.AAA",
+    "term": "Zuggeschirre",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Landwirtschaft",
+      "AUT.AAW.AAD.AAF",
+      "Zuggeschirre"
+    ],
+    "top_id": "AUT.AAW.AAD"
+  },
+  {
+    "id": "AUT.AAW.AAD.AAG.AAB",
+    "term": "Butterherstellung",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Landwirtschaft",
+      "AUT.AAW.AAD.AAG",
+      "Butterherstellung"
+    ],
+    "top_id": "AUT.AAW.AAD"
+  },
+  {
+    "id": "AUT.AAW.AAD.AAG.AAA",
+    "term": "Milchgewinnung und -aufbereitung",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Landwirtschaft",
+      "AUT.AAW.AAD.AAG",
+      "Milchgewinnung und -aufbereitung"
+    ],
+    "top_id": "AUT.AAW.AAD"
+  },
+  {
+    "id": "AUT.AAW.AAD.AAH.AAA",
+    "term": "Arbeitsgerät",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Landwirtschaft",
+      "AUT.AAW.AAD.AAH",
+      "Arbeitsgerät"
+    ],
+    "top_id": "AUT.AAW.AAD"
+  },
+  {
+    "id": "AUT.AAW.AAD.AAH.AAD",
+    "term": "Einrichtung",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Landwirtschaft",
+      "AUT.AAW.AAD.AAH",
+      "Einrichtung"
+    ],
+    "top_id": "AUT.AAW.AAD"
+  },
+  {
+    "id": "AUT.AAW.AAD.AAI.AAB",
+    "term": "Hüter",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Landwirtschaft",
+      "AUT.AAW.AAD.AAI",
+      "Hüter"
+    ],
+    "top_id": "AUT.AAW.AAD"
+  },
+  {
+    "id": "AUT.AAW.AAD.AAI.AAD",
+    "term": "Kellerausstattung",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Landwirtschaft",
+      "AUT.AAW.AAD.AAI",
+      "Kellerausstattung"
+    ],
+    "top_id": "AUT.AAW.AAD"
+  },
+  {
+    "id": "AUT.AAW.AAD.AAI.AAA",
+    "term": "Kellereizubehör",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Landwirtschaft",
+      "AUT.AAW.AAD.AAI",
+      "Kellereizubehör"
+    ],
+    "top_id": "AUT.AAW.AAD"
+  },
+  {
+    "id": "AUT.AAW.AAD.AAI.AAC",
+    "term": "Werkzeuge",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Landwirtschaft",
+      "AUT.AAW.AAD.AAI",
+      "Werkzeuge"
+    ],
+    "top_id": "AUT.AAW.AAD"
+  },
+  {
+    "id": "AUT.AAW.AAD.AAB.AAI",
+    "term": "Bewässerung",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Landwirtschaft",
+      "Bodenbearbeitung",
+      "Bewässerung"
+    ],
+    "top_id": "AUT.AAW.AAD"
+  },
+  {
+    "id": "AUT.AAW.AAD.AAB.AAF",
+    "term": "Bodenlockerung",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Landwirtschaft",
+      "Bodenbearbeitung",
+      "Bodenlockerung"
+    ],
+    "top_id": "AUT.AAW.AAD"
+  },
+  {
+    "id": "AUT.AAW.AAD.AAB.AAB",
+    "term": "Eggen und Walzen",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Landwirtschaft",
+      "Bodenbearbeitung",
+      "Eggen und Walzen"
+    ],
+    "top_id": "AUT.AAW.AAD"
+  },
+  {
+    "id": "AUT.AAW.AAD.AAB.AAE",
+    "term": "Schädlingsbekämpfung",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Landwirtschaft",
+      "Bodenbearbeitung",
+      "Schädlingsbekämpfung"
+    ],
+    "top_id": "AUT.AAW.AAD"
+  },
+  {
+    "id": "AUT.AAW.AAD.AAB.AAH",
+    "term": "Werkzeuge",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Landwirtschaft",
+      "Bodenbearbeitung",
+      "Werkzeuge"
+    ],
+    "top_id": "AUT.AAW.AAD"
+  },
+  {
+    "id": "AUT.AAW.AAD.AAD.AAA",
+    "term": "Dreschgeräte",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Landwirtschaft",
+      "Ernteaufbereitung",
+      "Dreschgeräte"
+    ],
+    "top_id": "AUT.AAW.AAD"
+  },
+  {
+    "id": "AUT.AAW.AAD.AAD.AAF",
+    "term": "Weiterverarbeitung",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Landwirtschaft",
+      "Ernteaufbereitung",
+      "Weiterverarbeitung"
+    ],
+    "top_id": "AUT.AAW.AAD"
+  },
+  {
+    "id": "AUT.AAW.AAD.AAD.AAD",
+    "term": "Zerkleinerungsgeräte",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Landwirtschaft",
+      "Ernteaufbereitung",
+      "Zerkleinerungsgeräte"
+    ],
+    "top_id": "AUT.AAW.AAD"
+  },
+  {
+    "id": "AUT.AAW.AAD.AAJ",
+    "term": "Flachsverarbeitung",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Landwirtschaft",
+      "Flachsverarbeitung"
+    ],
+    "top_id": "AUT.AAW.AAD"
+  },
+  {
+    "id": "AUT.AAW.AAD.AAA",
+    "term": "Noch nicht bestimmte Objekte",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Landwirtschaft",
+      "Noch nicht bestimmte Objekte"
+    ],
+    "top_id": "AUT.AAW.AAD"
+  },
+  {
+    "id": "AUT.AAW.AAJ.AAB.AAC",
+    "term": "Großuhren",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Messen und Wiegen",
+      "AUT.AAW.AAJ.AAB",
+      "Großuhren"
+    ],
+    "top_id": "AUT.AAW.AAJ"
+  },
+  {
+    "id": "AUT.AAW.AAJ.AAB.AAD",
+    "term": "Kleinuhren",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Messen und Wiegen",
+      "AUT.AAW.AAJ.AAB",
+      "Kleinuhren"
+    ],
+    "top_id": "AUT.AAW.AAJ"
+  },
+  {
+    "id": "AUT.AAW.AAJ.AAB.AAE",
+    "term": "Uhrenzubehör",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Messen und Wiegen",
+      "AUT.AAW.AAJ.AAB",
+      "Uhrenzubehör"
+    ],
+    "top_id": "AUT.AAW.AAJ"
+  },
+  {
+    "id": "AUT.AAW.AAJ.AAD.AAA",
+    "term": "Hauswirtschaft",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Messen und Wiegen",
+      "AUT.AAW.AAJ.AAD",
+      "Hauswirtschaft"
+    ],
+    "top_id": "AUT.AAW.AAJ"
+  },
+  {
+    "id": "AUT.AAW.AAJ.AAD.AAB",
+    "term": "Landwirtschaft",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Messen und Wiegen",
+      "AUT.AAW.AAJ.AAD",
+      "Landwirtschaft"
+    ],
+    "top_id": "AUT.AAW.AAJ"
+  },
+  {
+    "id": "AUT.AAW.AAJ.AAF.AAC",
+    "term": "Temperatur",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Messen und Wiegen",
+      "AUT.AAW.AAJ.AAF",
+      "Temperatur"
+    ],
+    "top_id": "AUT.AAW.AAJ"
+  },
+  {
+    "id": "AUT.AAW.AAJ.AAG",
+    "term": "Längen- und Winkelmaße",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Messen und Wiegen",
+      "Längen- und Winkelmaße"
+    ],
+    "top_id": "AUT.AAW.AAJ"
+  },
+  {
+    "id": "AUT.AAW.AAJ.AAH",
+    "term": "Spezielle Messgeräte",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Messen und Wiegen",
+      "Spezielle Messgeräte"
+    ],
+    "top_id": "AUT.AAW.AAJ"
+  },
+  {
+    "id": "AUT.AAW.AAJ.AAC.AAA",
+    "term": "Balkenwaagen",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Messen und Wiegen",
+      "Waagen",
+      "Balkenwaagen"
+    ],
+    "top_id": "AUT.AAW.AAJ"
+  },
+  {
+    "id": "AUT.AAW.AAJ.AAC.AAC",
+    "term": "Federwaagen",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Messen und Wiegen",
+      "Waagen",
+      "Federwaagen"
+    ],
+    "top_id": "AUT.AAW.AAJ"
+  },
+  {
+    "id": "AUT.AAW.AAJ.AAC.AAI",
+    "term": "Gewichte",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Messen und Wiegen",
+      "Waagen",
+      "Gewichte"
+    ],
+    "top_id": "AUT.AAW.AAJ"
+  },
+  {
+    "id": "AUT.AAW.AAJ.AAC.AAD",
+    "term": "Laufgewichtswaagen",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Messen und Wiegen",
+      "Waagen",
+      "Laufgewichtswaagen"
+    ],
+    "top_id": "AUT.AAW.AAJ"
+  },
+  {
+    "id": "AUT.AAW.AAJ.AAC.AAF",
+    "term": "Zeigerwaagen",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Messen und Wiegen",
+      "Waagen",
+      "Zeigerwaagen"
+    ],
+    "top_id": "AUT.AAW.AAJ"
+  },
+  {
+    "id": "AUT.AAW.AAP.AAB.AAB",
+    "term": "Altarteile",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Religion und Glaube",
+      "AUT.AAW.AAP.AAB",
+      "Altarteile"
+    ],
+    "top_id": "AUT.AAW.AAP"
+  },
+  {
+    "id": "AUT.AAW.AAP.AAB.AAF",
+    "term": "Figurenteile",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Religion und Glaube",
+      "AUT.AAW.AAP.AAB",
+      "Figurenteile"
+    ],
+    "top_id": "AUT.AAW.AAP"
+  },
+  {
+    "id": "AUT.AAW.AAP.AAB.AAE",
+    "term": "Kircheneinrichtung",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Religion und Glaube",
+      "AUT.AAW.AAP.AAB",
+      "Kircheneinrichtung"
+    ],
+    "top_id": "AUT.AAW.AAP"
+  },
+  {
+    "id": "AUT.AAW.AAP.AAB.AAD",
+    "term": "Krippen",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Religion und Glaube",
+      "AUT.AAW.AAP.AAB",
+      "Krippen"
+    ],
+    "top_id": "AUT.AAW.AAP"
+  },
+  {
+    "id": "AUT.AAW.AAP.AAC.AAG",
+    "term": "Kreuze",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Religion und Glaube",
+      "AUT.AAW.AAP.AAC",
+      "Kreuze"
+    ],
+    "top_id": "AUT.AAW.AAP"
+  },
+  {
+    "id": "AUT.AAW.AAP.AAC.AAF",
+    "term": "Prozessionsgerät",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Religion und Glaube",
+      "AUT.AAW.AAP.AAC",
+      "Prozessionsgerät"
+    ],
+    "top_id": "AUT.AAW.AAP"
+  },
+  {
+    "id": "AUT.AAW.AAP.AAK",
+    "term": "Erinnerungsstücke",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Religion und Glaube",
+      "Erinnerungsstücke"
+    ],
+    "top_id": "AUT.AAW.AAP"
+  },
+  {
+    "id": "AUT.AAW.AAP.AAL",
+    "term": "Heiligenstatuen",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Religion und Glaube",
+      "Heiligenstatuen"
+    ],
+    "top_id": "AUT.AAW.AAP"
+  },
+  {
+    "id": "AUT.AAW.AAP.AAJ",
+    "term": "Kirchliche Organisationen",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Religion und Glaube",
+      "Kirchliche Organisationen"
+    ],
+    "top_id": "AUT.AAW.AAP"
+  },
+  {
+    "id": "AUT.AAW.AAP.AAE.AAH",
+    "term": "Amulette",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Religion und Glaube",
+      "Volksfrömmigkeit",
+      "Amulette"
+    ],
+    "top_id": "AUT.AAW.AAP"
+  },
+  {
+    "id": "AUT.AAW.AAP.AAE.AAG",
+    "term": "Andachtsbildchen",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Religion und Glaube",
+      "Volksfrömmigkeit",
+      "Andachtsbildchen"
+    ],
+    "top_id": "AUT.AAW.AAP"
+  },
+  {
+    "id": "AUT.AAW.AAP.AAE.AAB",
+    "term": "Devotionalien",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Religion und Glaube",
+      "Volksfrömmigkeit",
+      "Devotionalien"
+    ],
+    "top_id": "AUT.AAW.AAP"
+  },
+  {
+    "id": "AUT.AAW.AAP.AAE.AAC",
+    "term": "Krippen",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Religion und Glaube",
+      "Volksfrömmigkeit",
+      "Krippen"
+    ],
+    "top_id": "AUT.AAW.AAP"
+  },
+  {
+    "id": "AUT.AAW.AAP.AAE.AAF",
+    "term": "Rosenkränze",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Religion und Glaube",
+      "Volksfrömmigkeit",
+      "Rosenkränze"
+    ],
+    "top_id": "AUT.AAW.AAP"
+  },
+  {
+    "id": "AUT.AAW.AAP.AAE.AAE",
+    "term": "Votivbilder",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Religion und Glaube",
+      "Volksfrömmigkeit",
+      "Votivbilder"
+    ],
+    "top_id": "AUT.AAW.AAP"
+  },
+  {
+    "id": "AUT.AAW.AAP.AAE.AAA",
+    "term": "Votivgaben",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Religion und Glaube",
+      "Volksfrömmigkeit",
+      "Votivgaben"
+    ],
+    "top_id": "AUT.AAW.AAP"
+  },
+  {
+    "id": "AUT.AAW.AAR.AAC.AAA",
+    "term": "Familie/Lebenslauf",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Schriftgut",
+      "AUT.AAW.AAR.AAC",
+      "Familie/Lebenslauf"
+    ],
+    "top_id": "AUT.AAW.AAR"
+  },
+  {
+    "id": "AUT.AAW.AAR.AAF.AAE",
+    "term": "Briefe",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Schriftgut",
+      "AUT.AAW.AAR.AAF",
+      "Briefe"
+    ],
+    "top_id": "AUT.AAW.AAR"
+  },
+  {
+    "id": "AUT.AAW.AAR.AAJ.AAJ",
+    "term": "Gedichte",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Schriftgut",
+      "AUT.AAW.AAR.AAJ",
+      "Gedichte"
+    ],
+    "top_id": "AUT.AAW.AAR"
+  },
+  {
+    "id": "AUT.AAW.AAR.AAJ.AAH",
+    "term": "Kinder- und Jugendliteratur",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Schriftgut",
+      "AUT.AAW.AAR.AAJ",
+      "Kinder- und Jugendliteratur"
+    ],
+    "top_id": "AUT.AAW.AAR"
+  },
+  {
+    "id": "AUT.AAW.AAR.AAJ.AAI",
+    "term": "Lieder",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Schriftgut",
+      "AUT.AAW.AAR.AAJ",
+      "Lieder"
+    ],
+    "top_id": "AUT.AAW.AAR"
+  },
+  {
+    "id": "AUT.AAW.AAR.AAJ.AAF",
+    "term": "Notenhefte",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Schriftgut",
+      "AUT.AAW.AAR.AAJ",
+      "Notenhefte"
+    ],
+    "top_id": "AUT.AAW.AAR"
+  },
+  {
+    "id": "AUT.AAW.AAR.AAJ.AAG",
+    "term": "Roman",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Schriftgut",
+      "AUT.AAW.AAR.AAJ",
+      "Roman"
+    ],
+    "top_id": "AUT.AAW.AAR"
+  },
+  {
+    "id": "AUT.AAW.AAR.AAJ.AAA",
+    "term": "Zeitungen und Zeitschriften",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Schriftgut",
+      "AUT.AAW.AAR.AAJ",
+      "Zeitungen und Zeitschriften"
+    ],
+    "top_id": "AUT.AAW.AAR"
+  },
+  {
+    "id": "AUT.AAW.AAR.AAM.AAF",
+    "term": "Dekoration",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Schriftgut",
+      "AUT.AAW.AAR.AAM",
+      "Dekoration"
+    ],
+    "top_id": "AUT.AAW.AAR"
+  },
+  {
+    "id": "AUT.AAW.AAR.AAM.AAE",
+    "term": "Handarbeit",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Schriftgut",
+      "AUT.AAW.AAR.AAM",
+      "Handarbeit"
+    ],
+    "top_id": "AUT.AAW.AAR"
+  },
+  {
+    "id": "AUT.AAW.AAR.AAM.AAD",
+    "term": "Kochbücher",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Schriftgut",
+      "AUT.AAW.AAR.AAM",
+      "Kochbücher"
+    ],
+    "top_id": "AUT.AAW.AAR"
+  },
+  {
+    "id": "AUT.AAW.AAR.AAS",
+    "term": "Fachliteratur",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Schriftgut",
+      "Fachliteratur"
+    ],
+    "top_id": "AUT.AAW.AAR"
+  },
+  {
+    "id": "AUT.AAW.AAR.AAD",
+    "term": "Firmen",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Schriftgut",
+      "Firmen"
+    ],
+    "top_id": "AUT.AAW.AAR"
+  },
+  {
+    "id": "AUT.AAW.AAR.AAP",
+    "term": "Kalender",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Schriftgut",
+      "Kalender"
+    ],
+    "top_id": "AUT.AAW.AAR"
+  },
+  {
+    "id": "AUT.AAW.AAR.AAQ",
+    "term": "Religion",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Schriftgut",
+      "Religion"
+    ],
+    "top_id": "AUT.AAW.AAR"
+  },
+  {
+    "id": "AUT.AAW.AAR.AAT",
+    "term": "Schule",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Schriftgut",
+      "Schule"
+    ],
+    "top_id": "AUT.AAW.AAR"
+  },
+  {
+    "id": "AUT.AAW.AAR.AAH",
+    "term": "Vereine",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Schriftgut",
+      "Vereine"
+    ],
+    "top_id": "AUT.AAW.AAR"
+  },
+  {
+    "id": "AUT.AAW.AAR.AAR",
+    "term": "Werbung",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Schriftgut",
+      "Werbung"
+    ],
+    "top_id": "AUT.AAW.AAR"
+  },
+  {
+    "id": "AUT.AAW.AAR.AAE",
+    "term": "Zünfte",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Schriftgut",
+      "Zünfte"
+    ],
+    "top_id": "AUT.AAW.AAR"
+  },
+  {
+    "id": "AUT.AAW.AAM.AAC.AAA",
+    "term": "Brettspiele",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Spielzeug/Spiel/Sport",
+      "AUT.AAW.AAM.AAC",
+      "Brettspiele"
+    ],
+    "top_id": "AUT.AAW.AAM"
+  },
+  {
+    "id": "AUT.AAW.AAM.AAC.AAF",
+    "term": "Theaterspiele",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Spielzeug/Spiel/Sport",
+      "AUT.AAW.AAM.AAC",
+      "Theaterspiele"
+    ],
+    "top_id": "AUT.AAW.AAM"
+  },
+  {
+    "id": "AUT.AAW.AAM.AAC.AAB",
+    "term": "Würfelspiele",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Spielzeug/Spiel/Sport",
+      "AUT.AAW.AAM.AAC",
+      "Würfelspiele"
+    ],
+    "top_id": "AUT.AAW.AAM"
+  },
+  {
+    "id": "AUT.AAW.AAM.AAD.AAA",
+    "term": "Wintersport",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Spielzeug/Spiel/Sport",
+      "AUT.AAW.AAM.AAD",
+      "Wintersport"
+    ],
+    "top_id": "AUT.AAW.AAM"
+  },
+  {
+    "id": "AUT.AAW.AAM.AAA.AAP",
+    "term": "Geschicklichkeitsspiele",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Spielzeug/Spiel/Sport",
+      "Kinderspielzeug",
+      "Geschicklichkeitsspiele"
+    ],
+    "top_id": "AUT.AAW.AAM"
+  },
+  {
+    "id": "AUT.AAW.AAM.AAA.AAI",
+    "term": "Miniaturfahrzeuge",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Spielzeug/Spiel/Sport",
+      "Kinderspielzeug",
+      "Miniaturfahrzeuge"
+    ],
+    "top_id": "AUT.AAW.AAM"
+  },
+  {
+    "id": "AUT.AAW.AAM.AAA.AAB",
+    "term": "Puppen und Zubehör",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Spielzeug/Spiel/Sport",
+      "Kinderspielzeug",
+      "Puppen und Zubehör"
+    ],
+    "top_id": "AUT.AAW.AAM"
+  },
+  {
+    "id": "AUT.AAW.AAM.AAA.AAC",
+    "term": "Puppenhäuser und -stuben",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Spielzeug/Spiel/Sport",
+      "Kinderspielzeug",
+      "Puppenhäuser und -stuben"
+    ],
+    "top_id": "AUT.AAW.AAM"
+  },
+  {
+    "id": "AUT.AAW.AAM.AAA.AAM",
+    "term": "Spielzeug für draußen",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Spielzeug/Spiel/Sport",
+      "Kinderspielzeug",
+      "Spielzeug für draußen"
+    ],
+    "top_id": "AUT.AAW.AAM"
+  },
+  {
+    "id": "AUT.AAW.AAM.AAA.AAL",
+    "term": "Spielzeugtiere",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Spielzeug/Spiel/Sport",
+      "Kinderspielzeug",
+      "Spielzeugtiere"
+    ],
+    "top_id": "AUT.AAW.AAM"
+  },
+  {
+    "id": "AUT.AAW.AAI.AAC.AAA",
+    "term": "Handtraggeräte",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Transport und Verkehr",
+      "AUT.AAW.AAI.AAC",
+      "Handtraggeräte"
+    ],
+    "top_id": "AUT.AAW.AAI"
+  },
+  {
+    "id": "AUT.AAW.AAI.AAC.AAB",
+    "term": "Rückentraggeräte",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Transport und Verkehr",
+      "AUT.AAW.AAI.AAC",
+      "Rückentraggeräte"
+    ],
+    "top_id": "AUT.AAW.AAI"
+  },
+  {
+    "id": "AUT.AAW.AAI.AAE.AAA",
+    "term": "Karren und Wagen",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Transport und Verkehr",
+      "AUT.AAW.AAI.AAE",
+      "Karren und Wagen"
+    ],
+    "top_id": "AUT.AAW.AAI"
+  },
+  {
+    "id": "AUT.AAW.AAB.AAB.AAG",
+    "term": "Borde und Regale",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Wohnen",
+      "AUT.AAW.AAB.AAB",
+      "Borde und Regale"
+    ],
+    "top_id": "AUT.AAW.AAB"
+  },
+  {
+    "id": "AUT.AAW.AAB.AAB.AAI",
+    "term": "Möbelteile",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Wohnen",
+      "AUT.AAW.AAB.AAB",
+      "Möbelteile"
+    ],
+    "top_id": "AUT.AAW.AAB"
+  },
+  {
+    "id": "AUT.AAW.AAB.AAB.AAF",
+    "term": "Schlaf- und Ruhemöbel",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Wohnen",
+      "AUT.AAW.AAB.AAB",
+      "Schlaf- und Ruhemöbel"
+    ],
+    "top_id": "AUT.AAW.AAB"
+  },
+  {
+    "id": "AUT.AAW.AAB.AAB.AAC",
+    "term": "Schrankmöbel",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Wohnen",
+      "AUT.AAW.AAB.AAB",
+      "Schrankmöbel"
+    ],
+    "top_id": "AUT.AAW.AAB"
+  },
+  {
+    "id": "AUT.AAW.AAB.AAB.AAD",
+    "term": "Sitzmöbel",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Wohnen",
+      "AUT.AAW.AAB.AAB",
+      "Sitzmöbel"
+    ],
+    "top_id": "AUT.AAW.AAB"
+  },
+  {
+    "id": "AUT.AAW.AAB.AAB.AAA",
+    "term": "Truhen",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Wohnen",
+      "AUT.AAW.AAB.AAB",
+      "Truhen"
+    ],
+    "top_id": "AUT.AAW.AAB"
+  },
+  {
+    "id": "AUT.AAW.AAB.AAC.AAF",
+    "term": "Hilfsgerät",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Wohnen",
+      "AUT.AAW.AAB.AAC",
+      "Hilfsgerät"
+    ],
+    "top_id": "AUT.AAW.AAB"
+  },
+  {
+    "id": "AUT.AAW.AAB.AAC.AAG",
+    "term": "Uhren",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Wohnen",
+      "AUT.AAW.AAB.AAC",
+      "Uhren"
+    ],
+    "top_id": "AUT.AAW.AAB"
+  },
+  {
+    "id": "AUT.AAW.AAB.AAC.AAA",
+    "term": "Wandschmuck",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Wohnen",
+      "AUT.AAW.AAB.AAC",
+      "Wandschmuck"
+    ],
+    "top_id": "AUT.AAW.AAB"
+  },
+  {
+    "id": "AUT.AAW.AAB.AAC.AAE",
+    "term": "Zierobjekte",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Wohnen",
+      "AUT.AAW.AAB.AAC",
+      "Zierobjekte"
+    ],
+    "top_id": "AUT.AAW.AAB"
+  },
+  {
+    "id": "AUT.AAW.AAB.AAD.AAF",
+    "term": "Elektrische Leuchten",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Wohnen",
+      "AUT.AAW.AAB.AAD",
+      "Elektrische Leuchten"
+    ],
+    "top_id": "AUT.AAW.AAB"
+  },
+  {
+    "id": "AUT.AAW.AAB.AAD.AAB",
+    "term": "Kerzenleuchter",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Wohnen",
+      "AUT.AAW.AAB.AAD",
+      "Kerzenleuchter"
+    ],
+    "top_id": "AUT.AAW.AAB"
+  },
+  {
+    "id": "AUT.AAW.AAB.AAD.AAA",
+    "term": "Kienspäne",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Wohnen",
+      "AUT.AAW.AAB.AAD",
+      "Kienspäne"
+    ],
+    "top_id": "AUT.AAW.AAB"
+  },
+  {
+    "id": "AUT.AAW.AAB.AAD.AAG",
+    "term": "Lampenteile",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Wohnen",
+      "AUT.AAW.AAB.AAD",
+      "Lampenteile"
+    ],
+    "top_id": "AUT.AAW.AAB"
+  },
+  {
+    "id": "AUT.AAW.AAB.AAD.AAD",
+    "term": "Petroleumlampen",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Wohnen",
+      "AUT.AAW.AAB.AAD",
+      "Petroleumlampen"
+    ],
+    "top_id": "AUT.AAW.AAB"
+  },
+  {
+    "id": "AUT.AAW.AAB.AAD.AAH",
+    "term": "Zubehör",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Wohnen",
+      "AUT.AAW.AAB.AAD",
+      "Zubehör"
+    ],
+    "top_id": "AUT.AAW.AAB"
+  },
+  {
+    "id": "AUT.AAW.AAB.AAD.AAC",
+    "term": "Öllampen",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Wohnen",
+      "AUT.AAW.AAB.AAD",
+      "Öllampen"
+    ],
+    "top_id": "AUT.AAW.AAB"
+  },
+  {
+    "id": "AUT.AAW.AAB.AAE.AAI",
+    "term": "Kachelofenteile",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Wohnen",
+      "AUT.AAW.AAB.AAE",
+      "Kachelofenteile"
+    ],
+    "top_id": "AUT.AAW.AAB"
+  },
+  {
+    "id": "AUT.AAW.AAB.AAE.AAF",
+    "term": "Ofen- und Herdteile",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Wohnen",
+      "AUT.AAW.AAB.AAE",
+      "Ofen- und Herdteile"
+    ],
+    "top_id": "AUT.AAW.AAB"
+  },
+  {
+    "id": "AUT.AAW.AAB.AAE.AAG",
+    "term": "Ofen- und Herdzubehör",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Wohnen",
+      "AUT.AAW.AAB.AAE",
+      "Ofen- und Herdzubehör"
+    ],
+    "top_id": "AUT.AAW.AAB"
+  },
+  {
+    "id": "AUT.AAW.AAB.AAE.AAD",
+    "term": "Zimmeröfen",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Wohnen",
+      "AUT.AAW.AAB.AAE",
+      "Zimmeröfen"
+    ],
+    "top_id": "AUT.AAW.AAB"
+  },
+  {
+    "id": "AUT.AAW.AAB.AAF.AAB",
+    "term": "Bad und Toilette",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Wohnen",
+      "AUT.AAW.AAB.AAF",
+      "Bad und Toilette"
+    ],
+    "top_id": "AUT.AAW.AAB"
+  },
+  {
+    "id": "AUT.AAW.AAB.AAG",
+    "term": "Haustiere",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Wohnen",
+      "Haustiere"
+    ],
+    "top_id": "AUT.AAW.AAB"
+  },
+  {
+    "id": "AUT.AAW.AAK.AAB.AAE",
+    "term": "Erinnerungsstücke",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Öffentlichkeit und Gemeinwesen",
+      "AUT.AAW.AAK.AAB",
+      "Erinnerungsstücke"
+    ],
+    "top_id": "AUT.AAW.AAK"
+  },
+  {
+    "id": "AUT.AAW.AAK.AAB.AAD",
+    "term": "Fahnen",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Öffentlichkeit und Gemeinwesen",
+      "AUT.AAW.AAK.AAB",
+      "Fahnen"
+    ],
+    "top_id": "AUT.AAW.AAK"
+  },
+  {
+    "id": "AUT.AAW.AAK.AAB.AAF",
+    "term": "Gedenkmünzen/Medaillen",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Öffentlichkeit und Gemeinwesen",
+      "AUT.AAW.AAK.AAB",
+      "Gedenkmünzen/Medaillen"
+    ],
+    "top_id": "AUT.AAW.AAK"
+  },
+  {
+    "id": "AUT.AAW.AAK.AAB.AAA",
+    "term": "Orden/Abzeichen",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Öffentlichkeit und Gemeinwesen",
+      "AUT.AAW.AAK.AAB",
+      "Orden/Abzeichen"
+    ],
+    "top_id": "AUT.AAW.AAK"
+  },
+  {
+    "id": "AUT.AAW.AAK.AAB.AAB",
+    "term": "Siegel und Stempel",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Öffentlichkeit und Gemeinwesen",
+      "AUT.AAW.AAK.AAB",
+      "Siegel und Stempel"
+    ],
+    "top_id": "AUT.AAW.AAK"
+  },
+  {
+    "id": "AUT.AAW.AAK.AAB.AAJ",
+    "term": "Strafvollzug",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Öffentlichkeit und Gemeinwesen",
+      "AUT.AAW.AAK.AAB",
+      "Strafvollzug"
+    ],
+    "top_id": "AUT.AAW.AAK"
+  },
+  {
+    "id": "AUT.AAW.AAK.AAB.AAC",
+    "term": "Wappen",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Öffentlichkeit und Gemeinwesen",
+      "AUT.AAW.AAK.AAB",
+      "Wappen"
+    ],
+    "top_id": "AUT.AAW.AAK"
+  },
+  {
+    "id": "AUT.AAW.AAK.AAD.AAA",
+    "term": "Innungen",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Öffentlichkeit und Gemeinwesen",
+      "AUT.AAW.AAK.AAD",
+      "Innungen"
+    ],
+    "top_id": "AUT.AAW.AAK"
+  },
+  {
+    "id": "AUT.AAW.AAK.AAH.AAA",
+    "term": "Orden/Abzeichen",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Öffentlichkeit und Gemeinwesen",
+      "AUT.AAW.AAK.AAH",
+      "Orden/Abzeichen"
+    ],
+    "top_id": "AUT.AAW.AAK"
+  },
+  {
+    "id": "AUT.AAW.AAK.AAH.AAG",
+    "term": "Warn- und Hinweiszeichen",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Öffentlichkeit und Gemeinwesen",
+      "AUT.AAW.AAK.AAH",
+      "Warn- und Hinweiszeichen"
+    ],
+    "top_id": "AUT.AAW.AAK"
+  },
+  {
+    "id": "AUT.AAW.AAK.AAI.AAH",
+    "term": "Blankwaffen",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Öffentlichkeit und Gemeinwesen",
+      "AUT.AAW.AAK.AAI",
+      "Blankwaffen"
+    ],
+    "top_id": "AUT.AAW.AAK"
+  },
+  {
+    "id": "AUT.AAW.AAK.AAI.AAE",
+    "term": "Erinnerungsstücke",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Öffentlichkeit und Gemeinwesen",
+      "AUT.AAW.AAK.AAI",
+      "Erinnerungsstücke"
+    ],
+    "top_id": "AUT.AAW.AAK"
+  },
+  {
+    "id": "AUT.AAW.AAK.AAI.AAA",
+    "term": "Orden/Abzeichen",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Öffentlichkeit und Gemeinwesen",
+      "AUT.AAW.AAK.AAI",
+      "Orden/Abzeichen"
+    ],
+    "top_id": "AUT.AAW.AAK"
+  },
+  {
+    "id": "AUT.AAW.AAK.AAI.AAM",
+    "term": "Waffenzubehör und Munition",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Öffentlichkeit und Gemeinwesen",
+      "AUT.AAW.AAK.AAI",
+      "Waffenzubehör und Munition"
+    ],
+    "top_id": "AUT.AAW.AAK"
+  },
+  {
+    "id": "AUT.AAW.AAK.AAJ.AAE",
+    "term": "Sparen",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Öffentlichkeit und Gemeinwesen",
+      "AUT.AAW.AAK.AAJ",
+      "Sparen"
+    ],
+    "top_id": "AUT.AAW.AAK"
+  },
+  {
+    "id": "AUT.AAW.AAK.AAK.AAA",
+    "term": "Einrichtung",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Öffentlichkeit und Gemeinwesen",
+      "AUT.AAW.AAK.AAK",
+      "Einrichtung"
+    ],
+    "top_id": "AUT.AAW.AAK"
+  },
+  {
+    "id": "AUT.AAW.AAK.AAK.AAD",
+    "term": "Schülerarbeiten",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Öffentlichkeit und Gemeinwesen",
+      "AUT.AAW.AAK.AAK",
+      "Schülerarbeiten"
+    ],
+    "top_id": "AUT.AAW.AAK"
+  },
+  {
+    "id": "AUT.AAW.AAK.AAK.AAB",
+    "term": "Unterrichtsmittel",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Öffentlichkeit und Gemeinwesen",
+      "AUT.AAW.AAK.AAK",
+      "Unterrichtsmittel"
+    ],
+    "top_id": "AUT.AAW.AAK"
+  },
+  {
+    "id": "AUT.AAW.AAK.AAM.AAD",
+    "term": "Ausstattung",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Öffentlichkeit und Gemeinwesen",
+      "AUT.AAW.AAK.AAM",
+      "Ausstattung"
+    ],
+    "top_id": "AUT.AAW.AAK"
+  },
+  {
+    "id": "AUT.AAW.AAK.AAM.AAC",
+    "term": "Einrichtung",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Öffentlichkeit und Gemeinwesen",
+      "AUT.AAW.AAK.AAM",
+      "Einrichtung"
+    ],
+    "top_id": "AUT.AAW.AAK"
+  },
+  {
+    "id": "AUT.AAW.AAK.AAM.AAB",
+    "term": "Modelle",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Öffentlichkeit und Gemeinwesen",
+      "AUT.AAW.AAK.AAM",
+      "Modelle"
+    ],
+    "top_id": "AUT.AAW.AAK"
+  },
+  {
+    "id": "AUT.AAW.AAK.AAM.AAA",
+    "term": "Schautafeln",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Öffentlichkeit und Gemeinwesen",
+      "AUT.AAW.AAK.AAM",
+      "Schautafeln"
+    ],
+    "top_id": "AUT.AAW.AAK"
+  },
+  {
+    "id": "AUT.AAW.AAK.AAF",
+    "term": "Vereine/Verbände",
+    "path": [
+      "Volkskundliche Sammlung NÖ",
+      "Volkskunde – Öffentlichkeit und Gemeinwesen",
+      "Vereine/Verbände"
+    ],
+    "top_id": "AUT.AAW.AAK"
+  }
+]

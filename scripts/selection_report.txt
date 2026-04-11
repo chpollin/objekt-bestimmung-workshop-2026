@@ -1,0 +1,31 @@
+Selected 250 objects (target 250)
+Random seed: 42
+Per-leaf cap: 3
+Min per top: 5
+
+Per top area:
+  AUT.AAW.AAH        40
+  AUT.AAW.AAC        27
+  AUT.AAW.AAQ        24
+  AUT.AAW.AAD        17
+  AUT.AAW.AAB        16
+  AUT.AAW.AAK        13
+  AUT.AAW.AAN        13
+  AUT.AAW.AAS        13
+  AUT.AAW.AAJ        12
+  AUT.AAW.AAR        11
+  AUT.AAW.AAO        10
+  AUT.AAW.AAP        10
+  AUT.AAW.AAA         9
+  AUT.AAW.AAM         8
+  AUT.AAW.AAT         7
+  AUT.AAW.AAE         6
+  AUT.AAW.AAL         6
+  AUT.AAW.AAI         4
+  AUT.AAW.AAF         3
+  AUT.AAW.AAG         1
+
+Distinct leaves used: 228 of 415
+Without dating:    29
+Without dimensions: 2
+Without medium:    2

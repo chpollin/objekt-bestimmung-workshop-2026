@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+
+# Pipeline working files
+scripts/cache/
+scripts/preview.html
+scripts/*.log
+
+# Sample/iteration phase artifacts (deleted after prompt is final)
+data/json/sample.json
+data/json/ai_blind_sample.json
+data/json/ai_enriched_sample.json
+data/json/ai_blind_sample_v1.json
+data/json/ai_enriched_sample_v1.json
+data/json/ai_judge_sample.json
+data/json/ai_judge_selection.json
+data/json/judge_selection.json
+scripts/dev/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+
+# Secrets
+.env

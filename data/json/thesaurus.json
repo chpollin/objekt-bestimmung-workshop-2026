@@ -1,0 +1,2775 @@
+{
+  "root": "Volkskundliche Sammlung NÖ",
+  "children": [
+    {
+      "id": "AUT.AAW.AAA",
+      "term": "Volkskunde – Architektur",
+      "children": [
+        {
+          "id": "AUT.AAW.AAA.AAB",
+          "term": "AUT.AAW.AAA.AAB",
+          "children": [
+            {
+              "id": "AUT.AAW.AAA.AAB.AAB",
+              "term": "Böden",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAA.AAB.AAL",
+              "term": "Dächer",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAA.AAB.AAD",
+              "term": "Tür- und Torbestandteile",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "AUT.AAW.AAA.AAC",
+          "term": "AUT.AAW.AAA.AAC",
+          "children": [
+            {
+              "id": "AUT.AAW.AAA.AAC.AAC",
+              "term": "Dächer",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAA.AAC.AAA",
+              "term": "Fassaden",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAA.AAC.AAB",
+              "term": "Wände/Decken",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "AUT.AAW.AAA.AAD",
+          "term": "AUT.AAW.AAA.AAD",
+          "children": [
+            {
+              "id": "AUT.AAW.AAA.AAD.AAB",
+              "term": "Strom",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "AUT.AAW.AAA.AAE",
+          "term": "AUT.AAW.AAA.AAE",
+          "children": [
+            {
+              "id": "AUT.AAW.AAA.AAE.AAE",
+              "term": "Einfriedungen",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "AUT.AAW.AAS",
+      "term": "Volkskunde – Bildwerke",
+      "children": [
+        {
+          "id": "AUT.AAW.AAS.AAA",
+          "term": "AUT.AAW.AAS.AAA",
+          "children": [
+            {
+              "id": "AUT.AAW.AAS.AAA.AAI",
+              "term": "Alltagsdarstellungen",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAS.AAA.AAL",
+              "term": "Genrebilder",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAS.AAA.AAJ",
+              "term": "Religiöse Darstellungen",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "AUT.AAW.AAS.AAD",
+          "term": "AUT.AAW.AAS.AAD",
+          "children": [
+            {
+              "id": "AUT.AAW.AAS.AAD.AAC",
+              "term": "Ansichtskarten",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "AUT.AAW.AAS.AAE",
+          "term": "AUT.AAW.AAS.AAE",
+          "children": [
+            {
+              "id": "AUT.AAW.AAS.AAE.AAC",
+              "term": "Politik/Soziales/Zeitgeschehen",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAS.AAE.AAB",
+              "term": "Produkt- und Wirtschaftswerbung",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "AUT.AAW.AAS.AAH",
+          "term": "AUT.AAW.AAS.AAH",
+          "children": [
+            {
+              "id": "AUT.AAW.AAS.AAH.AAD",
+              "term": "Landschaften und Gebäude",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAS.AAH.AAC",
+              "term": "Portraits",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "AUT.AAW.AAS.AAI",
+          "term": "AUT.AAW.AAS.AAI",
+          "children": [
+            {
+              "id": "AUT.AAW.AAS.AAI.AAF",
+              "term": "Genrebilder",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAS.AAI.AAC",
+              "term": "Landschaften, identifiziert",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAS.AAI.AAD",
+              "term": "Landschaften, unbekannt",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAS.AAI.AAE",
+              "term": "Mode",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAS.AAI.AAA",
+              "term": "Religiöse Darstellungen",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "AUT.AAW.AAS.AAN",
+          "term": "Andenkenbilder",
+          "children": []
+        },
+        {
+          "id": "AUT.AAW.AAS.AAK",
+          "term": "Bilderrahmen",
+          "children": []
+        },
+        {
+          "id": "AUT.AAW.AAS.AAL",
+          "term": "Kastenbilder",
+          "children": []
+        },
+        {
+          "id": "AUT.AAW.AAS.AAO",
+          "term": "Spiegelbild",
+          "children": []
+        },
+        {
+          "id": "AUT.AAW.AAS.AAM",
+          "term": "Stickerei",
+          "children": []
+        },
+        {
+          "id": "AUT.AAW.AAS.AAB",
+          "term": "Zeichnung/Grafik",
+          "children": [
+            {
+              "id": "AUT.AAW.AAS.AAB.AAB",
+              "term": "Portraits, unbekannt",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "AUT.AAW.AAO",
+      "term": "Volkskunde – Brauch und Fest",
+      "children": [
+        {
+          "id": "AUT.AAW.AAO.AAB",
+          "term": "AUT.AAW.AAO.AAB",
+          "children": [
+            {
+              "id": "AUT.AAW.AAO.AAB.AAJ",
+              "term": "Allerheiligen und Allerseelen",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAO.AAB.AAB",
+              "term": "Fastnacht (Fasching)",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAO.AAB.AAF",
+              "term": "Neujahr",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAO.AAB.AAG",
+              "term": "Nikolo/Krampus",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAO.AAB.AAC",
+              "term": "Ostern",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAO.AAB.AAE",
+              "term": "Regionale Bräuche und Feste",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAO.AAB.AAA",
+              "term": "Weihnachten",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "AUT.AAW.AAO.AAC",
+          "term": "AUT.AAW.AAO.AAC",
+          "children": [
+            {
+              "id": "AUT.AAW.AAO.AAC.AAE",
+              "term": "Andere Jubiläen",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAO.AAC.AAA",
+              "term": "Geburt und Taufe",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAO.AAC.AAD",
+              "term": "Hochzeit und Ehejubiläen",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAO.AAC.AAC",
+              "term": "Kommunion/Konfirmation/Firmung",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAO.AAC.AAF",
+              "term": "Tod und Begräbnis",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "AUT.AAW.AAG",
+      "term": "Volkskunde – Fischerei",
+      "children": [
+        {
+          "id": "AUT.AAW.AAG.AAA",
+          "term": "AUT.AAW.AAG.AAA",
+          "children": [
+            {
+              "id": "AUT.AAW.AAG.AAA.AAB",
+              "term": "Zubehör",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "AUT.AAW.AAE",
+      "term": "Volkskunde – Forstwirtschaft",
+      "children": [
+        {
+          "id": "AUT.AAW.AAE.AAB",
+          "term": "AUT.AAW.AAE.AAB",
+          "children": [
+            {
+              "id": "AUT.AAW.AAE.AAB.AAB",
+              "term": "Fäll- und Spaltwerkzeuge",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "AUT.AAW.AAE.AAE",
+          "term": "AUT.AAW.AAE.AAE",
+          "children": [
+            {
+              "id": "AUT.AAW.AAE.AAE.AAA",
+              "term": "Pecher",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "AUT.AAW.AAE.AAG",
+          "term": "Holzverarbeitung",
+          "children": [
+            {
+              "id": "AUT.AAW.AAE.AAG.AAB",
+              "term": "Bearbeitungswerkzeuge",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAE.AAG.AAA",
+              "term": "Sägen",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "AUT.AAW.AAN",
+      "term": "Volkskunde – Freizeit/Unterhaltung/Genuss",
+      "children": [
+        {
+          "id": "AUT.AAW.AAN.AAA",
+          "term": "AUT.AAW.AAN.AAA",
+          "children": [
+            {
+              "id": "AUT.AAW.AAN.AAA.AAC",
+              "term": "Reisegepäck",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAN.AAA.AAB",
+              "term": "Souvenirs",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "AUT.AAW.AAN.AAB",
+          "term": "AUT.AAW.AAN.AAB",
+          "children": [
+            {
+              "id": "AUT.AAW.AAN.AAB.AAB",
+              "term": "Bastelerzeugnisse",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "AUT.AAW.AAN.AAD",
+          "term": "AUT.AAW.AAN.AAD",
+          "children": [
+            {
+              "id": "AUT.AAW.AAN.AAD.AAA",
+              "term": "Blasinstrumente",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAN.AAD.AAF",
+              "term": "Mechanische Musikinstrumente",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAN.AAD.AAB",
+              "term": "Saiteninstrumente",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAN.AAD.AAG",
+              "term": "Wiedergabegeräte",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "AUT.AAW.AAN.AAG",
+          "term": "AUT.AAW.AAN.AAG",
+          "children": [
+            {
+              "id": "AUT.AAW.AAN.AAG.AAC",
+              "term": "Ausstattung",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAN.AAG.AAD",
+              "term": "Einrichtung",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAN.AAG.AAB",
+              "term": "Schilder",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAN.AAG.AAA",
+              "term": "Stammtischzeichen",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "AUT.AAW.AAN.AAH",
+          "term": "AUT.AAW.AAN.AAH",
+          "children": [
+            {
+              "id": "AUT.AAW.AAN.AAH.AAB",
+              "term": "Rauchutensilien",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAN.AAH.AAA",
+              "term": "Schnupfutensilien",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "AUT.AAW.AAN.AAJ",
+          "term": "Erinnerungsstücke",
+          "children": []
+        },
+        {
+          "id": "AUT.AAW.AAN.AAE",
+          "term": "Theater/Oper",
+          "children": []
+        },
+        {
+          "id": "AUT.AAW.AAN.AAI",
+          "term": "Unterhaltung",
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "AUT.AAW.AAT",
+      "term": "Volkskunde – Gesundheit",
+      "children": [
+        {
+          "id": "AUT.AAW.AAT.AAA",
+          "term": "AUT.AAW.AAT.AAA",
+          "children": [
+            {
+              "id": "AUT.AAW.AAT.AAA.AAE",
+              "term": "Behandlungsinstrumente",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAT.AAA.AAM",
+              "term": "Erste Hilfe",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAT.AAA.AAH",
+              "term": "Hebammengerät",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAT.AAA.AAJ",
+              "term": "Krankenpflege",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAT.AAA.AAL",
+              "term": "Sehhilfen",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAT.AAA.AAG",
+              "term": "Tierärztliche Instrumente",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAT.AAA.AAO",
+              "term": "Volksmedizin/Magie",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "AUT.AAW.AAT.AAB",
+          "term": "AUT.AAW.AAT.AAB",
+          "children": [
+            {
+              "id": "AUT.AAW.AAT.AAB.AAD",
+              "term": "Arbeitsgeräte",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAT.AAB.AAE",
+              "term": "Arzneimittelbehälter",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAT.AAB.AAB",
+              "term": "Laboreinrichtung",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAT.AAB.AAC",
+              "term": "Wiegen und Messen",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "AUT.AAW.AAT.AAC",
+          "term": "AUT.AAW.AAT.AAC",
+          "children": [
+            {
+              "id": "AUT.AAW.AAT.AAC.AAB",
+              "term": "Haar- und Bartpflege",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAT.AAC.AAF",
+              "term": "Hilfsgerät",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAT.AAC.AAD",
+              "term": "Monatshygiene",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAT.AAC.AAE",
+              "term": "Perücken",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAT.AAC.AAA",
+              "term": "Waschutensilien",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "AUT.AAW.AAH",
+      "term": "Volkskunde – Handwerk/Industrie/Handel",
+      "children": [
+        {
+          "id": "AUT.AAW.AAH.AAB",
+          "term": "AUT.AAW.AAH.AAB",
+          "children": [
+            {
+              "id": "AUT.AAW.AAH.AAB.AAB",
+              "term": "Hilfsgerät",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAH.AAB.AAE",
+              "term": "Hobel",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAH.AAB.AAC",
+              "term": "Messmittel und Anreißzeuge",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAH.AAB.AAH",
+              "term": "Oberflächenbearbeitung",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAH.AAB.AAD",
+              "term": "Sägen",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAH.AAB.AAA",
+              "term": "Werkstatteinrichtung",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "AUT.AAW.AAH.AAC",
+          "term": "AUT.AAW.AAH.AAC",
+          "children": [
+            {
+              "id": "AUT.AAW.AAH.AAC.AAI",
+              "term": "Arbeitsmaterialien",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAH.AAC.AAE",
+              "term": "Bohrwerkzeuge",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAH.AAC.AAB",
+              "term": "Hilfsgerät",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAH.AAC.AAA",
+              "term": "Werkstatteinrichtung",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "AUT.AAW.AAH.AAD",
+          "term": "AUT.AAW.AAH.AAD",
+          "children": [
+            {
+              "id": "AUT.AAW.AAH.AAD.AAJ",
+              "term": "Arbeitsmaterialien",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAH.AAD.AAA",
+              "term": "Ausrüstung",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAH.AAD.AAH",
+              "term": "Bohrwerkzeuge",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAH.AAD.AAB",
+              "term": "Hilfsgerät",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAH.AAD.AAC",
+              "term": "Messmittel und Anreißzeuge",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAH.AAD.AAI",
+              "term": "Oberflächenbearbeitung",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAH.AAD.AAF",
+              "term": "Sägen",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAH.AAD.AAE",
+              "term": "Äxte und Beile",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "AUT.AAW.AAH.AAE",
+          "term": "AUT.AAW.AAH.AAE",
+          "children": [
+            {
+              "id": "AUT.AAW.AAH.AAE.AAG",
+              "term": "Arbeitsmaterialien",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAH.AAE.AAB",
+              "term": "Hilfsgerät",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAH.AAE.AAC",
+              "term": "Mess- und Schneidewerkzeug",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAH.AAE.AAF",
+              "term": "Nacharbeiten",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAH.AAE.AAE",
+              "term": "Nähwerkzeug",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAH.AAE.AAD",
+              "term": "Vorarbeiten",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAH.AAE.AAA",
+              "term": "Werkstatteinrichtung",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAH.AAE.AAI",
+              "term": "Zunftgerät",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "AUT.AAW.AAH.AAF",
+          "term": "AUT.AAW.AAH.AAF",
+          "children": [
+            {
+              "id": "AUT.AAW.AAH.AAF.AAA",
+              "term": "Werkstatteinrichtung",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "AUT.AAW.AAH.AAG",
+          "term": "AUT.AAW.AAH.AAG",
+          "children": [
+            {
+              "id": "AUT.AAW.AAH.AAG.AAC",
+              "term": "Hilfsgerät",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAH.AAG.AAH",
+              "term": "Hufbeschlag",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAH.AAG.AAJ",
+              "term": "Werkstücke",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAH.AAG.AAD",
+              "term": "Zangen",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAH.AAG.AAK",
+              "term": "Zunftgerät",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "AUT.AAW.AAH.AAI",
+          "term": "AUT.AAW.AAH.AAI",
+          "children": [
+            {
+              "id": "AUT.AAW.AAH.AAI.AAI",
+              "term": "Arbeitsmaterialien",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAH.AAI.AAG",
+              "term": "Bohrwerkzeuge",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAH.AAI.AAB",
+              "term": "Hilfsgerät",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAH.AAI.AAE",
+              "term": "Hobel",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAH.AAI.AAF",
+              "term": "Hämmer",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAH.AAI.AAC",
+              "term": "Meßmittel und Anreißzeuge",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAH.AAI.AAH",
+              "term": "Oberflächenbearbeitung",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAH.AAI.AAJ",
+              "term": "Werkstücke",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "AUT.AAW.AAH.AAL",
+          "term": "AUT.AAW.AAH.AAL",
+          "children": [
+            {
+              "id": "AUT.AAW.AAH.AAL.AAI",
+              "term": "Oberflächenbearbeitung",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAH.AAL.AAC",
+              "term": "Spann- und Schraubwerkzeug",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAH.AAL.AAK",
+              "term": "Werkstücke",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "AUT.AAW.AAH.AAM",
+          "term": "AUT.AAW.AAH.AAM",
+          "children": [
+            {
+              "id": "AUT.AAW.AAH.AAM.AAA",
+              "term": "Fadenherstellung",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAH.AAM.AAH",
+              "term": "Hilfsgeräte",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAH.AAM.AAB",
+              "term": "Mustervorlagen",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAH.AAM.AAC",
+              "term": "Spul- und Schärgerät",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAH.AAM.AAD",
+              "term": "Webgeräte",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAH.AAM.AAE",
+              "term": "Werkstücke",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "AUT.AAW.AAH.AAN",
+          "term": "AUT.AAW.AAH.AAN",
+          "children": [
+            {
+              "id": "AUT.AAW.AAH.AAN.AAD",
+              "term": "Geräte für den Druckvorgang",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAH.AAN.AAB",
+              "term": "Mustervorlagen",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "AUT.AAW.AAH.AAO",
+          "term": "AUT.AAW.AAH.AAO",
+          "children": [
+            {
+              "id": "AUT.AAW.AAH.AAO.AAI",
+              "term": "Arbeitsmaterialien",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAH.AAO.AAB",
+              "term": "Maße und Zuschnitt",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAH.AAO.AAH",
+              "term": "Scheren",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAH.AAO.AAA",
+              "term": "Werkstatteinrichtung",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAH.AAO.AAF",
+              "term": "Werkstücke",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "AUT.AAW.AAH.AAQ",
+          "term": "AUT.AAW.AAH.AAQ",
+          "children": [
+            {
+              "id": "AUT.AAW.AAH.AAQ.AAB",
+              "term": "Arbeitsgeräte",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAH.AAQ.AAE",
+              "term": "Backwaren",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAH.AAQ.AAC",
+              "term": "Formen",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAH.AAQ.AAF",
+              "term": "Verpackungsmaterial",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "AUT.AAW.AAH.AAZ",
+          "term": "AUT.AAW.AAH.AAZ",
+          "children": [
+            {
+              "id": "AUT.AAW.AAH.AAZ.AAB",
+              "term": "Arbeitsmaterialien",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAH.AAZ.AAA",
+              "term": "Werkstücke",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAH.AAZ.AAC",
+              "term": "Werkzeuge",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "AUT.AAW.AAH.ABC",
+          "term": "AUT.AAW.AAH.ABC",
+          "children": [
+            {
+              "id": "AUT.AAW.AAH.ABC.AAA",
+              "term": "Hilfsgerät",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAH.ABC.AAB",
+              "term": "Pinsel",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "AUT.AAW.AAH.ABD",
+          "term": "AUT.AAW.AAH.ABD",
+          "children": [
+            {
+              "id": "AUT.AAW.AAH.ABD.AAC",
+              "term": "Werkstatteinrichtung",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAH.ABD.AAA",
+              "term": "Werkstücke",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAH.ABD.AAB",
+              "term": "Werkzeuge",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "AUT.AAW.AAH.ABE",
+          "term": "AUT.AAW.AAH.ABE",
+          "children": [
+            {
+              "id": "AUT.AAW.AAH.ABE.AAB",
+              "term": "Werkstücke",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAH.ABE.AAA",
+              "term": "Werkzeuge",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "AUT.AAW.AAH.ABF",
+          "term": "AUT.AAW.AAH.ABF",
+          "children": [
+            {
+              "id": "AUT.AAW.AAH.ABF.AAA",
+              "term": "Geräte",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAH.ABF.AAC",
+              "term": "Zunftgeräte",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "AUT.AAW.AAH.ABG",
+          "term": "AUT.AAW.AAH.ABG",
+          "children": [
+            {
+              "id": "AUT.AAW.AAH.ABG.AAB",
+              "term": "Arbeitsgeräte",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAH.ABG.AAA",
+              "term": "Model",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "AUT.AAW.AAH.ABH",
+          "term": "AUT.AAW.AAH.ABH",
+          "children": [
+            {
+              "id": "AUT.AAW.AAH.ABH.AAB",
+              "term": "Rechenmaschinen",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAH.ABH.AAA",
+              "term": "Schreiben",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "AUT.AAW.AAH.ABI",
+          "term": "AUT.AAW.AAH.ABI",
+          "children": [
+            {
+              "id": "AUT.AAW.AAH.ABI.AAA",
+              "term": "Werkzeuge",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "AUT.AAW.AAH.ABM",
+          "term": "AUT.AAW.AAH.ABM",
+          "children": [
+            {
+              "id": "AUT.AAW.AAH.ABM.AAA",
+              "term": "Zunftgerät",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "AUT.AAW.AAH.ABT",
+          "term": "AUT.AAW.AAH.ABT",
+          "children": [
+            {
+              "id": "AUT.AAW.AAH.ABT.AAB",
+              "term": "Knöpfe",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAH.ABT.AAA",
+              "term": "Stoffe",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "AUT.AAW.AAH.ABL",
+          "term": "Dachdecker",
+          "children": []
+        },
+        {
+          "id": "AUT.AAW.AAH.ABP",
+          "term": "Druckerei",
+          "children": []
+        },
+        {
+          "id": "AUT.AAW.AAH.ABQ",
+          "term": "Frisör",
+          "children": []
+        },
+        {
+          "id": "AUT.AAW.AAH.ABU",
+          "term": "Geräteteile",
+          "children": []
+        },
+        {
+          "id": "AUT.AAW.AAH.ABS",
+          "term": "Installateur",
+          "children": []
+        },
+        {
+          "id": "AUT.AAW.AAH.ABX",
+          "term": "Kunstblumenherstellung",
+          "children": []
+        },
+        {
+          "id": "AUT.AAW.AAH.ABA",
+          "term": "Ladeneinrichtung",
+          "children": [
+            {
+              "id": "AUT.AAW.AAH.ABA.AAD",
+              "term": "Hilfsgerät",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAH.ABA.AAH",
+              "term": "Ladenschilder",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAH.ABA.AAC",
+              "term": "Packmaterial",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAH.ABA.AAF",
+              "term": "Verkaufsartikel",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAH.ABA.AAB",
+              "term": "Vorratsbehältnisse",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAH.ABA.AAG",
+              "term": "Werbematerial und -anlagen",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "AUT.AAW.AAH.ABJ",
+          "term": "Maschinenteile",
+          "children": []
+        },
+        {
+          "id": "AUT.AAW.AAH.AAA",
+          "term": "Noch nicht bestimmte Werkzeuge",
+          "children": []
+        },
+        {
+          "id": "AUT.AAW.AAH.ABO",
+          "term": "Spitzen und Borten",
+          "children": []
+        },
+        {
+          "id": "AUT.AAW.AAH.ABK",
+          "term": "Werkzeugteile",
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "AUT.AAW.AAC",
+      "term": "Volkskunde – Hauswirtschaft",
+      "children": [
+        {
+          "id": "AUT.AAW.AAC.AAB",
+          "term": "AUT.AAW.AAC.AAB",
+          "children": [
+            {
+              "id": "AUT.AAW.AAC.AAB.AAH",
+              "term": "Andere Hilfsgeräte",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAC.AAB.AAK",
+              "term": "Backgeräte",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAC.AAB.AAP",
+              "term": "Backgeschirr",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAC.AAB.AAO",
+              "term": "Behälter/Aufbewahrung",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAC.AAB.AAJ",
+              "term": "Brat- und Röstgeschirr",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAC.AAB.AAE",
+              "term": "Hack- und Schneidegeräte",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAC.AAB.AAG",
+              "term": "Kochgeräte",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAC.AAB.AAI",
+              "term": "Kochgeschirr",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAC.AAB.AAB",
+              "term": "Pressen",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAC.AAB.AAD",
+              "term": "Reiben und Hobel",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAC.AAB.AAF",
+              "term": "Rührgeräte",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAC.AAB.AAA",
+              "term": "Siebe und Filter",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAC.AAB.AAC",
+              "term": "Stampf- und Mahlgeräte",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "AUT.AAW.AAC.AAD",
+          "term": "AUT.AAW.AAC.AAD",
+          "children": [
+            {
+              "id": "AUT.AAW.AAC.AAD.AAA",
+              "term": "Reinigungsgerät",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAC.AAD.AAC",
+              "term": "Ungezieferbekämpfung",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "AUT.AAW.AAC.AAE",
+          "term": "AUT.AAW.AAC.AAE",
+          "children": [
+            {
+              "id": "AUT.AAW.AAC.AAE.AAF",
+              "term": "Hilfsgerät und Materialien",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAC.AAE.AAD",
+              "term": "Häkeln",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAC.AAE.AAG",
+              "term": "Klöppeln",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAC.AAE.AAI",
+              "term": "Mustervorlagen",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAC.AAE.AAA",
+              "term": "Nähen",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAC.AAE.AAE",
+              "term": "Sticken",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAC.AAE.AAC",
+              "term": "Stricken",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "AUT.AAW.AAC.AAF",
+          "term": "AUT.AAW.AAC.AAF",
+          "children": [
+            {
+              "id": "AUT.AAW.AAC.AAF.AAB",
+              "term": "Küche und Bad",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAC.AAF.AAC",
+              "term": "Schlafbereich",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAC.AAF.AAA",
+              "term": "Wohn- und Eßbereich",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "AUT.AAW.AAC.AAG",
+          "term": "AUT.AAW.AAC.AAG",
+          "children": [
+            {
+              "id": "AUT.AAW.AAC.AAG.AAC",
+              "term": "Mangeln und Bügeln",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAC.AAG.AAB",
+              "term": "Trocknen",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAC.AAG.AAA",
+              "term": "Waschen",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "AUT.AAW.AAC.AAH",
+          "term": "AUT.AAW.AAC.AAH",
+          "children": [
+            {
+              "id": "AUT.AAW.AAC.AAH.AAA",
+              "term": "Laternen",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "AUT.AAW.AAC.AAI",
+          "term": "AUT.AAW.AAC.AAI",
+          "children": [
+            {
+              "id": "AUT.AAW.AAC.AAI.AAA",
+              "term": "Zubehör",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "AUT.AAW.AAC.AAL",
+          "term": "Elektroinstallationen",
+          "children": []
+        },
+        {
+          "id": "AUT.AAW.AAC.AAC",
+          "term": "Essen und Trinken",
+          "children": [
+            {
+              "id": "AUT.AAW.AAC.AAC.AAA",
+              "term": "Ess- und Serviergeschirr",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAC.AAC.AAD",
+              "term": "Essbesteck",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAC.AAC.AAI",
+              "term": "Flaschen",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAC.AAC.AAB",
+              "term": "Kaffee- und Teegeschirr",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAC.AAC.AAE",
+              "term": "Spezialbesteck",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAC.AAC.AAF",
+              "term": "Tafelhilfsgerät",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAC.AAC.AAG",
+              "term": "Tafelzubehör",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAC.AAC.AAJ",
+              "term": "Taschenmesser",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAC.AAC.AAC",
+              "term": "Trink- und Schankgeschirr",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "AUT.AAW.AAC.AAM",
+          "term": "Schreibwaren",
+          "children": []
+        },
+        {
+          "id": "AUT.AAW.AAC.AAJ",
+          "term": "Werkzeuge",
+          "children": [
+            {
+              "id": "AUT.AAW.AAC.AAJ.AAB",
+              "term": "Hämmer",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAC.AAJ.AAA",
+              "term": "Schneidwerkzeuge",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "AUT.AAW.AAF",
+      "term": "Volkskunde – Jagd",
+      "children": [
+        {
+          "id": "AUT.AAW.AAF.AAA",
+          "term": "AUT.AAW.AAF.AAA",
+          "children": [
+            {
+              "id": "AUT.AAW.AAF.AAA.AAC",
+              "term": "Handfeuerwaffen",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAF.AAA.AAD",
+              "term": "Zubehör und Munition",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "AUT.AAW.AAF.AAB",
+          "term": "Jagdausrüstung",
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "AUT.AAW.AAQ",
+      "term": "Volkskunde – Kleidung",
+      "children": [
+        {
+          "id": "AUT.AAW.AAQ.AAB",
+          "term": "AUT.AAW.AAQ.AAB",
+          "children": [
+            {
+              "id": "AUT.AAW.AAQ.AAB.AAF",
+              "term": "Fußbekleidung",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAQ.AAB.AAH",
+              "term": "Gesondert getragenes Zubehör",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAQ.AAB.AAJ",
+              "term": "Handschuhe",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAQ.AAB.AAE",
+              "term": "Kopfbedeckung",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAQ.AAB.AAD",
+              "term": "Nacht- und Ankleidekleidung",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAQ.AAB.AAB",
+              "term": "Oberkleidung",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAQ.AAB.AAC",
+              "term": "Unterkleidung",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAQ.AAB.AAG",
+              "term": "Zubehör",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAQ.AAB.AAA",
+              "term": "Überkleidung",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "AUT.AAW.AAQ.AAC",
+          "term": "AUT.AAW.AAQ.AAC",
+          "children": [
+            {
+              "id": "AUT.AAW.AAQ.AAC.AAF",
+              "term": "Fußbekleidung",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAQ.AAC.AAH",
+              "term": "Gesondert getragenes Zubehör",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAQ.AAC.AAJ",
+              "term": "Handschuhe",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAQ.AAC.AAE",
+              "term": "Kopfbedeckung",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAQ.AAC.AAD",
+              "term": "Nacht- und Ankleidekleidung",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAQ.AAC.AAB",
+              "term": "Oberkleidung",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAQ.AAC.AAI",
+              "term": "Schmuck für Körper und Kleidung",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAQ.AAC.AAC",
+              "term": "Unterkleidung",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAQ.AAC.AAG",
+              "term": "Zubehör",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAQ.AAC.AAA",
+              "term": "Überkleidung",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "AUT.AAW.AAQ.AAD",
+          "term": "AUT.AAW.AAQ.AAD",
+          "children": [
+            {
+              "id": "AUT.AAW.AAQ.AAD.AAF",
+              "term": "Fußkleidung",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAQ.AAD.AAH",
+              "term": "Gesondert getragenes Zubehör",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAQ.AAD.AAE",
+              "term": "Kopfbedeckung",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAQ.AAD.AAD",
+              "term": "Nachtkleidung",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAQ.AAD.AAB",
+              "term": "Oberkleidung",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAQ.AAD.AAC",
+              "term": "Unterkleidung",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAQ.AAD.AAA",
+              "term": "Überkleidung",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "AUT.AAW.AAQ.AAE",
+          "term": "AUT.AAW.AAQ.AAE",
+          "children": [
+            {
+              "id": "AUT.AAW.AAQ.AAE.AAD",
+              "term": "Kopfbedeckung",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAQ.AAE.AAH",
+              "term": "Schmuck für Körper und Kleidung",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "AUT.AAW.AAQ.AAG",
+          "term": "AUT.AAW.AAQ.AAG",
+          "children": [
+            {
+              "id": "AUT.AAW.AAQ.AAG.AAE",
+              "term": "Bischofsgewänder",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "AUT.AAW.AAQ.AAH",
+          "term": "AUT.AAW.AAQ.AAH",
+          "children": [
+            {
+              "id": "AUT.AAW.AAQ.AAH.AAA",
+              "term": "Hochzeit",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAQ.AAH.AAB",
+              "term": "Taufe",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "AUT.AAW.AAQ.AAI",
+          "term": "AUT.AAW.AAQ.AAI",
+          "children": [
+            {
+              "id": "AUT.AAW.AAQ.AAI.AAC",
+              "term": "Bergbau",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAQ.AAI.AAB",
+              "term": "Feuerwehr",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "AUT.AAW.AAQ.AAK",
+          "term": "AUT.AAW.AAQ.AAK",
+          "children": [
+            {
+              "id": "AUT.AAW.AAQ.AAK.AAA",
+              "term": "Ankleiden",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAQ.AAK.AAB",
+              "term": "Aufbewahren",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAQ.AAK.AAC",
+              "term": "Pflegen",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "AUT.AAW.AAQ.AAN",
+          "term": "AUT.AAW.AAQ.AAN",
+          "children": [
+            {
+              "id": "AUT.AAW.AAQ.AAN.AAA",
+              "term": "Damen",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAQ.AAN.AAB",
+              "term": "Herren",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAQ.AAN.AAC",
+              "term": "Kinder",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "AUT.AAW.AAQ.AAM",
+          "term": "Accessoires",
+          "children": []
+        },
+        {
+          "id": "AUT.AAW.AAQ.AAL",
+          "term": "Regen- und Sonnenschutz",
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "AUT.AAW.AAL",
+      "term": "Volkskunde – Kommunikation",
+      "children": [
+        {
+          "id": "AUT.AAW.AAL.AAA",
+          "term": "AUT.AAW.AAL.AAA",
+          "children": [
+            {
+              "id": "AUT.AAW.AAL.AAA.AAA",
+              "term": "Fernsprechen",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAL.AAA.AAC",
+              "term": "Hörfunk",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "AUT.AAW.AAL.AAB",
+          "term": "AUT.AAW.AAL.AAB",
+          "children": [
+            {
+              "id": "AUT.AAW.AAL.AAB.AAB",
+              "term": "Auditive Medien und Zubehör",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAL.AAB.AAA",
+              "term": "Visuelle Medien und Zubehör",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "AUT.AAW.AAL.AAD",
+          "term": "AUT.AAW.AAL.AAD",
+          "children": [
+            {
+              "id": "AUT.AAW.AAL.AAD.AAE",
+              "term": "Büromaterialien",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAL.AAD.AAB",
+              "term": "Schreiben",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "AUT.AAW.AAL.AAE",
+          "term": "Briefverkehr",
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "AUT.AAW.AAD",
+      "term": "Volkskunde – Landwirtschaft",
+      "children": [
+        {
+          "id": "AUT.AAW.AAD.AAC",
+          "term": "AUT.AAW.AAD.AAC",
+          "children": [
+            {
+              "id": "AUT.AAW.AAD.AAC.AAC",
+              "term": "Lesegeräte",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAD.AAC.AAA",
+              "term": "Mähgeräte und Zubehör",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "AUT.AAW.AAD.AAE",
+          "term": "AUT.AAW.AAD.AAE",
+          "children": [
+            {
+              "id": "AUT.AAW.AAD.AAE.AAJ",
+              "term": "Gartenbau",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAD.AAE.AAK",
+              "term": "Obstbau",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "AUT.AAW.AAD.AAF",
+          "term": "AUT.AAW.AAD.AAF",
+          "children": [
+            {
+              "id": "AUT.AAW.AAD.AAF.AAJ",
+              "term": "Almwirtschaft",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAD.AAF.AAB",
+              "term": "Bienen",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAD.AAF.AAD",
+              "term": "Fütterung",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAD.AAF.AAK",
+              "term": "Haustiere",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAD.AAF.AAE",
+              "term": "Hirtengerät",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAD.AAF.AAH",
+              "term": "Pferdegeschirr",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAD.AAF.AAG",
+              "term": "Pflege",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAD.AAF.AAF",
+              "term": "Stallhaltung",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAD.AAF.AAA",
+              "term": "Zuggeschirre",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "AUT.AAW.AAD.AAG",
+          "term": "AUT.AAW.AAD.AAG",
+          "children": [
+            {
+              "id": "AUT.AAW.AAD.AAG.AAB",
+              "term": "Butterherstellung",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAD.AAG.AAA",
+              "term": "Milchgewinnung und -aufbereitung",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "AUT.AAW.AAD.AAH",
+          "term": "AUT.AAW.AAD.AAH",
+          "children": [
+            {
+              "id": "AUT.AAW.AAD.AAH.AAA",
+              "term": "Arbeitsgerät",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAD.AAH.AAD",
+              "term": "Einrichtung",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "AUT.AAW.AAD.AAI",
+          "term": "AUT.AAW.AAD.AAI",
+          "children": [
+            {
+              "id": "AUT.AAW.AAD.AAI.AAB",
+              "term": "Hüter",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAD.AAI.AAD",
+              "term": "Kellerausstattung",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAD.AAI.AAA",
+              "term": "Kellereizubehör",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAD.AAI.AAC",
+              "term": "Werkzeuge",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "AUT.AAW.AAD.AAB",
+          "term": "Bodenbearbeitung",
+          "children": [
+            {
+              "id": "AUT.AAW.AAD.AAB.AAI",
+              "term": "Bewässerung",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAD.AAB.AAF",
+              "term": "Bodenlockerung",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAD.AAB.AAB",
+              "term": "Eggen und Walzen",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAD.AAB.AAE",
+              "term": "Schädlingsbekämpfung",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAD.AAB.AAH",
+              "term": "Werkzeuge",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "AUT.AAW.AAD.AAD",
+          "term": "Ernteaufbereitung",
+          "children": [
+            {
+              "id": "AUT.AAW.AAD.AAD.AAA",
+              "term": "Dreschgeräte",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAD.AAD.AAF",
+              "term": "Weiterverarbeitung",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAD.AAD.AAD",
+              "term": "Zerkleinerungsgeräte",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "AUT.AAW.AAD.AAJ",
+          "term": "Flachsverarbeitung",
+          "children": []
+        },
+        {
+          "id": "AUT.AAW.AAD.AAA",
+          "term": "Noch nicht bestimmte Objekte",
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "AUT.AAW.AAJ",
+      "term": "Volkskunde – Messen und Wiegen",
+      "children": [
+        {
+          "id": "AUT.AAW.AAJ.AAB",
+          "term": "AUT.AAW.AAJ.AAB",
+          "children": [
+            {
+              "id": "AUT.AAW.AAJ.AAB.AAC",
+              "term": "Großuhren",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAJ.AAB.AAD",
+              "term": "Kleinuhren",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAJ.AAB.AAE",
+              "term": "Uhrenzubehör",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "AUT.AAW.AAJ.AAD",
+          "term": "AUT.AAW.AAJ.AAD",
+          "children": [
+            {
+              "id": "AUT.AAW.AAJ.AAD.AAA",
+              "term": "Hauswirtschaft",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAJ.AAD.AAB",
+              "term": "Landwirtschaft",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "AUT.AAW.AAJ.AAF",
+          "term": "AUT.AAW.AAJ.AAF",
+          "children": [
+            {
+              "id": "AUT.AAW.AAJ.AAF.AAC",
+              "term": "Temperatur",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "AUT.AAW.AAJ.AAG",
+          "term": "Längen- und Winkelmaße",
+          "children": []
+        },
+        {
+          "id": "AUT.AAW.AAJ.AAH",
+          "term": "Spezielle Messgeräte",
+          "children": []
+        },
+        {
+          "id": "AUT.AAW.AAJ.AAC",
+          "term": "Waagen",
+          "children": [
+            {
+              "id": "AUT.AAW.AAJ.AAC.AAA",
+              "term": "Balkenwaagen",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAJ.AAC.AAC",
+              "term": "Federwaagen",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAJ.AAC.AAI",
+              "term": "Gewichte",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAJ.AAC.AAD",
+              "term": "Laufgewichtswaagen",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAJ.AAC.AAF",
+              "term": "Zeigerwaagen",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "AUT.AAW.AAP",
+      "term": "Volkskunde – Religion und Glaube",
+      "children": [
+        {
+          "id": "AUT.AAW.AAP.AAB",
+          "term": "AUT.AAW.AAP.AAB",
+          "children": [
+            {
+              "id": "AUT.AAW.AAP.AAB.AAB",
+              "term": "Altarteile",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAP.AAB.AAF",
+              "term": "Figurenteile",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAP.AAB.AAE",
+              "term": "Kircheneinrichtung",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAP.AAB.AAD",
+              "term": "Krippen",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "AUT.AAW.AAP.AAC",
+          "term": "AUT.AAW.AAP.AAC",
+          "children": [
+            {
+              "id": "AUT.AAW.AAP.AAC.AAG",
+              "term": "Kreuze",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAP.AAC.AAF",
+              "term": "Prozessionsgerät",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "AUT.AAW.AAP.AAK",
+          "term": "Erinnerungsstücke",
+          "children": []
+        },
+        {
+          "id": "AUT.AAW.AAP.AAL",
+          "term": "Heiligenstatuen",
+          "children": []
+        },
+        {
+          "id": "AUT.AAW.AAP.AAJ",
+          "term": "Kirchliche Organisationen",
+          "children": []
+        },
+        {
+          "id": "AUT.AAW.AAP.AAE",
+          "term": "Volksfrömmigkeit",
+          "children": [
+            {
+              "id": "AUT.AAW.AAP.AAE.AAH",
+              "term": "Amulette",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAP.AAE.AAG",
+              "term": "Andachtsbildchen",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAP.AAE.AAB",
+              "term": "Devotionalien",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAP.AAE.AAC",
+              "term": "Krippen",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAP.AAE.AAF",
+              "term": "Rosenkränze",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAP.AAE.AAE",
+              "term": "Votivbilder",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAP.AAE.AAA",
+              "term": "Votivgaben",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "AUT.AAW.AAR",
+      "term": "Volkskunde – Schriftgut",
+      "children": [
+        {
+          "id": "AUT.AAW.AAR.AAC",
+          "term": "AUT.AAW.AAR.AAC",
+          "children": [
+            {
+              "id": "AUT.AAW.AAR.AAC.AAA",
+              "term": "Familie/Lebenslauf",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "AUT.AAW.AAR.AAF",
+          "term": "AUT.AAW.AAR.AAF",
+          "children": [
+            {
+              "id": "AUT.AAW.AAR.AAF.AAE",
+              "term": "Briefe",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "AUT.AAW.AAR.AAJ",
+          "term": "AUT.AAW.AAR.AAJ",
+          "children": [
+            {
+              "id": "AUT.AAW.AAR.AAJ.AAJ",
+              "term": "Gedichte",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAR.AAJ.AAH",
+              "term": "Kinder- und Jugendliteratur",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAR.AAJ.AAI",
+              "term": "Lieder",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAR.AAJ.AAF",
+              "term": "Notenhefte",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAR.AAJ.AAG",
+              "term": "Roman",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAR.AAJ.AAA",
+              "term": "Zeitungen und Zeitschriften",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "AUT.AAW.AAR.AAM",
+          "term": "AUT.AAW.AAR.AAM",
+          "children": [
+            {
+              "id": "AUT.AAW.AAR.AAM.AAF",
+              "term": "Dekoration",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAR.AAM.AAE",
+              "term": "Handarbeit",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAR.AAM.AAD",
+              "term": "Kochbücher",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "AUT.AAW.AAR.AAS",
+          "term": "Fachliteratur",
+          "children": []
+        },
+        {
+          "id": "AUT.AAW.AAR.AAD",
+          "term": "Firmen",
+          "children": []
+        },
+        {
+          "id": "AUT.AAW.AAR.AAP",
+          "term": "Kalender",
+          "children": []
+        },
+        {
+          "id": "AUT.AAW.AAR.AAQ",
+          "term": "Religion",
+          "children": []
+        },
+        {
+          "id": "AUT.AAW.AAR.AAT",
+          "term": "Schule",
+          "children": []
+        },
+        {
+          "id": "AUT.AAW.AAR.AAH",
+          "term": "Vereine",
+          "children": []
+        },
+        {
+          "id": "AUT.AAW.AAR.AAR",
+          "term": "Werbung",
+          "children": []
+        },
+        {
+          "id": "AUT.AAW.AAR.AAE",
+          "term": "Zünfte",
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "AUT.AAW.AAM",
+      "term": "Volkskunde – Spielzeug/Spiel/Sport",
+      "children": [
+        {
+          "id": "AUT.AAW.AAM.AAC",
+          "term": "AUT.AAW.AAM.AAC",
+          "children": [
+            {
+              "id": "AUT.AAW.AAM.AAC.AAA",
+              "term": "Brettspiele",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAM.AAC.AAF",
+              "term": "Theaterspiele",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAM.AAC.AAB",
+              "term": "Würfelspiele",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "AUT.AAW.AAM.AAD",
+          "term": "AUT.AAW.AAM.AAD",
+          "children": [
+            {
+              "id": "AUT.AAW.AAM.AAD.AAA",
+              "term": "Wintersport",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "AUT.AAW.AAM.AAA",
+          "term": "Kinderspielzeug",
+          "children": [
+            {
+              "id": "AUT.AAW.AAM.AAA.AAP",
+              "term": "Geschicklichkeitsspiele",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAM.AAA.AAI",
+              "term": "Miniaturfahrzeuge",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAM.AAA.AAB",
+              "term": "Puppen und Zubehör",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAM.AAA.AAC",
+              "term": "Puppenhäuser und -stuben",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAM.AAA.AAM",
+              "term": "Spielzeug für draußen",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAM.AAA.AAL",
+              "term": "Spielzeugtiere",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "AUT.AAW.AAI",
+      "term": "Volkskunde – Transport und Verkehr",
+      "children": [
+        {
+          "id": "AUT.AAW.AAI.AAC",
+          "term": "AUT.AAW.AAI.AAC",
+          "children": [
+            {
+              "id": "AUT.AAW.AAI.AAC.AAA",
+              "term": "Handtraggeräte",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAI.AAC.AAB",
+              "term": "Rückentraggeräte",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "AUT.AAW.AAI.AAE",
+          "term": "AUT.AAW.AAI.AAE",
+          "children": [
+            {
+              "id": "AUT.AAW.AAI.AAE.AAA",
+              "term": "Karren und Wagen",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "AUT.AAW.AAB",
+      "term": "Volkskunde – Wohnen",
+      "children": [
+        {
+          "id": "AUT.AAW.AAB.AAB",
+          "term": "AUT.AAW.AAB.AAB",
+          "children": [
+            {
+              "id": "AUT.AAW.AAB.AAB.AAG",
+              "term": "Borde und Regale",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAB.AAB.AAI",
+              "term": "Möbelteile",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAB.AAB.AAF",
+              "term": "Schlaf- und Ruhemöbel",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAB.AAB.AAC",
+              "term": "Schrankmöbel",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAB.AAB.AAD",
+              "term": "Sitzmöbel",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAB.AAB.AAA",
+              "term": "Truhen",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "AUT.AAW.AAB.AAC",
+          "term": "AUT.AAW.AAB.AAC",
+          "children": [
+            {
+              "id": "AUT.AAW.AAB.AAC.AAF",
+              "term": "Hilfsgerät",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAB.AAC.AAG",
+              "term": "Uhren",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAB.AAC.AAA",
+              "term": "Wandschmuck",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAB.AAC.AAE",
+              "term": "Zierobjekte",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "AUT.AAW.AAB.AAD",
+          "term": "AUT.AAW.AAB.AAD",
+          "children": [
+            {
+              "id": "AUT.AAW.AAB.AAD.AAF",
+              "term": "Elektrische Leuchten",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAB.AAD.AAB",
+              "term": "Kerzenleuchter",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAB.AAD.AAA",
+              "term": "Kienspäne",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAB.AAD.AAG",
+              "term": "Lampenteile",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAB.AAD.AAD",
+              "term": "Petroleumlampen",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAB.AAD.AAH",
+              "term": "Zubehör",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAB.AAD.AAC",
+              "term": "Öllampen",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "AUT.AAW.AAB.AAE",
+          "term": "AUT.AAW.AAB.AAE",
+          "children": [
+            {
+              "id": "AUT.AAW.AAB.AAE.AAI",
+              "term": "Kachelofenteile",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAB.AAE.AAF",
+              "term": "Ofen- und Herdteile",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAB.AAE.AAG",
+              "term": "Ofen- und Herdzubehör",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAB.AAE.AAD",
+              "term": "Zimmeröfen",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "AUT.AAW.AAB.AAF",
+          "term": "AUT.AAW.AAB.AAF",
+          "children": [
+            {
+              "id": "AUT.AAW.AAB.AAF.AAB",
+              "term": "Bad und Toilette",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "AUT.AAW.AAB.AAG",
+          "term": "Haustiere",
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "AUT.AAW.AAK",
+      "term": "Volkskunde – Öffentlichkeit und Gemeinwesen",
+      "children": [
+        {
+          "id": "AUT.AAW.AAK.AAB",
+          "term": "AUT.AAW.AAK.AAB",
+          "children": [
+            {
+              "id": "AUT.AAW.AAK.AAB.AAE",
+              "term": "Erinnerungsstücke",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAK.AAB.AAD",
+              "term": "Fahnen",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAK.AAB.AAF",
+              "term": "Gedenkmünzen/Medaillen",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAK.AAB.AAA",
+              "term": "Orden/Abzeichen",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAK.AAB.AAB",
+              "term": "Siegel und Stempel",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAK.AAB.AAJ",
+              "term": "Strafvollzug",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAK.AAB.AAC",
+              "term": "Wappen",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "AUT.AAW.AAK.AAD",
+          "term": "AUT.AAW.AAK.AAD",
+          "children": [
+            {
+              "id": "AUT.AAW.AAK.AAD.AAA",
+              "term": "Innungen",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "AUT.AAW.AAK.AAH",
+          "term": "AUT.AAW.AAK.AAH",
+          "children": [
+            {
+              "id": "AUT.AAW.AAK.AAH.AAA",
+              "term": "Orden/Abzeichen",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAK.AAH.AAG",
+              "term": "Warn- und Hinweiszeichen",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "AUT.AAW.AAK.AAI",
+          "term": "AUT.AAW.AAK.AAI",
+          "children": [
+            {
+              "id": "AUT.AAW.AAK.AAI.AAH",
+              "term": "Blankwaffen",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAK.AAI.AAE",
+              "term": "Erinnerungsstücke",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAK.AAI.AAA",
+              "term": "Orden/Abzeichen",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAK.AAI.AAM",
+              "term": "Waffenzubehör und Munition",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "AUT.AAW.AAK.AAJ",
+          "term": "AUT.AAW.AAK.AAJ",
+          "children": [
+            {
+              "id": "AUT.AAW.AAK.AAJ.AAE",
+              "term": "Sparen",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "AUT.AAW.AAK.AAK",
+          "term": "AUT.AAW.AAK.AAK",
+          "children": [
+            {
+              "id": "AUT.AAW.AAK.AAK.AAA",
+              "term": "Einrichtung",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAK.AAK.AAD",
+              "term": "Schülerarbeiten",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAK.AAK.AAB",
+              "term": "Unterrichtsmittel",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "AUT.AAW.AAK.AAM",
+          "term": "AUT.AAW.AAK.AAM",
+          "children": [
+            {
+              "id": "AUT.AAW.AAK.AAM.AAD",
+              "term": "Ausstattung",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAK.AAM.AAC",
+              "term": "Einrichtung",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAK.AAM.AAB",
+              "term": "Modelle",
+              "children": []
+            },
+            {
+              "id": "AUT.AAW.AAK.AAM.AAA",
+              "term": "Schautafeln",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "AUT.AAW.AAK.AAF",
+          "term": "Vereine/Verbände",
+          "children": []
+        }
+      ]
+    }
+  ]
+}

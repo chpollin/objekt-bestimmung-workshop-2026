@@ -1,0 +1,37 @@
+[
+  {
+    "object_id": 1169721,
+    "title": "Holz",
+    "classification": "Volkskunde – Handwerk/Industrie/Handel",
+    "description": "Holzquader mit eingeschlagenen Nägeln, laut Inventarbuch \"Nageltasche\".",
+    "medium": "Holz, Metall"
+  },
+  {
+    "object_id": 1455219,
+    "title": "Votivtier",
+    "classification": "Volkskunde – Religion und Glaube",
+    "description": "Schmiedeeiserne stilisierte Tierdarstellung (wahrscheinlich Pferd).",
+    "medium": "Eisen, geschmiedet"
+  },
+  {
+    "object_id": 1171257,
+    "title": "Wespenfalle",
+    "classification": "Volkskunde – Hauswirtschaft",
+    "description": "Bauchige Wespenfalle aus transparentem Glas mit einem kurzen Hals, einer Öffnung im Boden und drei kleinen Füßen.",
+    "medium": "Glas, geblasen"
+  },
+  {
+    "object_id": 1173001,
+    "title": "Radio",
+    "classification": "Volkskunde – Freizeit/Unterhaltung/Genuss",
+    "description": "Kleines UKW-Taschenradio mit einem Batteriefach für Knopfzellen, einem Ein-Aus-Lautstärke-Schalter, einem Frequenzwählrad und einem Paar Ohrhörer mit Kabel in einer entsprechenden Buchse.",
+    "medium": "Metall, Kunststoff, elektronische Bauteile, bedruckt, verlötet"
+  },
+  {
+    "object_id": 1176022,
+    "title": "Mantel",
+    "classification": "Volkskunde – Kleidung",
+    "description": "Dunkelblauer einreihiger Herrenmantel mit schwarz-blauen Knöpfen. In dem Mantel befindet sich ein Etikett: \"65% Polyester, 35% Viskose\".",
+    "medium": "Stoff, Kunststoff, vernäht"
+  }
+]
