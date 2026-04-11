@@ -6,7 +6,7 @@ Operative Inhalte (Datenfluss, Komponenten, Verifikation) leben in [`data.md`](d
 
 ## 1. Projektziel
 
-Demo & Lehrmaterial für den Workshop „Kann KI kulturgeschichtliche Objekte bestimmen — und was brauchte es dafür?" am 20.04.2026 in Salzburg. Zeigt Museumsfachleuten, wie ein Vision-LLM aus Sammlungsfotos sammlungskonforme Beschreibungen und Thesaurusbegriffe ableitet, ohne Training oder Fine-Tuning. Ist gleichzeitig ein Editor, mit dem ein Experte die KI-Vorschläge prüfen und freigeben kann.
+Demo & Lehrmaterial für den Workshop „Kann KI kulturgeschichtliche Objekte bestimmen — und was brauchte es dafür?" am 20.04.2026 in Salzburg. Zeigt Museumsfachleuten, wie ein Vision-LLM aus Sammlungsfotos sammlungskonforme Beschreibungen und Thesaurusbegriffe ableitet, ohne Training oder Fine-Tuning. Ist gleichzeitig ein Vergleichs-Viewer, mit dem KI-Vorschläge gegen Originaldaten und Judge-Urteile nebeneinander gestellt werden können — kein Editor.
 
 ## 2. Zielgruppe und Erfolgskriterien
 
@@ -16,24 +16,24 @@ Demo & Lehrmaterial für den Workshop „Kann KI kulturgeschichtliche Objekte be
 
 - Workshop-Teilnehmende verstehen am Ende, was KI bei Sammlungsobjekten leistet und wo sie scheitert.
 - Das Tool funktioniert offline und auf GitHub Pages.
-- Ein Experte kann KI-Vorschläge bequem korrigieren und seine Korrekturen exportieren.
+- Original und KI-Varianten lassen sich pro Objekt bequem nebeneinander vergleichen.
 - Die Demo läuft am Workshop-Tag deterministisch (kein Live-API-Risiko).
 
 ## 3. Funktionale Anforderungen (FR)
 
 | ID    | Anforderung |
 |-------|-------------|
-| FR-1  | Das System stellt ~250 kuratierte Objekte aus der volkskundlichen Sammlung der Landessammlungen NÖ als durchsuchbare Galerie dar. |
-| FR-2  | Jedes Objekt zeigt: Foto, Originalmetadaten, KI-Beschreibung im Modus „blind", KI-Beschreibung im Modus „erweitert", optionalen Experten-Edit. |
-| FR-3  | Filter: Thesaurus-Hierarchie (collapsible Tree), Freitextsuche (Name/Beschreibung/Material), Status (ungeprüft/freigegeben/Konflikt), Datierung (datiert/undatiert/Jahrhundert). |
-| FR-4  | Detail-Drawer mit Editor: alle Felder editierbar, Vorbelegung wahlweise aus blind/enriched/leer, Speichern in localStorage. |
-| FR-5  | Statusanzeige pro Objekt: 🟢 freigegeben / 🟡 ungeprüft / 🔴 Konflikt KI-vs-Original auf Top-Bereichsebene / ⚪ keine KI-Daten. |
-| FR-6  | Export-Funktion: alle Edits als `edits.json` herunterladbar zum manuellen Commit. |
-| FR-7  | Beim Laden: bevorzugt committete `data/json/edits.json`, lokale Änderungen aus localStorage werden darüber gelegt und visuell markiert. |
-| FR-8  | Übersichtsstatistik („Akkuranz-Dashboard"): Anteil korrekter Top-Bereich-Wahl von KI-blind, Anteil korrekter Leaf-Term-Wahl, häufigste Verwechslungen. |
+| FR-1  | Das System stellt 245 kuratierte Objekte aus der volkskundlichen Sammlung der Landessammlungen NÖ als durchsuchbare Galerie dar. |
+| FR-2  | Jedes Objekt zeigt: Foto, Originalmetadaten, KI-Beschreibung im Modus „blind", KI-Beschreibung im Modus „erweitert", Judge-Urteil (bei handverlesener 8er-Stichprobe). |
+| FR-3  | Filter: Thesaurus-Hierarchie (collapsible Tree), Freitextsuche (Objektname/Term/Material/Maße/Datierung/Katalogtext), Status (Übereinstimmung/Konflikt/keine KI). Datierung als eigene Filterdimension gestrichen — nicht Kern der Vergleichs-Story. |
+| FR-4  | Detail-Seite (eigene Route `#/object/:id`) zeigt alle vier Varianten nebeneinander: Original, KI blind, KI erweitert, Judge (wenn vorhanden). Keine Editier-Funktion. Prev/Next-Navigation zwischen gefilterten Nachbarobjekten. |
+| FR-5  | Statusanzeige pro Objekt (drei Werte): 🟢 Übereinstimmung (KI-blind Top-Bereich = Original), 🔴 Konflikt, ⚪ keine KI-Daten. |
+| FR-6  | *(gestrichen)* Export-Funktion entfällt — siehe ADR-14. |
+| FR-7  | *(gestrichen)* `edits.json` entfällt — siehe ADR-14. |
+| FR-8  | Übersichtsstatistik („Akkuranz-Dashboard"): drei Panels — Akkuranz (Bereich/Leaf, beide Modi), häufigste Verwechslungen (klickbar, pinnt Filter auf `fromTop → toTop`-Paar), Judge-Panel (Quirk-Anteil als Hero-Metric plus Quality-Mittel). |
 | FR-9  | Pipeline ist resume-fähig und reproduzierbar (alle Outputs deterministisch außer Modell-Antworten). |
 | FR-10 | Pipeline-Output-JSONs enthalten ein `prompt_version`-Feld, damit verschiedene Prompt-Iterationen unterscheidbar sind. |
-| FR-11 | LLM-as-a-Judge bewertet jede KI-Antwort gegen Original und Bild und schlägt Verbesserungen vor. Ergebnis ist eine vierte Variante im Detail-Drawer. |
+| FR-11 | LLM-as-a-Judge bewertet eine handverlesene Stichprobe von 8 Objekten gegen Original und Bild und schlägt Verbesserungen vor. Ergebnis ist eine vierte Variante auf der Detail-Seite. Quirks werden zusätzlich als Banner auf der Original-Karte hervorgehoben. |
 
 ## 4. Nicht-funktionale Anforderungen (NFR)
 
@@ -57,7 +57,7 @@ Demo & Lehrmaterial für den Workshop „Kann KI kulturgeschichtliche Objekte be
 | ADR-2 | Zweistufiger Gemini-Call (Top-Bereich → Leaf-Term) | Geminis Enum-Limit ~120, größter Top-Bereich hat 98 Leafs → harte Constraints in beiden Stufen möglich, keine Halluzination | Single-Call mit Post-Validierung (Restrisiko), Single-Call ohne Constraint (didaktisch ehrlich aber praktisch unbrauchbar) |
 | ADR-3 | Beide Modi parallel (blind + enriched) | Didaktisch entscheidend: zeigt Erkennungs-Use-Case und Anreicherungs-Use-Case nebeneinander | Nur einer von beiden — verfehlt entweder Erkennungs- oder Anreicherungsfrage |
 | ADR-4 | Lokale Bilder im Repo statt Hotlinking | CORS, Performance, Offline-Fähigkeit, Workshop-Tag-Stabilität | Hotlinking, CORS-Proxy, Git LFS (nicht nötig bei resized JPGs) |
-| ADR-5 | localStorage + Export-Datei statt Backend | Static Site, keine Server-Komplexität, Git ist die Versionierung | Firebase/Supabase (Overkill), Browser-FS-API (Browser-spezifisch) |
+| ADR-5 | *(ersetzt durch ADR-14)* Ursprünglich: localStorage + Export-Datei statt Backend. Mit der Streichung des Editor-Scopes in ADR-14 ist diese Entscheidung obsolet — die Site ist ein reiner Vergleichs-Viewer ohne persistenten Zustand. | — | — |
 | ADR-6 | Hierarchischer Thesaurus mit aus Onlinesammlung ergänzten Top-Bereich-Namen | Excel hat nur Leaf-Namen, nicht Eltern. Onlinesammlung listet 21 Volkskunde-Bereiche auf. | Platzhalter „CN-Suffix" (Pfusch), manuelle Liste (mehr Aufwand, gleiche Quelle) |
 | ADR-7 | Few-Shot-Prompts mit echten Katalogtexten der Onlinesammlung | Excel hat keine Beschreibungstexte. Onlinesammlungs-Detailseiten haben sie im richtigen Stil. | Stilbeschreibung in Worten (schwächeres Signal), keine Few-Shots (KI driftet) |
 | ADR-8 | ~250 Objekte stratifiziert nach Top-Bereich, max. 3 pro Leaf | Maximale Vielfalt bei begrenzter Pipeline-Dauer und Repo-Größe | 10–15 (zu wenig für Showcase), 50 pro Top (zu groß), alle 10.722 (unmöglich) |
@@ -66,25 +66,29 @@ Demo & Lehrmaterial für den Workshop „Kann KI kulturgeschichtliche Objekte be
 | ADR-11 | Stage-2-Disambiguation: Geschwister-Namen im Prompt anzeigen | 34 Leaf-Term-Namen kommen mehrfach vor (z.B. „Hilfsgerät" 10×). Ohne Mid-Cluster-Hint kann das Modell sie nicht trennen. Empirisch in Sample-Iteration 1 bestätigt. | Stumpfe Leaf-Liste (Iteration 1, schwache Akkuranz), Mid-Level-Namen aus Web scrapen (Endpoint existiert nicht) |
 | ADR-12 | LLM-as-a-Judge als dritte Schicht | Manuelle Bewertung skaliert nicht. Stärkeres Modell (Gemini 3 Pro) als Judge gegen schwächeres Modell (Flash Lite) liefert objektive Iterationsmetrik UND Workshop-Material („Kann KI eine KI bewerten?"). | Nur menschliche Bewertung (zu langsam), gleiches Modell als Judge (kein Mehrwert) |
 | ADR-13 | Daten via JSON-Endpoint `/objects/{id}/json`, nicht via HTML-Scraping | Endpoint liefert sauberes Label/Value-Schema mit allen benötigten Feldern. | BeautifulSoup-Scraping (fragiler, kein Vorteil) |
+| ADR-14 | Vergleichs-Viewer statt Editor | Workshop-Story ist *Original ↔ KI-Ausgaben vergleichen*, nicht *Reviewen und Freigeben*. Jede Edit-Interaktion würde den Workshop-Flow unterbrechen, erhöht das Risiko am Workshop-Tag und verwässert die didaktische Kernfrage. Read-Only → null persistenter Zustand, null Failure-Modes. | Editor-Form mit localStorage-Export (Ursprungsplan, FR-2/4/6/7), „light editor" mit nur einem Freitext-Feld (halber Weg, verwirrend), Annotation-Feature ohne Persistenz (sinnlos). Siehe Journal 2026-04-11 *Frontend-Architektur*. |
+| ADR-15 | Hash-Router mit echter Detail-Seite statt Slide-over-Drawer | Browser-Back/Forward funktioniert, Direkt-Links auf `#/object/:id` sind möglich, beamertauglicher Layout ohne Overlay-Artefakte, Fokus auf ein Objekt. Der Router braucht nur wenige Zeilen, keine Library. | Slide-over-Drawer (Browser-Navigation gebrochen, fragile bei Zoom), Modal-Dialog (Fokus-Falle, bricht Back-Taste), Tabs innerhalb der Gallery (kein Direkt-Link). Siehe Journal 2026-04-11 *Frontend-Architektur*. |
 
 ## 6. Out of Scope (explizit)
 
 - Live-API-Calls aus dem Browser
 - API-Key-Eingabe-Feld im Frontend
 - Backend, Datenbank, User-Authentifizierung
-- Multi-User-Editing (genau ein Experte zur Zeit)
+- Editor- und Export-Funktion: Im Laufe der Umsetzung zugunsten eines reinen Vergleichs-Viewers gestrichen (siehe ADR-14, Journal 2026-04-11 *Frontend-Architektur*). Betroffen: FR-2 (Editor), FR-4 (Drawer+Editor), FR-6 (Export), FR-7 (`edits.json`-Merge), FR-5 („freigegeben/ungeprüft"-Status).
 - Vollständige 10.722 Objekte im Tool
 - Mehrsprachigkeit der UI
 - Test-Suite oder CI (manuelles Testen via Verifikation in `data.md`)
-- Tastatur-Shortcuts
-- „Auf GitHub bearbeiten"-Button als Default
+- Tastatur-Shortcuts in der Gallery. Einzige Ausnahme: ESC und Pfeiltasten in der Detail-Seite für essenzielle Navigation.
+- Iteration 3 der Prompts (entschieden am 2026-04-11, siehe Journal *Vollauf*)
+- Voll-Judge auf alle 245 Objekte (nur handverlesene 8er-Stichprobe, siehe FR-11)
 
 ## 7. Annahmen und Risiken
 
 | Risiko / Annahme | Stand | Mitigation |
 |------------------|-------|------------|
-| Gemini-API-Kosten | Sample-Run misst ~€0.0005 pro Call. Vollauf 246 × 2 Modi + Judge ≈ €0.50–€1.00. | Festes Budget per `--budget`-Flag in `06_run_gemini.py`, Sample-Lauf mit `--limit 10` zur Hochrechnung |
+| Gemini-API-Kosten | Vollauf abgeschlossen. | Erledigt |
 | Onlinesammlung könnte Scraping blockieren | Bisher keine Blockade. JSON-Endpoint liefert 4/250 mal 403, vermutlich permanent. | Höflich: User-Agent, 1s Sleep, Caching pro Objekt-ID, automatisches Filtern unerreichbarer Objekte. |
-| Pillow-Resize-Auflösung | 1024 px gewählt; nicht empirisch validiert. | A/B-Test in M2 mit wenigen Objekten in mehreren Auflösungen vor Vollauf, falls Akkuranz schwach bleibt |
-| Bilder-Repo-Größe | Nach M1: 17 MB für 245 Bilder. Sicher unter NFR-4. | Erledigt |
-| Genau ein Experte zur Zeit (kein Multi-User) | Annahme | In Out-of-Scope dokumentiert |
+| Pillow-Resize-Auflösung | 1024 px gewählt; nicht empirisch validiert. | A/B-Test wurde nicht durchgeführt — im Vollauf keine auffällige Auflösungs-bedingte Degradation, daher akzeptiert. |
+| Bilder-Repo-Größe | Nach Vollauf: 17 MB für 245 Bilder, Repo insgesamt 38 MB. Sicher unter NFR-4. | Erledigt |
+| Objekt 1168643 ohne Bild | Bild-Download schlug 3× fehl. | Erledigt durch Entfernen aus `objects.json` + `originals.json`, siehe Journal *Objekt 1168643 aus dem Scope entfernt*. |
+| Workshop-Tag Beamer-Lesbarkeit | Nicht am Beamer im Zielraum verifiziert. | Dry-Run am 19.04.2026 (Paket 7 des Abschlussplans). Quick-Fix-Option: `--text: #333333` → `#000000` in `style.css`. |
