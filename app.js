@@ -148,6 +148,17 @@ function statusFor(objectId) {
   return "match";
 }
 
+// Judge verdict keys come from the JSON schema as snake_case identifiers —
+// fine as stable API values but unreadable for museum professionals. Map
+// to human-readable German labels for display only.
+const VERDICT_LABEL = {
+  both_correct: "Beide korrekt",
+  tie_plausible: "Beide plausibel",
+  enriched_better: "Mit Metadaten besser",
+  blind_better: "Nur mit Foto besser",
+  both_wrong: "Beide falsch",
+};
+
 const STATUS_LABEL = {
   match: "🟢 Übereinstimmung",
   conflict: "🔴 Konflikt",
@@ -615,8 +626,8 @@ function renderDetailBody(obj, original, blind, enriched, judge) {
   const variants = document.createElement("div");
   variants.className = "detail-page__variants";
   variants.appendChild(renderVariantOriginal(obj, original));
-  variants.appendChild(renderVariantAi(obj, blind, "ai-blind", "VISION-LLM", "Das Modell sieht nur das Foto, keine Metadaten."));
-  variants.appendChild(renderVariantAi(obj, enriched, "ai-enriched", "VISION-LLM", "Das Modell sieht das Foto plus Objektname, Material, Maße und Datierung aus der Sammlung."));
+  variants.appendChild(renderVariantAi(obj, blind, "ai-blind", "VISION-LLM · NUR FOTO", "Das Modell sieht nur das Foto, keine Metadaten."));
+  variants.appendChild(renderVariantAi(obj, enriched, "ai-enriched", "VISION-LLM · FOTO + METADATEN", "Das Modell sieht das Foto plus Objektname, Material, Maße und Datierung aus der Sammlung."));
   variants.appendChild(renderVariantJudge(obj, judge));
   body.appendChild(variants);
 
@@ -744,7 +755,7 @@ function renderVariantAi(obj, record, klass, badgeText, subtitleText) {
   variantField(card, "Datierung", record.dating || "");
   variantField(card, "Confidence", record.confidence_note || "");
   if (record.stage1_reasoning) {
-    variantField(card, "Stufe-1-Begründung", record.stage1_reasoning);
+    variantField(card, "Bereichs-Begründung", record.stage1_reasoning);
   }
 
   const meta = document.createElement("div");
@@ -774,7 +785,7 @@ function renderVariantJudge(obj, judge) {
     return card;
   }
 
-  variantField(card, "Verdict", judge.verdict || "");
+  variantField(card, "Urteil", VERDICT_LABEL[judge.verdict] || judge.verdict || "");
   variantField(
     card,
     "Judge wählt",
@@ -783,8 +794,8 @@ function renderVariantJudge(obj, judge) {
   variantField(card, "Sammlungs-Quirk", judge.is_collection_quirk ? "ja" : "nein");
   variantField(
     card,
-    "Qualität",
-    `blind ${judge.description_quality_blind || "–"} · enriched ${judge.description_quality_enriched || "–"}`
+    "Beschreibungs-Qualität",
+    `Nur Foto ${judge.description_quality_blind || "–"} · Foto + Metadaten ${judge.description_quality_enriched || "–"}`
   );
   variantField(card, "Begründung", judge.reasoning || "");
 
@@ -914,7 +925,7 @@ function topLabel(topId) {
   const tree = state.thesaurus;
   if (tree && tree.children) {
     const node = tree.children.find((c) => c.id === topId);
-    if (node) return node.term;
+    if (node) return stripTopPrefix(node.term);
   }
   return topId;
 }
@@ -1044,11 +1055,11 @@ function renderDashboardJudgePanel(m) {
 
   const verdictLines = [...m.verdicts.entries()]
     .sort((a, b) => b[1] - a[1])
-    .map(([k, v]) => `<li>${escapeHtml(k)} · ${v}×</li>`)
+    .map(([k, v]) => `<li>${escapeHtml(VERDICT_LABEL[k] || k)} · ${v}×</li>`)
     .join("");
 
   panel.innerHTML = `
-    <h3>Judge (${m.judgeCount} bewertet)</h3>
+    <h3>LLM-Judge (${m.judgeCount} bewertet)</h3>
     <div class="dashboard__metric dashboard__metric--hero">
       <b>${m.quirks} / ${m.judgeCount}</b>
       <span>Original = Sammlungs-Quirk</span>
