@@ -127,7 +127,7 @@ Der Judge wurde nicht gebeten, selbst zu klassifizieren, gibt aber in `judge_top
 
 ### Sammlungs-Quirks
 
-**4 von 8** Objekte als `is_collection_quirk = true` markiert: Marmoraufsatz, Trog, Spritze, Totschläger. Das ist der didaktisch wichtigste Befund: bei fast der Hälfte der untersuchten Mismatches ist die KI nicht falsch, sondern die Sammlung hat eine nicht-offensichtliche Konvention (Spritze = Hollerschieße → Spielzeug, Totschläger = Fischtöter → Fischerei).
+**3 von 8** Objekte als `is_collection_quirk = true` markiert: Trog (`1169812`), Spritze (`1174037`), Totschläger (`1183673`). Das ist der didaktisch wichtigste Befund: bei mehr als einem Drittel der untersuchten Mismatches ist die KI nicht falsch, sondern die Sammlung hat eine nicht-offensichtliche Konvention (Spritze = Hollerschieße → Spielzeug, Totschläger = Fischtöter → Fischerei, Trog mit sammlungsinterner Kontext-Zuordnung).
 
 ### Beschreibungs-Qualität (1–5)
 
@@ -147,6 +147,35 @@ Aggregiert über alle 8 Judge-Bewertungen. Diese sind die Grundlage für eine ev
 
 Lohnt sich eine Iteration 3, die Enriched explizit auf „Metadaten-Klassifikation priorisieren + Homonym-Warnung + Inner-Merkmal-Regel" tuned? Kosten: weitere ~€0.02 für Sample-Run + eventuell weiterer Judge-Run auf Teilmenge. Aber: v2 ist schon gut genug für den Vollauf, die Iterations-3-Gewinne wären Grenzfälle. Entscheidung mit User.
 
+**Entscheidung:** Iteration 3 wird **nicht** umgesetzt. Die v2-Akkuranz ist für die Workshop-Story ausreichend, die zu erwartenden Iterations-3-Gewinne liegen in Grenzfällen, und weitere Judge-Runs kosten Gemini-Pro-Credits für marginalen Mehrwert. Stattdessen: Vollauf mit v2.0 auf der kompletten Selektion.
+
 ---
 
-*(Iteration 3 oder Vollauf — folgt.)*
+## Vollauf auf 245 Objekten (Prompt v2.0)
+
+**Datum:** 2026-04-11
+**Modell:** `gemini-3.1-flash-lite-preview`
+**Prompts:** `system_blind.txt` v2.0, `system_enriched.txt` v2.0 (unverändert gegenüber Iteration 2)
+**Selektion:** 245 Objekte (nach Entfernen von `1168643`, siehe Journal-Eintrag *Objekt 1168643 aus dem Scope entfernt*)
+
+### Akkuranz
+
+|             | Top-Match | Leaf-Match |
+|-------------|-----------|------------|
+| Blind       | 123/245 (**50 %**) | 62/245 (**25 %**) |
+| Enriched    | 150/245 (**61 %**) | 85/245 (**35 %**) |
+
+### Vergleich Sample (v2, n=30) → Vollauf (v2, n=245)
+
+|             | Sample Top | Vollauf Top | Sample Leaf | Vollauf Leaf |
+|-------------|-----------|-------------|-------------|--------------|
+| Blind       | 53 %      | 50 %        | 27 %        | 25 %         |
+| Enriched    | 60 %      | 61 %        | 27 %        | **35 %**     |
+
+**Beobachtung:** Blind-Top fällt um 3 Punkte, Enriched-Top bleibt praktisch identisch. Bei der Leaf-Granularität ist der Sample stabil für Blind, aber **leicht pessimistisch** für Enriched — im Vollauf schneidet Enriched-Leaf 8 Punkte besser ab. Bei n=30 vs. n=245 ist das Sample statistisch schwach, und die Erkenntnis „Sample hat Enriched-Leaf unterschätzt" ist ehrlich ohne Überinterpretation: die v2-Prompt-Verbesserungen wirken bei der größeren Menge kumulativ etwas stärker, als der kleine Sample zeigte.
+
+### Status
+
+- Vollauf **abgeschlossen**, finale KI-Outputs liegen in `data/json/ai_blind.json` und `data/json/ai_enriched.json`.
+- Judge-Daten unverändert: 8 handverlesene Objekte aus der Sample-Phase (siehe Judge-Run-Sektion oben).
+- Iteration 3 **nicht umgesetzt** (siehe Entscheidung oben).
