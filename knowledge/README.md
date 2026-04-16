@@ -7,14 +7,14 @@ Wissensbasis von *Objekt-Bestimmung Workshop 2026*. Workshop am 20.04.2026 in Sa
 Eine zweiteilige Architektur:
 
 1. **Offline-Pipeline** (Python, in `scripts/`) berechnet alle KI-Antworten einmalig vor und legt JSONs unter `data/json/` ab.
-2. **Static Site** (Vanilla HTML/CSS/JS, in Repo-Root) liest die JSONs und stellt sie als Browse-/Filter-/Vergleichs-Viewer bereit. Pro Objekt stehen nebeneinander: Original (Sammlungsdaten), Vision-LLM mit nur dem Foto, Vision-LLM mit Foto plus Metadaten und ein LLM-Judge-Urteil. Kein Editor, kein Export — reine Lese-/Vergleichs-Funktion. Läuft offline und auf GitHub Pages, kein Backend.
+2. **Static Site** (Vanilla HTML/CSS/JS, in Repo-Root) liest die JSONs und stellt sie als Browse-/Filter-/Vergleichs-Viewer bereit. Pro Objekt stehen nebeneinander: Original (Sammlungsdaten), Vision-LLM mit nur dem Foto, Vision-LLM mit Foto plus Metadaten und die finale Korrektur-Fassung vom stärkeren Modell. Kein Editor, kein Export — reine Lese-/Vergleichs-Funktion. Läuft offline und auf GitHub Pages, kein Backend.
 
-Das Modell läuft in **drei Workflows**: *Nur Foto* (Vision-LLM mit Bild) → *Foto + Metadaten* (Vision-LLM mit Bild plus Objektname, Material, Maße, Datierung) → *LLM-Judge* (ein stärkeres Modell bewertet die beiden anderen, nur für eine handverlesene 8er-Stichprobe). Details in [`workflows.md`](workflows.md).
+Das Modell läuft in **drei Workflows**: *Nur Foto* (Vision-LLM mit Bild) → *Foto + Metadaten* (Vision-LLM mit Bild plus Objektname, Material, Maße, Datierung) → *Korrektur* (stärkeres Modell prüft die Enriched-Fassung und erzeugt die finale, sammlungsreife Version). Details in [`workflows.md`](workflows.md).
 
 ## Status
 
-- **Pipeline:** abgeschlossen. Thesaurus, Selektion, Originaltexte, Bilder, beide Vollauf-Modi, Judge-Stichprobe.
-- **Frontend:** funktional abgeschlossen. Hash-Router mit Gallery-Route (`#/`) und Detail-Route (`#/object/:id`), Filter (Thesaurus-Tree, Status, Freitext, klickbare Confusions), Akkuranz-Dashboard, Judge-Quirk-Banner.
+- **Pipeline:** abgeschlossen. Thesaurus, Selektion, Originaltexte, Bilder, beide Vollauf-Modi, Korrektur-Sample.
+- **Frontend:** funktional abgeschlossen. Hash-Router mit Gallery-Route (`#/`) und Detail-Route (`#/object/:id`), Filter (Thesaurus-Tree, Status, Freitext, klickbare Confusions), Akkuranz-Dashboard, Banner für kuratorische Prüfung.
 - **Abschlussphase (12.–19.04.2026):** Knowledge-Korrekturen, README im Repo-Root, GitHub Pages Deployment, Workshop-Tag-Dry-Run am 19.04. Siehe Plan in `~/.claude/plans/zesty-shimmying-treasure.md`.
 
 ## Reihenfolge zum Einstieg

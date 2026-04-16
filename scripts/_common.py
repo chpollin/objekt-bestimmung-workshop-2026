@@ -196,8 +196,8 @@ def gemini_generate_json(
 ) -> GeminiCallResult:
     """Run a Gemini generate_content call with JSON response schema and retries.
 
-    Shared between _gemini_client.py (workflows A/B) and 07_judge_sample.py
-    (workflow C). Returns parsed JSON plus token usage and latency.
+    Shared between _gemini_client.py (workflows A/B) and 07_correct_sample.py
+    (workflow C, Korrektur). Returns parsed JSON plus token usage and latency.
     """
     import google.generativeai as genai  # imported here so _common stays usable without the SDK
     import json as _json

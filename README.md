@@ -8,19 +8,19 @@
 
 ## English Abstract
 
-Static-site demo and teaching material for a one-day workshop on AI-assisted object classification in ethnographic museum collections. 245 curated objects from the Volkskundliche Sammlung of the Landessammlungen Niederösterreich are classified by Gemini 3.1 Flash-Lite in two modes — **blind** (image only) and **enriched** (image plus existing metadata) — and compared side-by-side with the original catalog record. A handpicked sample of eight cases is additionally reviewed by Gemini 3.1 Pro acting as an LLM-as-a-judge, flagging "collection quirks" where the AI's answer is not wrong but the collection follows an internal convention. The pipeline is precomputed offline; the browser tool is vanilla HTML/CSS/JS, runs fully offline, and is deployable to GitHub Pages without configuration. Data attribution: [Landessammlungen Niederösterreich](https://online.landessammlungen-noe.at), **CC BY-NC 4.0** — code released under the **MIT License**.
+Static-site demo and teaching material for a one-day workshop on AI-assisted object classification in ethnographic museum collections. 245 curated objects from the Volkskundliche Sammlung of the Landessammlungen Niederösterreich are classified by Gemini 3.1 Flash-Lite in two modes — **blind** (image only) and **enriched** (image plus existing metadata) — and compared side-by-side with the original catalog record. A stronger model (Gemini 3.1 Pro) then acts as a **Corrector**: it reviews the enriched output, produces the final collection-ready classification and description, lists the corrections it applied, and flags cases where the assignment cannot be derived from image and metadata alone (curator review needed). The pipeline is precomputed offline; the browser tool is vanilla HTML/CSS/JS, runs fully offline, and is deployable to GitHub Pages without configuration. Data attribution: [Landessammlungen Niederösterreich](https://online.landessammlungen-noe.at), **CC BY-NC 4.0** — code released under the **MIT License**.
 
 ---
 
 ## Was ist das?
 
-Ein zweiteiliges System aus einer Python-Offline-Pipeline und einem browserbasierten Vergleichs-Viewer. Ziel: Museumsfachleuten ohne ML-Vorwissen zu zeigen, was ein aktueller Vision-LLM aus einem Objektfoto plus Sammlungsmetadaten ableiten kann — und wo die Grenzen liegen. Besonders didaktisch wichtig sind die **Sammlungs-Quirks**: Fälle, in denen die KI-Antwort visuell und sprachlich korrekt ist, aber trotzdem von der Originalzuordnung abweicht, weil die Sammlung eine interne Konvention hat (z.B. *Totschläger* als Fischerei-Zubehör, nicht als Waffe).
+Ein zweiteiliges System aus einer Python-Offline-Pipeline und einem browserbasierten Vergleichs-Viewer. Ziel: Museumsfachleuten ohne ML-Vorwissen zu zeigen, was ein aktueller Vision-LLM aus einem Objektfoto plus Sammlungsmetadaten ableiten kann — und wo die Grenzen liegen. Besonders didaktisch wichtig sind die **Sammlungs-Eigenheiten**: Fälle, in denen die KI-Antwort visuell und sprachlich korrekt ist, aber trotzdem von der Originalzuordnung abweicht, weil die Sammlung eine interne Konvention hat (z.B. *Totschläger* als Fischerei-Zubehör, nicht als Waffe).
 
 Drei parallele Workflows (Details in [`knowledge/workflows.md`](knowledge/workflows.md)):
 
 1. **Nur Foto** (Workflow A) — das Vision-LLM sieht nur das Foto.
 2. **Foto + Metadaten** (Workflow B) — das Vision-LLM sieht das Foto plus die bestehenden Sammlungs-Metadaten (Objektname, Material, Maße, Datierung).
-3. **LLM-Judge** (Workflow C) — ein stärkeres Modell (Gemini 3.1 Pro) bewertet eine handverlesene 8er-Stichprobe der Ergebnisse und markiert sammlungsinterne Konventionen („Quirks").
+3. **Korrektur** (Workflow C) — ein stärkeres Modell (Gemini 3.1 Pro) prüft die Arbeit des Vision-LLM aus Workflow B und liefert die finale, sammlungsreife Fassung: Klassifikation, Beschreibung, Liste der vorgenommenen Korrekturen, und ein Flag für kuratorische Prüfung, wenn die Zuordnung aus Evidenz allein nicht eindeutig erschließbar ist.
 
 Die Architektur ist bewusst pre-computed statt Live-API: Der Bildserver der Landessammlungen NÖ sendet keine CORS-Header, und ein fehlschlagender Live-Call am Workshop-Tag wäre katastrophal. Details zur Begründung stehen in [`knowledge/requirements.md`](knowledge/requirements.md) unter ADR-1.
 
@@ -56,4 +56,4 @@ Eine separate `LICENSE`-Datei ist optional und nicht Teil dieses Commits — der
 
 ## Disclaimer
 
-Dies ist eine Lehr- und Demo-Site für einen einmaligen Workshop-Vortrag, keine Produktivsoftware. Keine Gewähr auf die Richtigkeit der KI-generierten Beschreibungen, Thesaurus-Zuordnungen oder Judge-Urteile. Die Originalklassifikationen der Landessammlungen NÖ sind die einzige belastbare Referenz.
+Dies ist eine Lehr- und Demo-Site für einen einmaligen Workshop-Vortrag, keine Produktivsoftware. Keine Gewähr auf die Richtigkeit der KI-generierten Beschreibungen, Thesaurus-Zuordnungen oder Korrektur-Fassungen. Die Originalklassifikationen der Landessammlungen NÖ sind die einzige belastbare Referenz.

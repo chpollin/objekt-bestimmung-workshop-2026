@@ -8,9 +8,9 @@ Das Projekt zeigt drei aufeinander aufbauende KI-Workflows. Jeder beantwortet ei
 |---|---|---|---|
 | **A. Blind** | nur das Foto | klassifiziert + beschreibt | Was kann KI ohne jedes Vorwissen aus einem Sammlungsfoto ableiten? |
 | **B. Enriched** | Foto + Original-Metadaten | klassifiziert + reichert an | Wie verändert sich das Ergebnis, wenn die KI bestehende Sammlungsdaten als Kontext hat? |
-| **C. Judge** | Foto + Original + Antworten von A und B | bewertet, kritisiert, schlägt Korrekturen vor | Kann eine stärkere KI eine schwächere KI sinnvoll bewerten — und finden, was Menschen übersehen? |
+| **C. Korrektur** | Foto + Metadaten + Enriched-Antwort | prüft, korrigiert, liefert finale Fassung | Kann ein stärkeres Modell die Arbeit eines kleineren abschließen und in eine sammlungsreife Fassung überführen? |
 
-C ist **keine** dritte Klassifikation, sondern eine **Meta-Schicht** über A und B. C läuft mit einem stärkeren Modell (`gemini-3.1-pro-preview`) gegen die Outputs des schwächeren Modells (`gemini-3.1-flash-lite-preview`). Judge läuft bewusst nur auf einer handverlesenen 8er-Stichprobe (`data/json/judge_selection.json`) — siehe ADR-12 und FR-11 in `requirements.md`.
+C ist die **finale Fassung**, nicht nur Bewertung. Ein stärkeres Modell (`gemini-3.1-pro-preview`) liest die Arbeit des schwächeren Modells (`gemini-3.1-flash-lite-preview`) und erzeugt die Klassifikation plus Katalogeintrag, die in die Sammlung wandern könnten. Details in ADR-12 und FR-11 in `requirements.md`.
 
 ## Workflow A: Vision-LLM, nur Foto
 
@@ -49,56 +49,57 @@ C ist **keine** dritte Klassifikation, sondern eine **Meta-Schicht** über A und
 
 **Wofür es nicht taugt.** Wenn die Originaldaten fehlerhaft oder verführerisch sind, zieht der Kontext die KI in die Irre.
 
-## Workflow C: LLM-Judge (Meta-Ebene)
+## Workflow C: Korrektur (finale Fassung)
 
-**Eingabe.** Bild + Original-Metadaten + Original-Beschreibung + die JSON-Antworten von Workflow A und B.
+**Eingabe.** Bild + Original-Metadaten (Objektname, Material, Maße, Datierung) + die JSON-Antwort von Workflow B (Enriched). Den Original-Eintrag der Sammlung bekommt der Korrektor **nicht** — er arbeitet realistisch für den Produktionsfall (neue Objekte haben keinen Original-Eintrag). Die Original-Zuordnung wird nur nachträglich für die Evaluation verwendet.
 
 **Ausgabe.** JSON mit:
-- `verdict`: welcher Workflow gewinnt? (blind / enriched / beide / keiner)
-- `judge_top_id`: was hätte der Judge selbst gewählt
-- `description_quality_blind`, `description_quality_enriched`: 1–5-Skala
-- `prompt_improvement_hints`: konkrete Hinweise, was am Prompt von A oder B unzureichend ist
-- `is_collection_quirk`: bool — ist das Original eine sammlungsspezifische Konvention, die aus dem Bild allein nicht ableitbar wäre? (sehr wichtig für faire Bewertung)
-- Begründungstext
+- `final_top_id`: finaler Top-Bereich (enum-beschränkt auf die 20 Lebensbereiche)
+- `final_thesaurus_id`: finale Unterkategorie (enum-beschränkt auf Leaves des gewählten Top-Bereichs)
+- `final_description`: sammlungsreifer Katalogeintrag, 2–4 Sätze
+- `final_confidence_note`: offene Punkte, ggf. plausible Alternativen
+- `corrections_applied`: Liste mit Kurzbegründung pro Änderung gegenüber der Enriched-Fassung (leer, wenn nur Stilschliff)
+- `curator_review_needed`: bool — true, wenn die Zuordnung aus Foto und Metadaten allein nicht eindeutig ableitbar ist (Sammlungs-Eigenheit, Homonym-Falle)
+- `stage1_reasoning`: Begründung der Top-Bereich-Wahl
 
-**Pipeline-Schritt.** `python scripts/07_judge_sample.py --selection data/json/judge_selection.json`
+**Pipeline-Schritt.** `python scripts/07_correct_sample.py`
 
-**Modell.** `gemini-3.1-pro-preview` (deutlich stärker als das Flash-Lite-Modell der Workflows A und B). Andere Generation = andere Perspektive.
+**Modell.** `gemini-3.1-pro-preview` (deutlich stärker als das Flash-Lite-Modell der Workflows A und B). Zweistufig wie A und B: erst Top-Bereich, dann Leaf + Beschreibung.
 
 **Was es im Workshop zeigt.**
-1. **KI kann KI bewerten.** Eine zweite KI-Meinung gegen die erste — und sie ist nicht nur ein Spiegel, sondern findet echte Schwächen.
-2. **Sammlungs-Quirks werden sichtbar.** Wenn der Judge sagt „das Original ist eine sammlungsspezifische Konvention, die aus dem Bild allein nicht ableitbar wäre", lernen die Teilnehmer: Akkuranz-Prozente sagen nicht alles. Manche „Mismatches" sind keine KI-Fehler.
-3. **Iteration wird messbar.** Vor Iteration 2 hat der Judge die Hinweise „Top-Bereich-Magneten in blind", „Material-Trigger in enriched", „Religion/Bildwerke-Verwechslung" aufgelistet. Nach Iteration 2 lässt sich messen: tauchen diese Hinweise noch auf? Damit haben wir einen objektiven Iterations-Stopper.
+1. **Kleine Modelle plus großes Modell funktioniert.** Das billige Modell leistet die Grundarbeit, das teure korrigiert — realistisches Muster für Produktionsworkflows.
+2. **Korrekturen sind begründet.** `corrections_applied` macht nachvollziehbar, was geändert wurde und warum. Kein Black-Box-Ergebnis, sondern Auditspur.
+3. **Grenzen werden sichtbar.** Wenn der Korrektor `curator_review_needed = true` setzt, erkennt er selbst, dass eine Zuordnung aus Evidenz allein nicht erschließbar ist. Der Mensch übernimmt gezielt dort, wo die KI auf ihre Grenzen stößt.
 
-**Wofür es taugt.** Eval ohne menschlichen Aufwand. Prompt-Iteration. Erklärung der Mismatches im Workshop. Demonstration, dass „KI prüft KI" funktional sein kann.
+**Wofür es taugt.** Anreicherung neuer Objekte ohne bestehenden Katalogeintrag. Qualitätsprüfung mit nachvollziehbarer Korrektur-Spur. Filterung der Fälle, die einer Kuratorin vorgelegt werden sollen.
 
-**Wofür es nicht taugt.** Ground Truth zu setzen, wo es keine gibt. Der Judge ist eine Meinung, nicht die Wahrheit. Auch er kann irren — und genau diese Diskussion ist Teil der Workshop-Story.
+**Wofür es nicht taugt.** Sammlungskonventionen, die nur in der kuratorischen Dokumentation leben (Homonyme mit Fachzuordnung, Funktionsverortung). Solche Fälle markiert der Korrektor korrekt als prüfungsbedürftig, kann sie aber nicht eigenständig auflösen.
 
 ## Workflow im UI
 
 Die Detail-Seite (`#/object/:id`) zeigt vier Karten read-only untereinander in der rechten Spalte, links daneben das große Foto:
 
-1. **Original** (Ground-Truth, grau) — was die Sammlung sagt. Trägt bei Objekten mit Judge-Quirk zusätzlich einen gelben Banner *„Sammlungs-Quirk — Zuordnung folgt sammlungsinterner Konvention"*.
+1. **Original** (Ground-Truth, grau) — was die Sammlung sagt. Trägt bei Objekten mit `curator_review_needed = true` zusätzlich einen gelben Banner *„Korrektor: Zuordnung aus Evidenzmaterial nicht eindeutig — Sammlungs-Eigenheit, kuratorische Prüfung empfohlen"*.
 2. **KI Blind** (lila Badge) — Workflow A.
 3. **KI Enriched** (blau Badge) — Workflow B.
-4. **Judge** (dunkles Badge mit Modellname) — Workflow C, mit Verdict, Quality-Noten und Prompt-Hinweisen. Nur bei den 8 handverlesenen Objekten befüllt; bei den anderen zeigt die Karte *„Kein Judge-Urteil für dieses Objekt"*.
+4. **Korrektur / Finale Fassung** (dunkles Badge mit Modellname) — Workflow C, mit finalen Klassifikations- und Beschreibungsfeldern, Liste der angewandten Korrekturen und Konfidenz-Notiz.
 
 Es gibt keine Experten-Edit-Spalte — die Site ist ein reiner Vergleichs-Viewer (siehe ADR-14). Änderungen an der Klassifikation passieren außerhalb des Tools, im Sammlungsmanagementsystem.
 
-Im Akkuranz-Dashboard (FR-8) wird zusätzlich die Judge-Verteilung geführt: Quirk-Anteil als Hero-Metric, Quality-Mittelwerte für Blind und Enriched, Verdict-Verteilung. Die „häufigste Verwechslungen"-Liste ist klickbar — ein Klick pinnt einen Filter auf das betreffende `fromTop → toTop`-Paar, sodass man direkt in die Betroffenen-Objekte springt.
+Im Akkuranz-Dashboard (FR-8) wird zusätzlich die Korrektor-Auswertung geführt: Top-Match-Quote der finalen Fassung, Anzahl der Bereichs-Änderungen gegenüber Enriched (mit Treffer-Effekt), Anzahl der Objekte mit angewandten Korrekturen, Anzahl der für kuratorische Prüfung geflaggten Objekte. Die „häufigste Verwechslungen"-Liste ist klickbar — ein Klick pinnt einen Filter auf das betreffende `fromTop → toTop`-Paar, sodass man direkt in die Betroffenen-Objekte springt.
 
 ## Wo leben die Prompts
 
 | Datei | Zweck | Aktuelle Version |
 |---|---|---|
-| [`../scripts/prompts/system_blind.txt`](../scripts/prompts/system_blind.txt) | System-Prompt für Workflow A | v2.0 |
-| [`../scripts/prompts/system_enriched.txt`](../scripts/prompts/system_enriched.txt) | System-Prompt für Workflow B | v2.0 |
-| [`../scripts/prompts/system_judge.txt`](../scripts/prompts/system_judge.txt) | System-Prompt für Workflow C | v1.0 |
+| [`../scripts/prompts/system_blind.txt`](../scripts/prompts/system_blind.txt) | System-Prompt für Workflow A | v3.0 |
+| [`../scripts/prompts/system_enriched.txt`](../scripts/prompts/system_enriched.txt) | System-Prompt für Workflow B | v3.0 |
+| [`../scripts/prompts/system_corrector.txt`](../scripts/prompts/system_corrector.txt) | System-Prompt für Workflow C | v1.0 |
 | [`../scripts/prompts/few_shot_examples.json`](../scripts/prompts/few_shot_examples.json) | 5 echte Katalogtexte als Few-Shot, in Workflow A und B eingebunden | — |
 
 Die Prompt-Versionen sind in den Pipeline-Outputs als `prompt_version`-Feld mitgespeichert (FR-10). Damit lassen sich Antworten verschiedener Prompt-Versionen unterscheiden, ohne die JSON-Outputs zu überschreiben.
 
-**Wie iterieren wir die Prompts?** Jede neue Prompt-Version wird in [`sample_iteration.md`](sample_iteration.md) als Eintrag dokumentiert: Was wurde geändert, warum, gegen welche Sample-Beobachtungen, mit welchem messbaren Effekt (Akkuranz vor/nach, Judge-Verdict). Die Prompt-Dateien selbst sind die Quelle der Wahrheit, das Iterations-Tagebuch ist die Geschichte dahinter.
+**Wie iterieren wir die Prompts?** Jede neue Prompt-Version wird in [`sample_iteration.md`](sample_iteration.md) als Eintrag dokumentiert: Was wurde geändert, warum, gegen welche Sample-Beobachtungen, mit welchem messbaren Effekt (Akkuranz vor/nach). Die Prompt-Dateien selbst sind die Quelle der Wahrheit, das Iterations-Tagebuch ist die Geschichte dahinter.
 
 ## Schichten-Logik
 

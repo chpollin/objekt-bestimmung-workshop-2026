@@ -91,7 +91,7 @@ Auf jedem Objekt-JSON ist ein `license`-Feld. Stichproben zeigen **CC BY-NC 4.0*
 - **Few-Shot-Beispiele:** 5 echte Katalogtexte in `scripts/prompts/few_shot_examples.json`, ausgewählt von `03_scrape_originals.py` aus den gescrapten Beschreibungen.
 - **Vollauf *nur Foto*** — Workflow A (`data/json/ai_blind.json`, 245 Records, Prompt v2.0, `gemini-3.1-flash-lite-preview`): Top-Bereich 123/245 = **50 %**, Leaf-Term 62/245 = **25 %**.
 - **Vollauf *Foto + Metadaten*** — Workflow B (`data/json/ai_enriched.json`, 245 Records, Prompt v2.0, gleiches Modell): Top-Bereich 150/245 = **61 %**, Leaf-Term 85/245 = **35 %**.
-- **LLM-Judge** — Workflow C (`data/json/ai_judge.json`, 8 handverlesene Objekte, `gemini-3.1-pro-preview`): 8/8 Judge-Top-Wahlen stimmen mit dem Original überein, 3/8 Objekte als `is_collection_quirk = true` markiert (Trog `1169812`, Spritze `1174037`, Totschläger `1183673`), Beschreibungs-Qualität im Mittel 4.5 (nur Foto) bzw. 4.5 (Foto + Metadaten).
+- **Korrektur** — Workflow C (`data/json/ai_corrected_sample.json`, 30 Sample-Objekte, `gemini-3.1-pro-preview`): Finale Top-Bereich-Quote 21/30 = **70 %** und finale Leaf-Quote 13/30 = **43 %** (gegenüber 19/30 = 63 % Bereich und 12/30 = 40 % Leaf im Enriched-Modus v3). 4 Bereichs-Änderungen gegenüber der Enriched-Eingabe, davon 2 zum Treffer, 0 schadeten. 24 Objekte mit mindestens einer angewandten Korrektur (`corrections_applied` nicht leer). 9 Objekte als `curator_review_needed = true` geflaggt.
 
 Detaillierte Iterations-Chronik, inkl. Prompt v1 → v2 und Sample-Runs, in [`sample_iteration.md`](sample_iteration.md).
 
@@ -114,7 +114,8 @@ Detaillierte Iterations-Chronik, inkl. Prompt v1 → v2 und Sample-Runs, in [`sa
 │  scripts/05_preview_selection→ preview.html    │
 │  scripts/06_run_gemini       → ai_blind.json   │
 │                              → ai_enriched.json│
-│  scripts/07_judge_sample     → ai_judge.json   │
+│  scripts/07_correct_sample   → ai_corrected_   │
+│                                sample.json     │
 └────────┬───────────────────────────────────────┘
          │ Commit JSON + Bilder
          ▼
@@ -126,7 +127,9 @@ Detaillierte Iterations-Chronik, inkl. Prompt v1 → v2 und Sample-Runs, in [`sa
 │             ◀─ data/json/originals.json        │
 │             ◀─ data/json/ai_blind.json         │
 │             ◀─ data/json/ai_enriched.json      │
-│             ◀─ data/json/ai_judge.json         │
+│             ◀─ data/json/ai_corrected.json     │
+│             ◀─ data/json/ai_corrected_sample.  │
+│                           json (Fallback)      │
 │             ◀─ assets/img/*.jpg                │
 └────────────────────────────────────────────────┘
 ```
@@ -148,17 +151,16 @@ Der Frontend-Fluss endet hier: Die Site ist ein reiner Read-Only-Vergleichs-View
 | `scripts/05_preview_selection.py` | preview.html für visuelles Review |
 | `scripts/06_run_gemini.py` | Gemini-Calls, beide Modi via `--mode` |
 | `scripts/_gemini_client.py` | Zweistufige Gemini-Logik (Stage 1 + Stage 2 mit Disambiguation) |
-| `scripts/07_judge_sample.py` | LLM-as-a-Judge gegen blind+enriched (handverlesene Stichprobe) |
-| `scripts/prompts/system_blind.txt` | System-Prompt blind (v2.0) |
-| `scripts/prompts/system_enriched.txt` | System-Prompt enriched (v2.0) |
-| `scripts/prompts/system_judge.txt` | System-Prompt judge (v1.0) |
+| `scripts/07_correct_sample.py` | Korrektor: stärkeres Modell prüft Enriched-Output, liefert finale Fassung mit Korrektur-Spur |
+| `scripts/prompts/system_blind.txt` | System-Prompt blind (v3.0) |
+| `scripts/prompts/system_enriched.txt` | System-Prompt enriched (v3.0) |
+| `scripts/prompts/system_corrector.txt` | System-Prompt Korrektor (v1.0) |
 | `scripts/prompts/few_shot_examples.json` | 5 echte Katalogbeispiele |
 | `data/json/thesaurus.json` + `thesaurus_flat.json` | Thesaurus für Browser + Prompts |
 | `data/json/objects.json` | Master-Metadaten der 245 Objekte |
 | `data/json/originals.json` | Beschreibungstexte aus Onlinesammlung |
 | `data/json/ai_blind.json`, `ai_enriched.json` | KI-Outputs, je 245 Records |
-| `data/json/ai_judge.json` | 8 Judge-Bewertungen |
-| `data/json/judge_selection.json` | Die 8 handverlesenen Objekt-IDs für den Judge-Run |
+| `data/json/ai_corrected_sample.json` | 30 Korrektur-Ergebnisse aus dem Sample-Lauf |
 | `assets/img/*.jpg` | 245 Bilder, max. 1024 px lange Kante, gesamt 17 MB |
 | `index.html`, `style.css`, `app.js` | Vanilla-Browser-Tool, Vergleichs-Viewer |
 | `design.md` | UI-Spezifikation im Ist-Stand |
@@ -179,10 +181,10 @@ python 04_download_images.py
 python 05_preview_selection.py     # öffnet preview.html im Browser
 python 06_run_gemini.py --mode blind
 python 06_run_gemini.py --mode enriched
-python 07_judge_sample.py
+python 07_correct_sample.py
 ```
 
-Erwartung: alle 245 Objekte haben Bild + zwei KI-Outputs. Die Judge-Stichprobe umfasst 8 handverlesene Objekte aus `data/json/judge_selection.json`. Selection-Report zeigt sinnvolle Streuung.
+Erwartung: alle 245 Objekte haben Bild + zwei KI-Outputs. Der Korrektor läuft auf den 30 Sample-Objekten aus `data/json/sample.json` und erzeugt `data/json/ai_corrected_sample.json` mit 30 Records.
 
 **Browser-Tool:**
 
@@ -191,9 +193,9 @@ Erwartung: alle 245 Objekte haben Bild + zwei KI-Outputs. Die Judge-Stichprobe u
 - Filter-Stichprobe: Top-Bereich „Religion und Glaube" anklicken → nur Religions-Objekte sichtbar
 - Freitext „Beutel" → Treffer
 - Status-Filter „Konflikt" alleine → nur rote Kacheln; „keine KI" alleine → leere Galerie (alle 245 haben KI-Daten)
-- Klick auf Objekt → Detail-Seite (`#/object/:id`) mit Foto, Original, KI blind, KI erweitert, Judge. Prev/Next-Buttons navigieren durch die gefilterten Nachbarn, ESC geht zurück.
-- Detail-Seite eines Quirk-Objekts (z.B. `#/object/1169812`) → gelber Sammlungs-Quirk-Banner auf der Original-Karte sichtbar
-- Akkuranz-Dashboard: drei Panels sichtbar (Akkuranz, Verwechslungen, Judge 3/8 Quirks)
+- Klick auf Objekt → Detail-Seite (`#/object/:id`) mit Foto, Original, KI blind, KI erweitert, Korrektur. Prev/Next-Buttons navigieren durch die gefilterten Nachbarn, ESC geht zurück.
+- Detail-Seite eines Sample-Objekts mit `curator_review_needed = true` (z.B. `#/object/1183673` Totschläger) → gelber Banner „Kuratorische Prüfung empfohlen" auf der Original-Karte sichtbar
+- Akkuranz-Dashboard: drei Panels sichtbar (Akkuranz, Verwechslungen, Korrektur-Panel mit finaler Trefferquote und Zahl der für kuratorische Prüfung geflaggten Objekte)
 
 **GitHub Pages:**
 

@@ -38,7 +38,7 @@ from _paths import (
 )
 
 DEFAULT_MODEL = "gemini-3.1-flash-lite-preview"
-PROMPT_VERSION = "v2.0"
+PROMPT_VERSION = "v3.0"
 
 
 @dataclass

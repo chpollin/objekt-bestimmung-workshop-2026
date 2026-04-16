@@ -1,5 +1,7 @@
 # Entscheidungsjournal
 
+> **Hinweis (2026-04-16):** Die dritte Pipeline-Stufe wurde von „LLM-as-a-Judge" (reine Bewertung der Enriched/Blind-Antworten) auf „Korrektor" (Review-and-Revise: produziert die finale sammlungsreife Fassung) umgestellt. Aktuelle Implementierung siehe `scripts/07_correct_sample.py` und `scripts/prompts/system_corrector.txt`. Ältere Journal-Einträge zu „Judge" dokumentieren die damalige Planung. Das archivierte Judge-Ergebnis liegt unter `_archive/ai_judge_v1.0.json`.
+
 Chronologie der substantiellen Projekt-Entscheidungen. Format pro Eintrag:
 
 ```

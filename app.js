@@ -28,7 +28,8 @@ const DATA_PATHS = {
   originals: "data/json/originals.json",
   aiBlind: "data/json/ai_blind.json",
   aiEnriched: "data/json/ai_enriched.json",
-  aiJudge: "data/json/ai_judge.json",
+  aiCorrected: "data/json/ai_corrected.json",
+  aiCorrectedSample: "data/json/ai_corrected_sample.json",
 };
 
 // ============================================================
@@ -43,7 +44,7 @@ const state = {
   originalsById: new Map(),
   aiBlindById: new Map(),
   aiEnrichedById: new Map(),
-  aiJudgeById: new Map(),
+  aiCorrectedById: new Map(),
   filters: {
     topId: null,
     leafId: null,
@@ -92,7 +93,8 @@ async function loadAll() {
     originals,
     aiBlind,
     aiEnriched,
-    aiJudge,
+    aiCorrected,
+    aiCorrectedSample,
   ] = await Promise.all([
     fetchJsonOrNull(DATA_PATHS.thesaurus),
     fetchJsonOrNull(DATA_PATHS.thesaurusFlat),
@@ -100,7 +102,8 @@ async function loadAll() {
     fetchJsonOrNull(DATA_PATHS.originals),
     fetchJsonOrNull(DATA_PATHS.aiBlind),
     fetchJsonOrNull(DATA_PATHS.aiEnriched),
-    fetchJsonOrNull(DATA_PATHS.aiJudge),
+    fetchJsonOrNull(DATA_PATHS.aiCorrected),
+    fetchJsonOrNull(DATA_PATHS.aiCorrectedSample),
   ]);
 
   state.thesaurus = thesaurus;
@@ -111,7 +114,10 @@ async function loadAll() {
   buildIndex(state.originalsById, originals || [], "object_id");
   buildIndex(state.aiBlindById, aiBlind || [], "object_id");
   buildIndex(state.aiEnrichedById, aiEnriched || [], "object_id");
-  buildIndex(state.aiJudgeById, aiJudge || [], "object_id");
+  // Corrected: either the full run (ai_corrected.json) oder der Sample-Lauf.
+  // Beide kommen aus demselben Schema, der Sample liefert 30 Objekte.
+  const corrected = aiCorrected || aiCorrectedSample || [];
+  buildIndex(state.aiCorrectedById, corrected, "object_id");
 }
 
 // ============================================================
@@ -147,17 +153,6 @@ function statusFor(objectId) {
 
   return "match";
 }
-
-// Judge verdict keys come from the JSON schema as snake_case identifiers —
-// fine as stable API values but unreadable for museum professionals. Map
-// to human-readable German labels for display only.
-const VERDICT_LABEL = {
-  both_correct: "Beide korrekt",
-  tie_plausible: "Beide plausibel",
-  enriched_better: "Mit Metadaten besser",
-  blind_better: "Nur mit Foto besser",
-  both_wrong: "Beide falsch",
-};
 
 const STATUS_LABEL = {
   match: "🟢 Übereinstimmung",
@@ -544,7 +539,7 @@ function renderDetailView() {
   const original = state.originalsById.get(obj.object_id);
   const blind = state.aiBlindById.get(obj.object_id);
   const enriched = state.aiEnrichedById.get(obj.object_id);
-  const judge = state.aiJudgeById.get(obj.object_id);
+  const corrected = state.aiCorrectedById.get(obj.object_id);
 
   const prevId = neighbourId(-1);
   const nextId = neighbourId(+1);
@@ -554,7 +549,7 @@ function renderDetailView() {
   const page = document.createElement("div");
   page.className = "detail-page";
   page.appendChild(renderDetailHeader(obj, prevId, nextId));
-  page.appendChild(renderDetailBody(obj, original, blind, enriched, judge));
+  page.appendChild(renderDetailBody(obj, original, blind, enriched, corrected));
   root.appendChild(page);
 
   window.scrollTo({ top: 0, left: 0, behavior: "instant" });
@@ -608,7 +603,7 @@ function makeDetailNavButton(label, targetId, title) {
   return btn;
 }
 
-function renderDetailBody(obj, original, blind, enriched, judge) {
+function renderDetailBody(obj, original, blind, enriched, corrected) {
   const body = document.createElement("div");
   body.className = "detail-page__body";
 
@@ -628,7 +623,7 @@ function renderDetailBody(obj, original, blind, enriched, judge) {
   variants.appendChild(renderVariantOriginal(obj, original));
   variants.appendChild(renderVariantAi(obj, blind, "ai-blind", "VISION-LLM · NUR FOTO", "Das Modell sieht nur das Foto, keine Metadaten."));
   variants.appendChild(renderVariantAi(obj, enriched, "ai-enriched", "VISION-LLM · FOTO + METADATEN", "Das Modell sieht das Foto plus Objektname, Material, Maße und Datierung aus der Sammlung."));
-  variants.appendChild(renderVariantJudge(obj, judge));
+  variants.appendChild(renderVariantCorrected(obj, enriched, corrected));
   body.appendChild(variants);
 
   return body;
@@ -652,7 +647,7 @@ function variantCard(badgeText, klass, modelText, subtitleText = "") {
   card.appendChild(header);
 
   // Optional subtitle line explaining what the model saw — the
-  // didactic difference between blind/enriched/judge is not obvious
+  // didactic difference between blind/enriched/corrected is not obvious
   // from the badge alone, so each card spells it out.
   if (subtitleText) {
     const sub = document.createElement("div");
@@ -686,15 +681,15 @@ function renderVariantOriginal(obj, original) {
     "Ground Truth aus dem Sammlungsmanagementsystem der Landessammlungen NÖ."
   );
 
-  // If the judge flagged this object's sammlungs-zuordnung as a quirk,
-  // surface that on the Original card — it is the didactic point of the
-  // workshop: vermeintlich "falsche" Modell-Antworten sind oft korrekt,
-  // und das Original selbst ist die Kuriosität.
-  const judge = state.aiJudgeById.get(obj.object_id);
-  if (judge && judge.is_collection_quirk) {
+  // Wenn der Corrector dieses Objekt fuer kuratorische Pruefung geflaggt
+  // hat, erscheint ein Hinweis auf der Original-Card. Das ist der didaktische
+  // Punkt: Zuordnungen koennen aus Foto und Metadaten allein nicht eindeutig
+  // erschliessbar sein und folgen sammlungsinternen Konventionen.
+  const corrected = state.aiCorrectedById.get(obj.object_id);
+  if (corrected && corrected.curator_review_needed) {
     const note = document.createElement("div");
     note.className = "variant-card__quirk";
-    note.textContent = "Judge: Sammlungs-Quirk — Zuordnung folgt sammlungsinterner Konvention";
+    note.textContent = "Korrektor: Zuordnung aus Evidenzmaterial nicht eindeutig — Sammlungs-Eigenheit, kuratorische Pruefung empfohlen";
     card.appendChild(note);
   }
 
@@ -770,52 +765,79 @@ function renderVariantAi(obj, record, klass, badgeText, subtitleText) {
   return card;
 }
 
-function renderVariantJudge(obj, judge) {
+function renderVariantCorrected(obj, enriched, corrected) {
   const card = variantCard(
-    "LLM-JUDGE",
-    "ai-judge",
-    judge ? judge.judge_model || "" : "",
-    "Ein stärkeres Modell (Gemini 3.1 Pro) bewertet die beiden Vision-LLM-Antworten."
+    "KORREKTUR · FINALE FASSUNG",
+    "ai-corrected",
+    corrected ? corrected.model || "" : "",
+    "Ein staerkeres Modell (Gemini 3.1 Pro) prueft die Arbeit des Vision-LLM und liefert die finale, sammlungsreife Fassung."
   );
-  if (!judge) {
+  if (!corrected) {
     const empty = document.createElement("div");
     empty.className = "variant-card__empty";
-    empty.textContent = "Kein Judge-Urteil für dieses Objekt.";
+    empty.textContent = "Noch keine Korrektur fuer dieses Objekt.";
     card.appendChild(empty);
     return card;
   }
 
-  variantField(card, "Urteil", VERDICT_LABEL[judge.verdict] || judge.verdict || "");
-  variantField(
-    card,
-    "Judge wählt",
-    `${judge.judge_top_id || ""}  ${judge.judge_top_id === obj.top_id ? "✓" : "✗"}`
-  );
-  variantField(card, "Sammlungs-Quirk", judge.is_collection_quirk ? "ja" : "nein");
-  variantField(
-    card,
-    "Beschreibungs-Qualität",
-    `Nur Foto ${judge.description_quality_blind || "–"} · Foto + Metadaten ${judge.description_quality_enriched || "–"}`
-  );
-  variantField(card, "Begründung", judge.reasoning || "");
+  const topMatch = corrected.final_top_id === obj.top_id;
+  const leafMatch = corrected.final_thesaurus_id === obj.thesaurus_id;
+  // Baseline fuer "(geaendert)"-Marker: primaer die im Record gespeicherte
+  // Enriched-Eingabe, Fallback auf geladenes state.aiEnriched.
+  const baselineTopId = corrected.input_enriched_top_id || (enriched && enriched.top_id);
+  const topChanged = baselineTopId && corrected.final_top_id !== baselineTopId;
 
-  if (judge.prompt_improvement_hints && judge.prompt_improvement_hints.length) {
+  variantField(
+    card,
+    "Bereich",
+    `${corrected.final_top_term || corrected.final_top_id || ""}  ${topMatch ? "✓" : "✗"}${topChanged ? "  (geaendert)" : ""}`
+  );
+  variantField(
+    card,
+    "Unterkategorie",
+    `${corrected.final_thesaurus_term || corrected.final_thesaurus_id || ""}  ${leafMatch ? "✓" : "✗"}`
+  );
+  variantField(card, "Finale Beschreibung", corrected.final_description || "");
+  variantField(card, "Konfidenz-Notiz", corrected.final_confidence_note || "");
+
+  if (corrected.curator_review_needed) {
+    const badge = document.createElement("div");
+    badge.className = "variant-card__quirk";
+    badge.textContent = "Kuratorische Pruefung empfohlen — Zuordnung aus Evidenz nicht eindeutig.";
+    card.appendChild(badge);
+  }
+
+  if (corrected.corrections_applied && corrected.corrections_applied.length) {
     const row = document.createElement("div");
     row.className = "variant-card__field";
     const l = document.createElement("div");
     l.className = "variant-card__field-label";
-    l.textContent = "Hinweise";
+    l.textContent = "Angewandte Korrekturen";
     const ul = document.createElement("ul");
     ul.className = "variant-card__hints";
-    for (const hint of judge.prompt_improvement_hints) {
+    for (const corr of corrected.corrections_applied) {
       const li = document.createElement("li");
-      li.textContent = hint;
+      li.textContent = corr;
       ul.appendChild(li);
     }
     row.appendChild(l);
     row.appendChild(ul);
     card.appendChild(row);
+  } else {
+    variantField(card, "Angewandte Korrekturen", "keine — Arbeitsmodell bestaetigt");
   }
+
+  if (corrected.stage1_reasoning) {
+    variantField(card, "Bereichs-Begruendung", corrected.stage1_reasoning);
+  }
+
+  const meta = document.createElement("div");
+  meta.className = "variant-card__meta";
+  const pieces = [];
+  if (corrected.prompt_version) pieces.push(`prompt ${corrected.prompt_version}`);
+  if (corrected.tokens_input != null) pieces.push(`${corrected.tokens_input}+${corrected.tokens_output} tok`);
+  meta.textContent = pieces.join(" · ");
+  if (meta.textContent) card.appendChild(meta);
 
   return card;
 }
@@ -844,7 +866,7 @@ function wireDetailKeys() {
 // ============================================================
 
 /**
- * Compute accuracy + judge metrics over the current filteredObjects set.
+ * Compute accuracy + corrector metrics over the current filteredObjects set.
  * Returns null if no AI data is loaded.
  */
 function computeDashboard() {
@@ -858,16 +880,18 @@ function computeDashboard() {
 
   const confusions = new Map(); // key `fromTop|toTop` -> {fromTop, toTop, count}
 
-  let judgeCount = 0;
-  let quirks = 0;
-  const verdicts = new Map();
-  let qb = 0, qe = 0;
+  let correctedCount = 0;
+  let correctedTop = 0, correctedLeaf = 0;
+  let topChanges = 0;          // Corrector hat Top-Bereich geaendert
+  let topChangesHelped = 0;    // ... und damit zum richtigen Treffer gefuehrt
+  let reviewNeeded = 0;
+  let nonEmptyCorrections = 0;
 
   for (const obj of list) {
     n++;
     const b = state.aiBlindById.get(obj.object_id);
     const e = state.aiEnrichedById.get(obj.object_id);
-    const j = state.aiJudgeById.get(obj.object_id);
+    const c = state.aiCorrectedById.get(obj.object_id);
 
     if (b) {
       blindCount++;
@@ -885,12 +909,21 @@ function computeDashboard() {
       if (e.top_id === obj.top_id) enrichedTop++;
       if (e.thesaurus_id === obj.thesaurus_id) enrichedLeaf++;
     }
-    if (j) {
-      judgeCount++;
-      if (j.is_collection_quirk) quirks++;
-      if (j.verdict) verdicts.set(j.verdict, (verdicts.get(j.verdict) || 0) + 1);
-      qb += j.description_quality_blind || 0;
-      qe += j.description_quality_enriched || 0;
+    if (c) {
+      correctedCount++;
+      if (c.final_top_id === obj.top_id) correctedTop++;
+      if (c.final_thesaurus_id === obj.thesaurus_id) correctedLeaf++;
+      // Wichtig: Als Vergleichsbasis die Enriched-Antwort verwenden, die dem
+      // Korrektor tatsaechlich als Input gezeigt wurde (im Record gespeichert
+      // als input_enriched_top_id). Fallback auf das geladene state.aiEnriched
+      // fuer alte Records ohne das Feld.
+      const baselineTopId = c.input_enriched_top_id || (e && e.top_id);
+      if (baselineTopId && c.final_top_id !== baselineTopId) {
+        topChanges++;
+        if (c.final_top_id === obj.top_id && baselineTopId !== obj.top_id) topChangesHelped++;
+      }
+      if (c.curator_review_needed) reviewNeeded++;
+      if (c.corrections_applied && c.corrections_applied.length > 0) nonEmptyCorrections++;
     }
   }
 
@@ -907,11 +940,13 @@ function computeDashboard() {
     enrichedTop,
     enrichedLeaf,
     topConfusions,
-    judgeCount,
-    quirks,
-    verdicts,
-    qbMean: judgeCount ? qb / judgeCount : 0,
-    qeMean: judgeCount ? qe / judgeCount : 0,
+    correctedCount,
+    correctedTop,
+    correctedLeaf,
+    topChanges,
+    topChangesHelped,
+    reviewNeeded,
+    nonEmptyCorrections,
   };
 }
 
@@ -945,7 +980,7 @@ function renderDashboard() {
   body.innerHTML = "";
   body.appendChild(renderDashboardAccuracyPanel(m));
   body.appendChild(renderDashboardConfusionsPanel(m));
-  body.appendChild(renderDashboardJudgePanel(m));
+  body.appendChild(renderDashboardCorrectorPanel(m));
 }
 
 function renderDashboardAccuracyPanel(m) {
@@ -1041,42 +1076,44 @@ function renderConfusionListItem(c) {
   return li;
 }
 
-function renderDashboardJudgePanel(m) {
+function renderDashboardCorrectorPanel(m) {
   const panel = document.createElement("div");
   panel.className = "dashboard__panel";
 
-  if (m.judgeCount === 0) {
+  if (m.correctedCount === 0) {
     panel.innerHTML = `
-      <h3>Judge</h3>
-      <p class="dashboard__empty">Kein Judge-Urteil im aktuellen Filter.</p>
+      <h3>Korrektur</h3>
+      <p class="dashboard__empty">Keine Korrektur im aktuellen Filter.</p>
     `;
     return panel;
   }
 
-  const verdictLines = [...m.verdicts.entries()]
-    .sort((a, b) => b[1] - a[1])
-    .map(([k, v]) => `<li>${escapeHtml(VERDICT_LABEL[k] || k)} · ${v}×</li>`)
-    .join("");
-
   panel.innerHTML = `
-    <h3>LLM-Judge (${m.judgeCount} bewertet)</h3>
+    <h3>Korrektur &middot; finale Fassung (${m.correctedCount} Objekte)</h3>
     <div class="dashboard__metric dashboard__metric--hero">
-      <b>${m.quirks} / ${m.judgeCount}</b>
-      <span>Original = Sammlungs-Quirk</span>
+      <b>${pct(m.correctedTop, m.correctedCount)}</b>
+      <span>Bereich &middot; Finale Fassung (${m.correctedTop}/${m.correctedCount})</span>
+    </div>
+    <div class="dashboard__metric">
+      <b>${pct(m.correctedLeaf, m.correctedCount)}</b>
+      <span>Unterkategorie &middot; Finale Fassung (${m.correctedLeaf}/${m.correctedCount})</span>
+    </div>
+    <div class="dashboard__metric">
+      <b>${m.topChanges}</b>
+      <span>Bereichs-Aenderungen gegenueber Arbeitsmodell (davon ${m.topChangesHelped} Treffer zusaetzlich)</span>
+    </div>
+    <div class="dashboard__metric">
+      <b>${m.nonEmptyCorrections}</b>
+      <span>Objekte mit angewandten Korrekturen</span>
+    </div>
+    <div class="dashboard__metric">
+      <b>${m.reviewNeeded}</b>
+      <span>fuer kuratorische Pruefung geflaggt</span>
     </div>
     <p class="dashboard__note">
-      In diesen Fällen ist nicht das Modell falsch, sondern die
-      Sammlungs-Zuordnung folgt einer internen Konvention.
+      Der Korrektor prueft die Arbeit des Vision-LLM und liefert die finale, sammlungsreife Fassung.
+      Flag fuer kuratorische Pruefung: Zuordnung aus Foto und Metadaten nicht eindeutig.
     </p>
-    <div class="dashboard__metric">
-      <b>${m.qbMean.toFixed(1)}</b>
-      <span>Beschreibungs-Qualität · Nur Foto (Ø 1–5)</span>
-    </div>
-    <div class="dashboard__metric">
-      <b>${m.qeMean.toFixed(1)}</b>
-      <span>Beschreibungs-Qualität · Foto + Metadaten (Ø 1–5)</span>
-    </div>
-    <ul class="dashboard__list">${verdictLines}</ul>
   `;
   return panel;
 }

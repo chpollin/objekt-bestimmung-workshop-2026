@@ -38,13 +38,13 @@ python scripts/06_run_gemini.py --mode blind --sample  # ai_blind_sample.json
 python scripts/06_run_gemini.py --mode enriched --sample  # ai_enriched_sample.json
 ```
 
-**M1.5 — Judge-Phase (Workflow C, nur handverlesene Teilmenge, Pro-Modell):**
+**M1.5 — Korrektur (Workflow C, Pro-Modell):**
 
 ```bash
-python scripts/07_judge_sample.py --selection data/json/judge_selection.json
+python scripts/07_correct_sample.py
 ```
 
-Die Selection-Datei ist eine handgepflegte Liste von 6–8 Objekten, die didaktisch besonders interessant sind. Siehe die Auswahl-Begründung in `sample_iteration.md`.
+Das Skript liest `data/json/sample.json` und `data/json/ai_enriched_sample_v3.json` und erzeugt `data/json/ai_corrected_sample.json`. Pro Objekt ein zweistufiger Pro-Call (Top-Bereich → Leaf + finale Beschreibung). Das stärkere Modell prüft die Arbeit des Vision-LLM, korrigiert wo nötig und flaggt Sammlungs-Eigenheiten, die aus Evidenz allein nicht eindeutig ableitbar sind, als `curator_review_needed = true`. Voraussetzung: `GEMINI_API_KEY` im Environment.
 
 **M2 — Vollauf:**
 
@@ -69,7 +69,7 @@ Nach jedem Skript:
 | `04_download_images.py` | Lädt Bilder, resized mit Pillow auf max. 1024 px. `--max-edge`, `--quality`. | — | ja (überspringt vorhandene, `--force`) |
 | `05_preview_selection.py` | Erzeugt `scripts/preview.html` für visuelles Review der Selektion. | — | rein lesend |
 | `06_run_gemini.py` | Zweistufiger Gemini-Call (Top → Leaf) pro Objekt, beide Modi via `--mode`. `--sample`, `--limit N`, `--force`, `--budget EUR`, `--model`. | `gemini-3.1-flash-lite-preview` | ja |
-| `07_judge_sample.py` | LLM-as-a-Judge über die Ergebnisse von 06. Bewertet jede Antwort gegen Original und Bild, schlägt Prompt-Verbesserungen vor. `--selection FILE.json`, `--suffix` (für v1/v2-Vergleich), `--limit N`, `--force`. | `gemini-3.1-pro-preview` | ja |
+| `07_correct_sample.py` | Korrektor: prüft die Enriched-Antwort aus 06 und erzeugt die finale sammlungsreife Fassung (Top-Bereich, Unterkategorie, Beschreibung, Liste der Korrekturen, Flag für kuratorische Prüfung). Zweistufig wie 06, mit JSON-Schema-Constraint. | `gemini-3.1-pro-preview` | ja |
 | `dev/sample_select.py` | **Wegwerf-Tool.** Wählt 30 Objekte deterministisch für die Sample-Iterationsphase. Gitignored. | — | deterministisch |
 
 ## Geteilte Module
@@ -80,11 +80,11 @@ Nach jedem Skript:
 
 ## Cache, Working Files und Iterationsartefakte
 
-Alles unter `scripts/cache/`, `scripts/dev/`, `scripts/preview.html` und `data/json/*sample*.json`, `data/json/*_v1.json`, `data/json/judge_selection.json` ist gitignored. Bei Bedarf einfach löschen:
+Alles unter `scripts/cache/`, `scripts/dev/`, `scripts/preview.html` und `data/json/*sample*.json`, `data/json/*_v1.json`, `data/json/*_v3.json`, `data/json/corrector_selection.json` ist gitignored. Bei Bedarf einfach löschen:
 
 ```bash
 rm -rf scripts/cache scripts/preview.html
-rm data/json/*sample*.json data/json/*_v1.json data/json/judge_selection.json
+rm data/json/*sample*.json data/json/*_v1.json data/json/*_v3.json
 ```
 
 ## Stateful: was bleibt im Repo, was nicht
@@ -94,7 +94,8 @@ rm data/json/*sample*.json data/json/*_v1.json data/json/judge_selection.json
 | `data/Trainingsobjekte_LandNOE_VK.xlsx` | ja | Quelle |
 | `data/json/thesaurus.json`, `thesaurus_flat.json`, `objects.json`, `originals.json` | ja | M1-Ergebnisse, vom Frontend gelesen |
 | `data/json/ai_blind.json`, `ai_enriched.json` | ja (ab M2-Vollauf) | KI-Outputs Workflows A und B |
-| `data/json/*sample*.json`, `*_v1.json`, `judge_selection.json`, `ai_judge_selection.json` | nein | Iterationsartefakte, Wegwerf nach M2 |
+| `data/json/ai_corrected.json` | ja (ab M2-Korrektur) | Korrektur-Output Workflow C |
+| `data/json/*sample*.json`, `*_v1.json`, `*_v3.json`, `corrector_selection.json` | nein | Iterationsartefakte, Wegwerf nach M2 |
 | `assets/img/*.jpg` | ja | Lokale Bilder, CC BY-NC 4.0, Attribution im ReadMe |
 | `scripts/*.py` (außer `dev/`), `scripts/prompts/*` | ja | Code |
 | `scripts/dev/*.py` | nein | Wegwerf-Helfer für die Sample-Phase |

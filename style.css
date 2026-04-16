@@ -14,7 +14,7 @@
 
   --ai-blind: #7b61ff;
   --ai-enriched: #3d8bff;
-  --ai-judge: #1a3a5f;
+  --ai-corrected: #1a3a5f;
   --ground-truth: #5b7c99;
 
   --ok: #2e8540;
@@ -712,7 +712,7 @@ h3 {
 .variant-card--original { border-left-color: var(--ground-truth); }
 .variant-card--ai-blind { border-left-color: var(--ai-blind); }
 .variant-card--ai-enriched { border-left-color: var(--ai-enriched); }
-.variant-card--ai-judge { border-left-color: var(--ai-judge); }
+.variant-card--ai-corrected { border-left-color: var(--ai-corrected); }
 
 .variant-card__header {
   display: flex;
@@ -736,7 +736,7 @@ h3 {
 .variant-card__badge--original { background: var(--ground-truth); }
 .variant-card__badge--ai-blind { background: var(--ai-blind); }
 .variant-card__badge--ai-enriched { background: var(--ai-enriched); }
-.variant-card__badge--ai-judge { background: var(--ai-judge); }
+.variant-card__badge--ai-corrected { background: var(--ai-corrected); }
 
 .variant-card__model {
   font-size: 11px;

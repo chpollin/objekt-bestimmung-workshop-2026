@@ -1,5 +1,7 @@
 # Sample-Iteration
 
+> **Hinweis (2026-04-16):** Die Sektion „Judge-Run" dokumentiert den damaligen LLM-as-a-Judge-Ansatz. Der wurde durch einen Korrektor (Review-and-Revise) ersetzt; Ergebnisse des aktuellen Korrektor-Laufs stehen in `data/json/ai_corrected_sample.json`, der alte Judge-Output unter `_archive/ai_judge_v1.0.json`. Der Rest der Iterationsstory (v1 → v2 Prompt-Entwicklung, Sample-Auswahl) gilt unverändert.
+
 Arbeitstagebuch der Sample-/Prompt-Iterationsphase. Anders als `data.md` (stabile Bestandsaufnahme) und `requirements.md` (Single Source of Truth) ist diese Datei **chronologisch** und wird mit jedem Prompt-Lauf erweitert.
 
 Zweck: Dokumentieren, wie wir vom ersten naiven Prompt zur finalen Version gekommen sind, welche Fälle Erkenntnisse gebracht haben und welche Hypothesen wir verworfen haben. Wichtig für späteres Auditing und für den Workshop, weil die Iterationsstory selbst Teil der Lehrgeschichte ist.

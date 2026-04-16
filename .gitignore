@@ -10,15 +10,19 @@ scripts/cache/
 scripts/preview.html
 scripts/*.log
 
-# Sample/iteration phase artifacts (deleted after prompt is final)
-data/json/sample.json
+# Sample/iteration phase artifacts (deleted after prompt is final).
+# ai_corrected_sample.json ist bewusst NICHT gitignored: Das Frontend laedt
+# es als Fallback-Quelle fuer den Workshop, solange der Korrektor-Vollauf
+# noch nicht existiert. Dito sample.json, da sie als Objekt-Auswahl fuer
+# den committeten Sample-Output referenziert wird.
 data/json/ai_blind_sample.json
 data/json/ai_enriched_sample.json
 data/json/ai_blind_sample_v1.json
 data/json/ai_enriched_sample_v1.json
-data/json/ai_judge_sample.json
-data/json/ai_judge_selection.json
-data/json/judge_selection.json
+data/json/ai_blind_sample_v3.json
+data/json/ai_enriched_sample_v3.json
+data/json/ai_corrected_selection.json
+data/json/corrector_selection.json
 scripts/dev/
 
 # OS

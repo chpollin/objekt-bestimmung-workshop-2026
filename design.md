@@ -27,10 +27,10 @@ CSS Custom Properties in `style.css` unter `:root`.
 | `--accent-strong` | `#00766F` | Hover/Press |
 | `--ai-blind` | `#7B61FF` | KI-Blind-Badge |
 | `--ai-enriched` | `#3D8BFF` | KI-Enriched-Badge |
-| `--ai-judge` | `#1A3A5F` | Judge-Badge (dunkel = stärkere Autorität) |
+| `--ai-corrected` | `#1A3A5F` | Korrektor-Badge (dunkel = stärkeres Modell) |
 | `--ground-truth` | `#5B7C99` | Original-Badge |
 | `--ok` | `#2E8540` | Übereinstimmung (🟢) |
-| `--warn` | `#E08A00` | Judge-Quirk-Banner, Hero-Metric |
+| `--warn` | `#E08A00` | Banner „Kuratorische Prüfung empfohlen", Hero-Metric |
 | `--err` | `#C8362D` | Konflikt (🔴) |
 | `--mute` | `#9E9E9E` | keine KI-Daten (⚪) |
 
@@ -86,15 +86,12 @@ Drei Panels nebeneinander in einem CSS-Grid. Jedes Panel liest aus `state.filter
 
 ```
 ┌──────────────────────────────────┬────────────────────────────────┬────────────────────────────────────┐
-│ Treffergenauigkeit               │ Häufigste Verwechslungen       │ LLM-Judge (8 bewertet)             │
-│ 50 %  Bereich · Nur Foto 123/245 │ Landwirt. → Handwerk · 7×      │ 3 / 8  Original = Sammlungs-Quirk  │
-│ 25 %  Leaf   · Nur Foto  62/245  │ Architektur → Wohnen · 6×      │ (Erklärtext in --text-mute)        │
-│ 61 %  Bereich · F+M     150/245  │ Bildwerke → Religion · 4×      │ 4.5  Beschreibungs-Qualität · F    │
-│ 35 %  Leaf   · F+M       85/245  │ …                              │ 4.5  Beschreibungs-Qualität · F+M  │
-│                                  │   [klickbar → Filter]          │ • Beide plausibel · 3×             │
-│                                  │                                │ • Beide korrekt · 3×               │
-│                                  │                                │ • Mit Metadaten besser · 1×        │
-│                                  │                                │ • Nur mit Foto besser · 1×         │
+│ Treffergenauigkeit               │ Häufigste Verwechslungen       │ Korrektur · finale Fassung (30)    │
+│ 50 %  Bereich · Nur Foto 123/245 │ Landwirt. → Handwerk · 7×      │ 70 %  Bereich · final 21/30        │
+│ 25 %  Leaf   · Nur Foto  62/245  │ Architektur → Wohnen · 6×      │ 43 %  Unterkat · final 13/30       │
+│ 61 %  Bereich · F+M     150/245  │ Bildwerke → Religion · 4×      │ 4     Bereichs-Änderungen (2 +)    │
+│ 35 %  Leaf   · F+M       85/245  │ …                              │ 24    Objekte mit Korrekturen      │
+│                                  │   [klickbar → Filter]          │ 9     für kuratorische Prüfung     │
 └──────────────────────────────────┴────────────────────────────────┴────────────────────────────────────┘
 ```
 
@@ -104,7 +101,7 @@ Die Konfusions-Zeilen sind klickbar: ein Klick pinnt einen Filter `confusion = {
 
 Das „Volkskunde – "-Präfix wird in der Konfusions-Liste strip-gerendert (siehe `topLabel()` in `app.js`), weil beide Seiten des Pfeils denselben Präfix tragen und er als Redundanz stört.
 
-Im Judge-Panel ist der Quirk-Wert (`3 / 8`) als Hero-Metric in `--warn` (Orange) gesetzt, mit explizitem Erklärtext: *„In diesen Fällen ist nicht das Modell falsch, sondern die Sammlungs-Zuordnung folgt einer internen Konvention."* Das ist die didaktische Kernbotschaft. Die Verdict-Labels (`both_correct`, `tie_plausible` etc.) sind rohe JSON-Schlüssel und werden über das `VERDICT_LABEL`-Mapping auf deutsche Anzeige-Strings gebracht.
+Im Korrektor-Panel steht die Top-Match-Quote der finalen Fassung als Hero-Metric. Daneben werden drei weitere Kennzahlen geführt: Anzahl der Bereichs-Änderungen gegenüber dem Enriched-Lauf (und in Klammern, wie viele davon zum richtigen Treffer führten), Anzahl der Objekte mit angewandten Korrekturen (d.h. `corrections_applied` ist nicht leer), und Anzahl der für kuratorische Prüfung geflaggten Objekte (`curator_review_needed = true`). Der Erklärtext betont: der Korrektor produziert eine Auditspur, der Mensch übernimmt gezielt dort, wo die KI auf ihre Grenzen stößt.
 
 ## Layout — Detail-Seite (`#/object/:id`)
 
@@ -139,23 +136,24 @@ Kein Drawer, keine Overlay-Slide-Animation — eine echte Unterseite, die die Ga
 │                              │   /„Das Modell sieht das Foto plus …"/│
 │                              │ (gleiche Felder)                      │
 │                              │                                       │
-│                              │ ◉ LLM-JUDGE                           │
+│                              │ ◉ KORREKTUR · FINALE FASSUNG          │
 │                              │   gemini-3.1-pro-preview              │
-│                              │   /„Ein stärkeres Modell bewertet …"/ │
-│                              │ Urteil: Beide plausibel               │
-│                              │ Judge wählt: … ✓                      │
-│                              │ Beschreibungs-Qualität: Nur Foto 5 ·  │
-│                              │   Foto + Metadaten 5                  │
-│                              │ Begründung: …                         │
-│                              │ Hinweise an den Prompt: …             │
+│                              │   /„Ein stärkeres Modell prüft und …"/│
+│                              │ Bereich: … ✓                          │
+│                              │ Unterkategorie: … ✓                   │
+│                              │ Finale Beschreibung: …                │
+│                              │ Konfidenz-Notiz: …                    │
+│                              │ [Banner: Kuratorische Prüfung]        │
+│                              │ Angewandte Korrekturen: …             │
+│                              │ Bereichs-Begründung: …                │
 └──────────────────────────────┴───────────────────────────────────────┘
 ```
 
 **Header:** Back-Link zur Galerie (erhält Filter-State), Titel mit Objektname + Untertitel (Inventarnummer + Bereich-Name), Prev/Next-Buttons navigieren durch die **gefilterten** Nachbarn — nicht durch die gesamten 245. Disable am Ende/Anfang.
 
-**Body:** Zweispaltiges CSS-Grid. Links das große Foto, rechts vier `.variant-card` stapeln sich: Original (Sammlungsdaten), Vision-LLM mit nur dem Foto, Vision-LLM mit Foto + Metadaten, LLM-Judge. Jede Karte hat unter dem Badge eine `.variant-card__subtitle`-Zeile (kursiv, muted), die in einem Satz erklärt, was *dieses* Modell gesehen hat — das ist die didaktische Kernbotschaft pro Karte. Der Judge-Slot bleibt bei Objekten ohne Judge-Urteil leer und zeigt eine `variant-card__empty`-Zeile.
+**Body:** Zweispaltiges CSS-Grid. Links das große Foto, rechts vier `.variant-card` stapeln sich: Original (Sammlungsdaten), Vision-LLM mit nur dem Foto, Vision-LLM mit Foto + Metadaten, Korrektur (finale Fassung). Jede Karte hat unter dem Badge eine `.variant-card__subtitle`-Zeile (kursiv, muted), die in einem Satz erklärt, was *dieses* Modell gesehen hat — das ist die didaktische Kernbotschaft pro Karte. Der Korrektur-Slot bleibt bei Objekten außerhalb des Sample-Laufs leer und zeigt eine `variant-card__empty`-Zeile.
 
-**Judge-Quirk-Banner:** Bei Objekten mit `ai_judge.is_collection_quirk === true` erscheint auf der Original-Karte ein gelber Banner direkt unter dem Badge: *„Judge: Sammlungs-Quirk — Zuordnung folgt sammlungsinterner Konvention"*. Das ist nicht Cosmetic, sondern der Moment, in dem die Treffergenauigkeits-Prozente vom Dashboard eine Erklärung bekommen.
+**Banner für kuratorische Prüfung:** Bei Objekten mit `ai_corrected.curator_review_needed === true` erscheint auf der Original-Karte ein gelber Banner direkt unter dem Badge: *„Korrektor: Zuordnung aus Evidenzmaterial nicht eindeutig — Sammlungs-Eigenheit, kuratorische Prüfung empfohlen"*. Das ist nicht Cosmetic, sondern der Moment, in dem die Treffergenauigkeits-Prozente vom Dashboard eine Erklärung bekommen.
 
 **Mobile-Fallback:** Unter 900 px wird das Grid einspaltig (Foto oben, Varianten darunter), das Foto ist `position: static` und `max-height: 50vh`. Mobile ist kein Primärziel (NFR fehlt), aber die Seite bricht nicht.
 
@@ -178,12 +176,12 @@ Kein Drawer, keine Overlay-Slide-Animation — eine echte Unterseite, die die Ga
 - `.detail-page`, `.detail-page__header`, `.detail-page__back`, `.detail-page__title-wrap`, `.detail-page__title`, `.detail-page__meta`, `.detail-page__nav` — Detail-Seiten-Chrome
 - `.detail-page__body`, `.detail-page__photo`, `.detail-page__variants` — Zwei-Spalten-Layout der Detail-Seite
 - `.variant-card` — eine Variante
-- `.variant-card--original` / `--ai-blind` / `--ai-enriched` / `--ai-judge` — Farbvariante pro Quelle
+- `.variant-card--original` / `--ai-blind` / `--ai-enriched` / `--ai-corrected` — Farbvariante pro Quelle
 - `.variant-card__header`, `.variant-card__badge`, `.variant-card__model` — Karten-Header
 - `.variant-card__subtitle` — kursive Erklärzeile direkt unter dem Header: *„Das Modell sieht nur das Foto, keine Metadaten."* etc.
 - `.variant-card__field`, `.variant-card__field-label`, `.variant-card__field-value` — Datenzeile
 - `.variant-card__meta`, `.variant-card__hints`, `.variant-card__empty` — Footer und Spezialzeilen
-- `.variant-card__quirk` — gelber Judge-Quirk-Banner auf der Original-Karte
+- `.variant-card__quirk` — gelber Banner „Kuratorische Prüfung empfohlen" auf der Original-Karte
 - `.match-mark`, `.match-mark--ok/--err` — grüne/rote ✓/✗-Markierung neben KI-Werten
 
 ## Interaktion

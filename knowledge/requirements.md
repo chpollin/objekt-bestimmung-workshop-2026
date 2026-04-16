@@ -6,7 +6,7 @@ Operative Inhalte (Datenfluss, Komponenten, Verifikation) leben in [`data.md`](d
 
 ## 1. Projektziel
 
-Demo & Lehrmaterial für den Workshop „Kann KI kulturgeschichtliche Objekte bestimmen — und was brauchte es dafür?" am 20.04.2026 in Salzburg. Zeigt Museumsfachleuten, wie ein Vision-LLM aus Sammlungsfotos sammlungskonforme Beschreibungen und Thesaurusbegriffe ableitet, ohne Training oder Fine-Tuning. Ist gleichzeitig ein Vergleichs-Viewer, mit dem KI-Vorschläge gegen Originaldaten und Judge-Urteile nebeneinander gestellt werden können — kein Editor.
+Demo & Lehrmaterial für den Workshop „Kann KI kulturgeschichtliche Objekte bestimmen — und was brauchte es dafür?" am 20.04.2026 in Salzburg. Zeigt Museumsfachleuten, wie ein Vision-LLM aus Sammlungsfotos sammlungskonforme Beschreibungen und Thesaurusbegriffe ableitet, ohne Training oder Fine-Tuning. Ist gleichzeitig ein Vergleichs-Viewer, mit dem KI-Vorschläge, finale Korrektur-Fassungen und Originaldaten nebeneinander gestellt werden können — kein Editor.
 
 ## 2. Zielgruppe und Erfolgskriterien
 
@@ -24,16 +24,16 @@ Demo & Lehrmaterial für den Workshop „Kann KI kulturgeschichtliche Objekte be
 | ID    | Anforderung |
 |-------|-------------|
 | FR-1  | Das System stellt 245 kuratierte Objekte aus der volkskundlichen Sammlung der Landessammlungen NÖ als durchsuchbare Galerie dar. |
-| FR-2  | Jedes Objekt zeigt: Foto, Originalmetadaten, KI-Beschreibung im Modus „blind", KI-Beschreibung im Modus „erweitert", Judge-Urteil (bei handverlesener 8er-Stichprobe). |
+| FR-2  | Jedes Objekt zeigt: Foto, Originalmetadaten, KI-Beschreibung im Modus „blind", KI-Beschreibung im Modus „erweitert", finale Korrektur-Fassung (falls vorhanden). |
 | FR-3  | Filter: Thesaurus-Hierarchie (collapsible Tree), Freitextsuche (Objektname/Term/Material/Maße/Datierung/Katalogtext), Status (Übereinstimmung/Konflikt/keine KI). Datierung als eigene Filterdimension gestrichen — nicht Kern der Vergleichs-Story. |
-| FR-4  | Detail-Seite (eigene Route `#/object/:id`) zeigt alle vier Varianten nebeneinander: Original, KI blind, KI erweitert, Judge (wenn vorhanden). Keine Editier-Funktion. Prev/Next-Navigation zwischen gefilterten Nachbarobjekten. |
+| FR-4  | Detail-Seite (eigene Route `#/object/:id`) zeigt alle vier Varianten nebeneinander: Original, KI blind, KI erweitert, Korrektur-Fassung (wenn vorhanden). Keine Editier-Funktion. Prev/Next-Navigation zwischen gefilterten Nachbarobjekten. |
 | FR-5  | Statusanzeige pro Objekt (drei Werte): 🟢 Übereinstimmung (KI-blind Top-Bereich = Original), 🔴 Konflikt, ⚪ keine KI-Daten. |
 | FR-6  | *(gestrichen)* Export-Funktion entfällt — siehe ADR-14. |
 | FR-7  | *(gestrichen)* `edits.json` entfällt — siehe ADR-14. |
-| FR-8  | Übersichtsstatistik („Akkuranz-Dashboard"): drei Panels — Akkuranz (Bereich/Leaf, beide Modi), häufigste Verwechslungen (klickbar, pinnt Filter auf `fromTop → toTop`-Paar), Judge-Panel (Quirk-Anteil als Hero-Metric plus Quality-Mittel). |
+| FR-8  | Übersichtsstatistik („Akkuranz-Dashboard"): drei Panels — Akkuranz (Bereich/Leaf, beide Modi), häufigste Verwechslungen (klickbar, pinnt Filter auf `fromTop → toTop`-Paar), Korrektor-Panel (Top-Match-Quote der finalen Fassung, Zahl der Bereichs-Änderungen, Zahl der für kuratorische Prüfung geflaggten Objekte). |
 | FR-9  | Pipeline ist resume-fähig und reproduzierbar (alle Outputs deterministisch außer Modell-Antworten). |
 | FR-10 | Pipeline-Output-JSONs enthalten ein `prompt_version`-Feld, damit verschiedene Prompt-Iterationen unterscheidbar sind. |
-| FR-11 | LLM-as-a-Judge bewertet eine handverlesene Stichprobe von 8 Objekten gegen Original und Bild und schlägt Verbesserungen vor. Ergebnis ist eine vierte Variante auf der Detail-Seite. Quirks werden zusätzlich als Banner auf der Original-Karte hervorgehoben. |
+| FR-11 | Ein stärkeres Modell (Korrektor, Gemini 3.1 Pro) prüft die Enriched-Fassung jedes Objekts, liefert die finale sammlungsreife Klassifikation und Beschreibung, listet die angewandten Korrekturen und flaggt Objekte für kuratorische Prüfung, wenn die Zuordnung aus Evidenz allein nicht eindeutig ableitbar ist. Der Korrektor bekommt den Original-Eintrag der Sammlung **nicht**, damit die Arbeit dem realistischen Produktionsfall entspricht. Ergebnis ist eine vierte Variante auf der Detail-Seite. Für kuratorische Prüfung geflaggte Objekte erhalten einen Banner auf der Original-Karte. |
 
 ## 4. Nicht-funktionale Anforderungen (NFR)
 
@@ -64,7 +64,7 @@ Demo & Lehrmaterial für den Workshop „Kann KI kulturgeschichtliche Objekte be
 | ADR-9 | Knowledge-Basis im Repo unter `knowledge/` | Anforderungen müssen mitwachsen und für andere lesbar sein | Plan-Datei in `~/.claude/plans/` (nur lokal sichtbar, vergänglich) |
 | ADR-10 | Ordnerstruktur: `scripts/` (statt `pipeline/`) und `data/json/` für JSON-Outputs | Existierende Repo-Struktur respektieren statt parallele Hierarchie aufbauen | `pipeline/` + `data/*.json` (würde leere Verzeichnisse hinterlassen) |
 | ADR-11 | Stage-2-Disambiguation: Geschwister-Namen im Prompt anzeigen | 34 Leaf-Term-Namen kommen mehrfach vor (z.B. „Hilfsgerät" 10×). Ohne Mid-Cluster-Hint kann das Modell sie nicht trennen. Empirisch in Sample-Iteration 1 bestätigt. | Stumpfe Leaf-Liste (Iteration 1, schwache Akkuranz), Mid-Level-Namen aus Web scrapen (Endpoint existiert nicht) |
-| ADR-12 | LLM-as-a-Judge als dritte Schicht | Manuelle Bewertung skaliert nicht. Stärkeres Modell (Gemini 3 Pro) als Judge gegen schwächeres Modell (Flash Lite) liefert objektive Iterationsmetrik UND Workshop-Material („Kann KI eine KI bewerten?"). | Nur menschliche Bewertung (zu langsam), gleiches Modell als Judge (kein Mehrwert) |
+| ADR-12 | Korrektor als dritte Schicht (stärkeres Modell, produziert finale Fassung) | Der realistische Use Case ist Anreicherung: das kleinere Modell leistet die Grundarbeit, das stärkere Modell prüft und erzeugt die sammlungsreife Fassung. Der Korrektor bekommt den Original-Eintrag bewusst nicht, damit er nicht vom Vergleich gegen Ground Truth lebt, sondern aus Foto + Metadaten + Vorarbeit des kleineren Modells eine eigenständige finale Fassung liefert. Das ist kein LLM-as-a-Judge (reine Bewertung), sondern ein Review-and-Revise-Pattern mit nachvollziehbarer Korrekturspur. | LLM-as-a-Judge (liefert nur Urteil, keinen Output); manuelle Review (skaliert nicht); Korrektor mit Zugriff auf Original (wäre Cheating gegen Ground Truth, nicht produktionsrealistisch) |
 | ADR-13 | Daten via JSON-Endpoint `/objects/{id}/json`, nicht via HTML-Scraping | Endpoint liefert sauberes Label/Value-Schema mit allen benötigten Feldern. | BeautifulSoup-Scraping (fragiler, kein Vorteil) |
 | ADR-14 | Vergleichs-Viewer statt Editor | Workshop-Story ist *Original ↔ KI-Ausgaben vergleichen*, nicht *Reviewen und Freigeben*. Jede Edit-Interaktion würde den Workshop-Flow unterbrechen, erhöht das Risiko am Workshop-Tag und verwässert die didaktische Kernfrage. Read-Only → null persistenter Zustand, null Failure-Modes. | Editor-Form mit localStorage-Export (Ursprungsplan, FR-2/4/6/7), „light editor" mit nur einem Freitext-Feld (halber Weg, verwirrend), Annotation-Feature ohne Persistenz (sinnlos). Siehe Journal 2026-04-11 *Frontend-Architektur*. |
 | ADR-15 | Hash-Router mit echter Detail-Seite statt Slide-over-Drawer | Browser-Back/Forward funktioniert, Direkt-Links auf `#/object/:id` sind möglich, beamertauglicher Layout ohne Overlay-Artefakte, Fokus auf ein Objekt. Der Router braucht nur wenige Zeilen, keine Library. | Slide-over-Drawer (Browser-Navigation gebrochen, fragile bei Zoom), Modal-Dialog (Fokus-Falle, bricht Back-Taste), Tabs innerhalb der Gallery (kein Direkt-Link). Siehe Journal 2026-04-11 *Frontend-Architektur*. |
@@ -80,7 +80,7 @@ Demo & Lehrmaterial für den Workshop „Kann KI kulturgeschichtliche Objekte be
 - Test-Suite oder CI (manuelles Testen via Verifikation in `data.md`)
 - Tastatur-Shortcuts in der Gallery. Einzige Ausnahme: ESC und Pfeiltasten in der Detail-Seite für essenzielle Navigation.
 - Iteration 3 der Prompts (entschieden am 2026-04-11, siehe Journal *Vollauf*)
-- Voll-Judge auf alle 245 Objekte (nur handverlesene 8er-Stichprobe, siehe FR-11)
+- Vollauf der Korrektur auf alle 245 Objekte (Sample-Lauf auf 30 Objekten als Demo ausreichend, siehe FR-11)
 
 ## 7. Annahmen und Risiken
 

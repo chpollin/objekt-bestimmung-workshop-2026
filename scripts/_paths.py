@@ -39,12 +39,12 @@ DOWNLOAD_REPORT = SCRIPTS / "download_report.txt"
 PROMPTS_DIR = SCRIPTS / "prompts"
 SYSTEM_BLIND_TXT = PROMPTS_DIR / "system_blind.txt"
 SYSTEM_ENRICHED_TXT = PROMPTS_DIR / "system_enriched.txt"
-SYSTEM_JUDGE_TXT = PROMPTS_DIR / "system_judge.txt"
+SYSTEM_CORRECTOR_TXT = PROMPTS_DIR / "system_corrector.txt"
 FEW_SHOT_JSON = PROMPTS_DIR / "few_shot_examples.json"
 
-# Judge outputs (M2)
-AI_JUDGE_JSON = DATA_JSON / "ai_judge.json"
-AI_JUDGE_SAMPLE = DATA_JSON / "ai_judge_sample.json"
+# Corrector outputs (M2) — das staerkere Modell liefert die finale Fassung
+AI_CORRECTED_JSON = DATA_JSON / "ai_corrected.json"
+AI_CORRECTED_SAMPLE = DATA_JSON / "ai_corrected_sample.json"
 
 # Online collection
 ONLINE_BASE = "https://online.landessammlungen-noe.at"
