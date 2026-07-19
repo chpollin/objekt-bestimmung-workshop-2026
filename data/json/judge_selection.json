@@ -1,0 +1,23 @@
+{
+  "description": "Handverlesene Objekte fuer den LLM-as-a-Judge Workflow. Klein gehalten, weil Judge-Pro teuer ist. Mischung aus Zickzack-Mismatches (v1 vs v2), Regel-Gewinnen, Sammlungs-Quirks und Kontroll-Treffern.",
+  "object_ids": [
+    1171669,
+    1169812,
+    1168634,
+    1173235,
+    1183673,
+    1174037,
+    1179144,
+    1173675
+  ],
+  "reasons": {
+    "1171669": "Marmoraufsatz - Zickzack zwischen v1 und v2 in beiden Modi",
+    "1169812": "Trog - v2 blind regressiv zu v1",
+    "1168634": "Heiligenfigur - v2 hat Religion-Konvention erkannt",
+    "1173235": "Spardose - v2 hat Oeffentlichkeit-Regel erkannt",
+    "1183673": "Totschlaeger unter Fischerei - Sammlungs-Quirk-Kandidat",
+    "1174037": "Spritze unter Spielzeug - Sammlungs-Quirk-Kandidat",
+    "1179144": "Zither - klarer Treffer beide Modi, Kontrollgruppe",
+    "1173675": "Guertel - klarer Treffer beide Modi, Kontrollgruppe"
+  }
+}
