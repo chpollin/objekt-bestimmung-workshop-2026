@@ -57,3 +57,12 @@ Eine separate `LICENSE`-Datei ist optional und nicht Teil dieses Commits — der
 ## Disclaimer
 
 Dies ist eine Lehr- und Demo-Site für einen einmaligen Workshop-Vortrag, keine Produktivsoftware. Keine Gewähr auf die Richtigkeit der KI-generierten Beschreibungen, Thesaurus-Zuordnungen oder Korrektur-Fassungen. Die Originalklassifikationen der Landessammlungen NÖ sind die einzige belastbare Referenz.
+
+## Licence
+
+The code in this repository is released under the MIT Licence (see `LICENSE`).
+Documentation, knowledge documents, and other textual content are licensed under
+CC BY 4.0. Third-party research data is excluded from these terms; the object data
+and images are those of the Volkskundliche Sammlung der Landessammlungen
+Niederösterreich (CC BY-NC 4.0), whose rights remain with that institution. See
+the section *Urheberrecht und Lizenz* above for the per-object detail.
