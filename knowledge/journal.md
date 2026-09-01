@@ -170,3 +170,16 @@ Außerdem: **Chronologisches Arbeitstagebuch der Iteration** als neue Knowledge-
 - Fünf Daten-JSONs konsistent auf 245 Records: `objects.json`, `originals.json`, `ai_blind.json`, `ai_enriched.json` mit jeweils 245, plus `ai_judge.json` mit seinen 8 handverlesenen Einträgen.
 - `scripts/download_report.txt` bleibt unverändert als Audit-Spur für die Entscheidung.
 - Frontend-Gallery-Header zeigt „245 Objekte".
+
+---
+
+### 2026-04-20 — Stand am Workshop-Tag und offene Judge-Restdateien
+
+**Anlass:** Der Workshop hat stattgefunden. Pipeline und Frontend sind funktional abgeschlossen, letzter Commit ist `f1d7024`, der LLM-as-a-Judge durch den Korrektor ersetzt. Beim Durchsehen des Arbeitsverzeichnisses blieben zwei nicht versionierte Dateien übrig.
+
+**Entscheidung:** Der Stand wird als abgeschlossen geführt. `data/json/judge_selection.json` und `data/json/ai_judge_selection.json` sind Überreste des entfernten Judge-Workflows, werden weder von `app.js` noch von einem Skript referenziert und bleiben vorerst untracked liegen. Vor dem nächsten Commit oder einem Deployment ist zu entscheiden, ob sie gelöscht oder zum Judge-Ergebnis unter `_archive/` gelegt werden.
+
+**Konsequenz:**
+
+- Der Datenbestand des aktiven Frontends bleibt von den beiden Dateien unberührt.
+- Die Akkuranzwerte des Vollaufs stehen in `sample_iteration.md` und werden hier nicht wiederholt.
