@@ -1,0 +1,8 @@
+# GitHub Pages builds this repository root with Jekyll. The site serves only the
+# viewer (index.html, app.js, style.css, assets/, data/json/) and README.md.
+# Knowledge base, design document and pipeline material stay in the repository
+# but are not published as pages.
+exclude:
+  - knowledge/
+  - design.md
+  - scripts/
