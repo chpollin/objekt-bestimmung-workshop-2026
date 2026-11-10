@@ -183,3 +183,11 @@ Außerdem: **Chronologisches Arbeitstagebuch der Iteration** als neue Knowledge-
 
 - Der Datenbestand des aktiven Frontends bleibt von den beiden Dateien unberührt.
 - Die Akkuranzwerte des Vollaufs stehen in `sample_iteration.md` und werden hier nicht wiederholt.
+
+### 2026-11-10 — Wartungsdurchgang und Wiedereinstieg
+
+**Anlass:** Repository-Pflege. Arbeitsbaum sauber, `main` gleich `origin/main`. Am selben Tag wurden mit Commit `5bf8aae` die Personennamen aus den Dateieigenschaften der Excel-Quelldatei entfernt.
+
+**Entscheidung:** Der Statusblock in `README.md` nennt den gehaltenen Workshop statt der Abschlussphase und des lokalen Plans. Neu ist `handoff.md` als Wiedereinstieg des ruhenden Projekts. Der Eintrag vom 2026-04-20 ist überholt, soweit er die beiden Judge-Restdateien als untracked führt. Sie sind seit Commit `33b6451` vom 2026-07-19 versioniert und werden über GitHub Pages ausgeliefert.
+
+**Konsequenz:** Ob die Judge-Restdateien gelöscht, archiviert oder belassen werden, bleibt beim Besitzer und steht in `handoff.md`.

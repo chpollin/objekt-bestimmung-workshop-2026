@@ -15,7 +15,7 @@ Das Modell läuft in **drei Workflows**: *Nur Foto* (Vision-LLM mit Bild) → *F
 
 - **Pipeline:** abgeschlossen. Thesaurus, Selektion, Originaltexte, Bilder, beide Vollauf-Modi, Korrektur-Sample.
 - **Frontend:** funktional abgeschlossen. Hash-Router mit Gallery-Route (`#/`) und Detail-Route (`#/object/:id`), Filter (Thesaurus-Tree, Status, Freitext, klickbare Confusions), Akkuranz-Dashboard, Banner für kuratorische Prüfung.
-- **Abschlussphase (12.–19.04.2026):** Knowledge-Korrekturen, README im Repo-Root, GitHub Pages Deployment, Workshop-Tag-Dry-Run am 19.04. Siehe Plan in `~/.claude/plans/zesty-shimmying-treasure.md`.
+- **Workshop:** am 20.04.2026 gehalten. Der Viewer ist über GitHub Pages veröffentlicht, das Projekt ruht. Den Wiedereinstieg mit den offenen Punkten führt [handoff.md](handoff.md).
 
 ## Reihenfolge zum Einstieg
 
