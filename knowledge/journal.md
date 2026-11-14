@@ -12,6 +12,10 @@ Chronologie der substantiellen Projekt-Entscheidungen. Format pro Eintrag:
 **Konsequenz:** ...
 ```
 
+## Open
+
+- Judge-Restdateien `data/json/judge_selection.json` und `data/json/ai_judge_selection.json`: Der Besitzer entscheidet, ob sie gelöscht, nach `_archive/` gelegt oder belassen werden. Die beiden Überreste des entfernten Judge-Workflows werden von keinem Skript und nicht von `app.js` gelesen, sind seit dem WIP-Commit `33b6451` vom 2026-07-19 versioniert und über GitHub Pages abrufbar. Quelle: `git log -- data/json/judge_selection.json data/json/ai_judge_selection.json` und die Einträge vom 2026-04-20 und 2026-11-10; Ziel: `data/json/`, `_archive/`.
+
 ---
 
 ### 2026-04-11 — Projekt-Setup, Architektur und Knowledge-Basis
@@ -191,3 +195,11 @@ Außerdem: **Chronologisches Arbeitstagebuch der Iteration** als neue Knowledge-
 **Entscheidung:** Der Statusblock in `README.md` nennt den gehaltenen Workshop statt der Abschlussphase und des lokalen Plans. Neu ist `handoff.md` als Wiedereinstieg des ruhenden Projekts. Der Eintrag vom 2026-04-20 ist überholt, soweit er die beiden Judge-Restdateien als untracked führt. Sie sind seit Commit `33b6451` vom 2026-07-19 versioniert und werden über GitHub Pages ausgeliefert.
 
 **Konsequenz:** Ob die Judge-Restdateien gelöscht, archiviert oder belassen werden, bleibt beim Besitzer und steht in `handoff.md`.
+
+### 2026-11-14 — Handoff-Datei im Journal aufgelöst
+
+**Anlass:** Entscheidung des Besitzers vom 2026-11-14, dass Promptotyping-Repositories kein `knowledge/handoff.md` mehr führen und das Journal mit dem Offenen beginnt.
+
+**Entscheidung:** Der einzige offene Punkt der Handoff-Datei, die Entscheidung über die Judge-Restdateien, steht unter Open am Anfang dieses Journals. Nicht übernommen wurde ihr Wiedereinstiegsabsatz, weil Workshop-Datum, Viewer-Adresse und Einstiegsreihenfolge bereits in `README.md` und `knowledge/README.md` stehen. `handoff.md` ist entfernt, `knowledge/README.md` verweist auf den Abschnitt Open.
+
+**Konsequenz:** Der Wiedereinstieg beginnt mit `knowledge/README.md` und dem Abschnitt Open dieses Journals.
