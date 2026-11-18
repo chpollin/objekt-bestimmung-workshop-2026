@@ -159,6 +159,21 @@ h3 {
   padding: 0;
 }
 
+.app-footer {
+  padding: var(--space-4) var(--space-5);
+  border-top: 1px solid var(--border);
+  font-size: var(--fs-sm);
+  color: var(--text-mute);
+}
+
+.app-footer p {
+  margin: 0;
+}
+
+.app-footer a {
+  color: var(--accent-strong);
+}
+
 .filter-sidebar {
   padding: var(--space-4) var(--space-5);
   background: var(--bg-alt);
